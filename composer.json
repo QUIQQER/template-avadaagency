@@ -2,7 +2,7 @@
   "name": "quiqqer\/template-argon",
   "type": "quiqqer-template",
   "description": "Argon Bootstrap template adapted for QUIQQER",
-  "version": "dev-master",
+  "version": "dev-dev",
   "license": "GPL-3.0+",
   "authors": [
     {
