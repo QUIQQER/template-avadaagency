@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+    {*pace*}
+    {$Template->getHeader()}
+
+    {assign var=layoutType value=$Template->getLayoutType()}
+    {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+    {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+
+    <!-- [begin] css combine -->
+    {fontawesome}
+    {bootstrap}
+    <link href="{$URL_TPL_DIR}bin/css/argon.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_TPL_DIR}bin/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css"/>
+
+    {if $quiTplType && $quiTplType == 'rightSidebar'}
+    <link href="{$URL_TPL_DIR}bin/types/rightSidebar.css" rel="stylesheet" type="text/css"/>
+    {/if}
+
+    {if $quiTplType && $quiTplType == 'leftSidebar'}
+    <link href="{$URL_TPL_DIR}bin/types/leftSidebar.css" rel="stylesheet" type="text/css"/>
+    {/if}
+    <!-- [end] css combine -->
+
+
+    {*$settingsCSS*}
+
+</head>
+<body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
+
+
+<!-- page -->
+<div class="body-container">
+    <!-- header -->
+    {strip}
+    <header class="page-header">
+        {if $Site->getAttribute('image_emotion')}
+        {image src=$Site->getAttribute('image_emotion') class="header-img"
+        title=$Site->getAttribute('title')}
+        {/if}
+        <div class="page-header-container grid-container">
+            {if $Site->getAttribute('templateArgon.showTitle')}
+            <h1 class="page-header-text-title">
+                {$Site->getAttribute('title')}
+            </h1>
+            {/if}
+
+            {if $Site->getAttribute('templateArgon.showShort') &&
+            $Site->getAttribute('short')}
+            <div class="page-header-text-wrapper">
+                <div class="page-header-text-wrapper-short">
+                    {$Site->getAttribute('short')}
+                </div>
+            </div>
+            {/if}
+        </div>
+    </header>
+    {/strip}
+
+    <!-- header suffix -->
+    <!-- breadcrumb -->
+    {if $showBreadcrumb}
+    <div class="template-breadcrumb">
+        <div class="">
+            {$Breadcrumb->create()}
+        </div>
+    </div>
+    {/if}
+
+    <div class="headerSuffix">
+        <!-- header suffix  -->
+        {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+        {foreach $headerSuffix as $Brick}
+        <div class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                    brick-{$Brick->getAttribute('id')}-wrapper">
+            <div class="">
+                <section>
+                    {$Brick->create()}
+                </section>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+
+    <!-- content -->
+    <div class="{cycle values='' reset=true}">
+        <div class="main-content">
+            {$Template->getLayout()}
+        </div>
+    </div>
+
+    <div class="prefixFooter">
+        <!-- footer prefix-->
+        {cycle assign=cy values='brick-even-suffix,brick-odd-suffix' reset=true}
+        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+        {foreach $footerPrefix as $Brick}
+        <div class="footerPrefix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
+                        brick-{$Brick->getAttribute('id')}-wrapper">
+            <div class="">
+                <section>
+                    {$Brick->create()}
+                </section>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+
+    <!-- footer -->
+    {if $Template->getAttribute('template-footer')}
+    <footer class="page-footer clear-fix">
+        <div class="page-footer-container ">
+            {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+            {if !empty($footer)}
+            <div class="">
+                <div class="">
+                    {foreach from=$footer item=Brick}
+                        {$Brick->addCSSClass('page-footer-brick')}
+                        {$Brick->create()}
+                    {/foreach}
+                </div>
+            </div>
+            {/if}
+        </div>
+
+        <div class="page-footer-copyright">
+            <div class="">
+                <div class="page-footer-copyright">
+                    {locale group="quiqqer/template-argon" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+                </div>
+            </div>
+        </div>
+    </footer>
+    {/if}
+</div>
+
+
+<!-- [begin] js combine -->
+<script src="{$URL_OPT_DIR}bin/require.js"></script>
+<script src="{$URL_TPL_DIR}bin/js/argon.js"></script>
+<script src="{$URL_TPL_DIR}bin/init.js"></script>
+<!-- [end] js combine -->
+
+</body>
+</html>
