@@ -688,84 +688,10 @@
 
         <wysiwyg class="page-content">
             <css src="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic"/>
+            <css src="URL_OPT_DIR/quiqqer/template-argon/bin/css/argon.css"/>
+            <css src="URL_OPT_DIR/quiqqer/template-argon/bin/css/fonts.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-argon/bin/css/style.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-argon/bin/css/editor.css"/>
-
-
-            <styles>
-
-                <!-- link effect 1: simple (grey) -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="linkSimpleGrey" />
-                    <attributes>
-                        <attribute name="class">link-simple-grey</attribute>
-                    </attributes>
-                </style>
-
-                <!-- link effect 2: simple (color) -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="linkSimpleColor" />
-                    <attributes>
-                        <attribute name="class">link-simple-color</attribute>
-                    </attributes>
-                </style>
-
-
-                <!-- link effect 3: slide up (grey) -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="LinkSlideUpGrey" />
-                    <attributes>
-                        <attribute name="class">link-slide-up-grey</attribute>
-                    </attributes>
-                </style>
-
-                <!-- link effect 4: slide up (color) -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="LinkSlideUpColor" />
-                    <attributes>
-                        <attribute name="class">link-slide-up-color</attribute>
-                    </attributes>
-                </style>
-
-                <!-- link effect 5: slide right (grey) -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="LinkSlideRightGrey" />
-                    <attributes>
-                        <attribute name="class">link-slide-right-grey</attribute>
-                    </attributes>
-                </style>
-
-                <!-- Template Button small -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="templateButton.small" />
-                    <attributes>
-                        <attribute name="class">template-button template-button-small</attribute>
-                    </attributes>
-                </style>
-                <!-- Template Button medium -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="templateButton.medium" />
-                    <attributes>
-                        <attribute name="class">template-button template-button-medium</attribute>
-                    </attributes>
-                </style>
-                <!-- Template Button big -->
-                <style element="a">
-                    <locale group="quiqqer/template-argon"
-                            var="templateButton.large" />
-                    <attributes>
-                        <attribute name="class">template-button template-button-big</attribute>
-                    </attributes>
-                </style>
-
-            </styles>
         </wysiwyg>
 
     </project>

@@ -1,2 +1,33 @@
-@CHARSET "UTF-8";
+.navbar-brand img {
+    max-height: 200%;
+}
 
+/**********************/
+/* quiqqer breadcrumb */
+/**********************/
+.quiqqer-breadcrumb-list {
+    background-color: transparent;
+    font-size: 15px;
+    float: right;
+    text-transform: uppercase;
+}
+
+.quiqqer-breadcrumb .quiqqer-breadcrumb-title {
+    display: none;
+}
+
+.quiqqer-breadcrumb-list li:first-child .fa {
+    display: none;
+}
+
+.quiqqer-breadcrumb-list a {
+    color: #C7C4C0;
+}
+
+.quiqqer-breadcrumb-list a:hover {
+    color: #ffffff;
+}
+
+.quiqqer-breadcrumb-list li:last-child a .quiqqer-breadcrumb-link-text {
+    color: #fff;
+}

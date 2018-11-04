@@ -14,6 +14,10 @@ if ($Site->getAttribute('templateBusinessPro.showTitle') ||
     $Template->setAttribute('content-header', false);
 }
 
+/**
+ * Project Logo
+ */
+$Logo = $Project->getMedia()->getLogoImage();
 
 /**
  * Breadcrumb
@@ -56,6 +60,7 @@ switch ($Template->getLayoutType()) {
 }
 
 $templateSettings['BricksManager']   = QUI\Bricks\Manager::init();
+$templateSettings['Logo']   = $Logo;
 $templateSettings['Breadcrumb']      = $Breadcrumb;
 $templateSettings['bodyClass']       = $bodyClass;
 $templateSettings['startPage']       = $startPage;
