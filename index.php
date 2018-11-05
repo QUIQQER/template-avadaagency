@@ -1,11 +1,17 @@
 <?php
 
+$Template->setAttribute('noConflict', true);
+
 $Locale = QUI::getLocale();
 
 /**
  * Emotion
  */
 QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
+$imageEmotion = false;
+if ($Site->getAttribute('image_emotion')) {
+    $imageEmotion = $Site->getAttribute('image_emotion');
+}
 
 // Inhaltsverhalten
 if ($Site->getAttribute('templateBusinessPro.showTitle') ||
@@ -27,11 +33,11 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 /**
  * Template config
  */
-$templateSettings = QUI\TemplateBusinessPro\Utils::getConfig(array(
+$templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
     'Project'  => $Project,
     'Site'     => $Site,
     'Template' => $Template
-));
+]);
 
 
 /**
@@ -59,10 +65,11 @@ switch ($Template->getLayoutType()) {
         break;
 }
 
-$templateSettings['BricksManager']   = QUI\Bricks\Manager::init();
-$templateSettings['Logo']   = $Logo;
-$templateSettings['Breadcrumb']      = $Breadcrumb;
-$templateSettings['bodyClass']       = $bodyClass;
-$templateSettings['startPage']       = $startPage;
+$templateSettings['BricksManager'] = QUI\Bricks\Manager::init();
+$templateSettings['Logo']          = $Logo;
+$templateSettings['Breadcrumb']    = $Breadcrumb;
+$templateSettings['bodyClass']     = $bodyClass;
+$templateSettings['startPage']     = $startPage;
+$templateSettings['imageEmotion']  = $imageEmotion;
 
 $Engine->assign($templateSettings);

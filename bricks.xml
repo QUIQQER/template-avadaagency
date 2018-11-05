@@ -6,11 +6,11 @@
         <brick control="*">
             <settings>
                 <setting name="brickFullWidth" type="checkbox">
-                    <locale group="quiqqer/template-argon"
+                    <locale group="quiqqer/template-avadaagency"
                             var="brickFullWidth"/>
                 </setting>
                 <setting name="noPadding" type="checkbox">
-                    <locale group="quiqqer/template-argon"
+                    <locale group="quiqqer/template-avadaagency"
                             var="noPadding"/>
                 </setting>
             </settings>
@@ -20,7 +20,7 @@
         <brick control="\QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content">
             <settings>
                 <setting name="promosliderBackground" type="color">
-                    <locale group="quiqqer/template-argon"
+                    <locale group="quiqqer/template-avadaagency"
                             var="promosliderBackground"/>
                 </setting>
             </settings>
@@ -33,12 +33,12 @@
             <areas>
                 <area name="headerSuffix" inheritance="1" priority="1">
                     <title>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.headerSuffix.title"
                                 />
                     </title>
                     <description>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.headerSuffix.description"
                                 />
                     </description>
@@ -46,12 +46,12 @@
 
                 <area name="footerPrefix" inheritance="1" priority="5">
                     <title>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.footerPrefix.title"
                                 />
                     </title>
                     <description>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.footerPrefix.description"
                                 />
                     </description>
@@ -59,12 +59,12 @@
 
                 <area name="footer" inheritance="1" priority="6">
                     <title>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.footer.title"
                                 />
                     </title>
                     <description>
-                        <locale group="quiqqer/template-argon"
+                        <locale group="quiqqer/template-avadaagency"
                                 var="area.footer.description"
                                 />
                     </description>
@@ -77,12 +77,12 @@
                 <layout layout="layout/startPage">
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.description"
                                     />
                         </description>
@@ -90,12 +90,12 @@
 
                     <area name="suffixContentBricks" inheritance="1" priority="4">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.description"
                                     />
                         </description>
@@ -105,12 +105,12 @@
                 <layout layout="layout/noSidebar">
                     <area name="noSidebar">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.noSidebar.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.noSidebar.description"
                                     />
                         </description>
@@ -118,12 +118,12 @@
 
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.description"
                                     />
                         </description>
@@ -131,12 +131,12 @@
 
                     <area name="suffixContentBricks" inheritance="1" priority="4">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.description"
                                     />
                         </description>
@@ -146,12 +146,12 @@
                 <layout layout="layout/leftSidebar">
                     <area name="leftSidebar" inheritance="1" priority="3">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.left.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.left.description"
                                     />
                         </description>
@@ -159,12 +159,12 @@
 
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.description"
                                     />
                         </description>
@@ -172,12 +172,12 @@
 
                     <area name="suffixContentBricks" inheritance="1" priority="3">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.description"
                                     />
                         </description>
@@ -187,12 +187,12 @@
                 <layout layout="layout/rightSidebar">
                     <area name="rightSidebar" inheritance="1" priority="3">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.right.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.right.description"
                                     />
                         </description>
@@ -200,12 +200,12 @@
 
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.prefix.content.description"
                                     />
                         </description>
@@ -213,12 +213,12 @@
 
                     <area name="suffixContentBricks" inheritance="1" priority="4">
                         <title>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.title"
                                     />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-argon"
+                            <locale group="quiqqer/template-avadaagency"
                                     var="area.sidebar.suffix.content.description"
                                     />
                         </description>

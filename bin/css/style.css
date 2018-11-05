@@ -2,13 +2,33 @@
     max-height: 200%;
 }
 
+.template-section {
+    padding: 1.7129em 0;
+}
+
+.no-padding,
+.template-section.no-padding {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/***************/
+/* page header */
+/***************/
+.page-head .header-wrapper {
+    align-items: center;
+    display: flex;
+    height: 170px; /* default, can be overwritten by template settings */
+    padding: 0;
+}
+
 /**********************/
 /* quiqqer breadcrumb */
 /**********************/
 .quiqqer-breadcrumb-list {
     background-color: transparent;
-    font-size: 15px;
     float: right;
+    font-size: 15px;
     text-transform: uppercase;
 }
 

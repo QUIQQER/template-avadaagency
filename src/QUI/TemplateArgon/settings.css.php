@@ -7,20 +7,20 @@ $navBarFontColor      = '#ffffff';
 $mobileFontColor      = '#ffffff';
 $mobileMenuBackground = '#252122';
 
-if ($Project->getConfig('templateArgon.settings.navBarMainColor')) {
-    $navBarMainColor = $Project->getConfig('templateArgon.settings.navBarMainColor');
+if ($Project->getConfig('templateAvadaAgency.settings.navBarMainColor')) {
+    $navBarMainColor = $Project->getConfig('templateAvadaAgency.settings.navBarMainColor');
 }
 
-if ($Project->getConfig('templateArgon.settings.navBarFontColor')) {
-    $navBarFontColor = $Project->getConfig('templateArgon.settings.navBarFontColor');
+if ($Project->getConfig('templateAvadaAgency.settings.navBarFontColor')) {
+    $navBarFontColor = $Project->getConfig('templateAvadaAgency.settings.navBarFontColor');
 }
 
-if ($Project->getConfig('templateArgon.settings.mobileFontColor')) {
-    $mobileFontColor = $Project->getConfig('templateArgon.settings.mobileFontColor');
+if ($Project->getConfig('templateAvadaAgency.settings.mobileFontColor')) {
+    $mobileFontColor = $Project->getConfig('templateAvadaAgency.settings.mobileFontColor');
 }
 
-if ($Project->getConfig('templateArgon.settings.mobileMenuBackground')) {
-    $mobileMenuBackground = $Project->getConfig('templateArgon.settings.mobileMenuBackground');
+if ($Project->getConfig('templateAvadaAgency.settings.mobileMenuBackground')) {
+    $mobileMenuBackground = $Project->getConfig('templateAvadaAgency.settings.mobileMenuBackground');
 }
 
 $navBarMainColorLighter = $Convert->colorBrightness($navBarMainColor, 0.9);
@@ -37,41 +37,40 @@ $colorFooterLinks      = '#E6E6E6';
 $colorMainContentBg    = '#ffffff';
 $colorMainContentFont  = '#5d5d5d';
 
-if ($Project->getConfig('templateArgon.settings.colorFooterBackground')) {
-    $colorFooterBackground = $Project->getConfig('templateArgon.settings.colorFooterBackground');
+if ($Project->getConfig('templateAvadaAgency.settings.colorFooterBackground')) {
+    $colorFooterBackground = $Project->getConfig('templateAvadaAgency.settings.colorFooterBackground');
 }
 
-if ($Project->getConfig('templateArgon.settings.colorFooterFont')) {
-    $colorFooterFont = $Project->getConfig('templateArgon.settings.colorFooterFont');
+if ($Project->getConfig('templateAvadaAgency.settings.colorFooterFont')) {
+    $colorFooterFont = $Project->getConfig('templateAvadaAgency.settings.colorFooterFont');
 }
 
-if ($Project->getConfig('templateArgon.settings.colorMain')) {
-    $colorMain = $Project->getConfig('templateArgon.settings.colorMain');
+if ($Project->getConfig('templateAvadaAgency.settings.colorMain')) {
+    $colorMain = $Project->getConfig('templateAvadaAgency.settings.colorMain');
 }
 
-if ($Project->getConfig('templateArgon.settings.buttonFontColor')) {
-    $buttonFontColor = $Project->getConfig('templateArgon.settings.buttonFontColor');
+if ($Project->getConfig('templateAvadaAgency.settings.buttonFontColor')) {
+    $buttonFontColor = $Project->getConfig('templateAvadaAgency.settings.buttonFontColor');
 }
 
-if ($Project->getConfig('templateArgon.settings.colorFooterLinks')) {
-    $colorFooterLinks = $Project->getConfig('templateArgon.settings.colorFooterLinks');
+if ($Project->getConfig('templateAvadaAgency.settings.colorFooterLinks')) {
+    $colorFooterLinks = $Project->getConfig('templateAvadaAgency.settings.colorFooterLinks');
 }
 
-if ($Project->getConfig('templateArgon.settings.colorMainContentBg')) {
-    $colorMainContentBg = $Project->getConfig('templateArgon.settings.colorMainContentBg');
+if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentBg')) {
+    $colorMainContentBg = $Project->getConfig('templateAvadaAgency.settings.colorMainContentBg');
 }
 
-if ($Project->getConfig('templateArgon.settings.colorMainContentFont')) {
-    $colorMainContentFont = $Project->getConfig('templateArgon.settings.colorMainContentFont');
+if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentFont')) {
+    $colorMainContentFont = $Project->getConfig('templateAvadaAgency.settings.colorMainContentFont');
 }
 
-$navBarHeight = (int)$Project->getConfig('templateArgon.settings.navBarHeight');
-$headerHeight = $Project->getConfig('templateArgon.settings.headerHeight');
-$headerHeightValue = (int)$Project->getConfig('templateArgon.settings.headerHeightValue');
-$bgColorSwitcherPrefix = $Project->getConfig('templateArgon.settings.bgColorSwitcherPrefix');
-$bgColorSwitcherSuffix = $Project->getConfig('templateArgon.settings.bgColorSwitcherSuffix');
-$headerImagePosition = $Project->getConfig('templateArgon.settings.headerImagePosition');
-$navPos = $Project->getConfig('templateArgon.settings.navPos');
+$navBarHeight = (int)$Project->getConfig('templateAvadaAgency.settings.navBarHeight');
+$headerHeight = (int)$Project->getConfig('templateAvadaAgency.settings.headerHeight');
+$bgColorSwitcherPrefix = $Project->getConfig('templateAvadaAgency.settings.bgColorSwitcherPrefix');
+$bgColorSwitcherSuffix = $Project->getConfig('templateAvadaAgency.settings.bgColorSwitcherSuffix');
+$headerImagePosition = $Project->getConfig('templateAvadaAgency.settings.headerImagePosition');
+$navPos = $Project->getConfig('templateAvadaAgency.settings.navPos');
 $colorMainButton = $Convert->colorBrightness($colorMain, 0.7);
 
 ob_start();
@@ -327,10 +326,8 @@ footer a:hover {
 <?php }; ?>
 
 <?php if ($headerHeight) { ?>
-.page-header {
-    display: flex;
-    height: <?php echo $headerHeightValue; ?>px;
-    overflow: hidden;
+.page-head .header-wrapper {
+    height: <?php echo $headerHeight; ?>px !important;
 }
 
 .header-img {

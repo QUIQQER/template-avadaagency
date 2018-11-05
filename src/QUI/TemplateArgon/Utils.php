@@ -1,17 +1,17 @@
 <?php
 
 /**
- * This file contains QUI\TemplateArgon\Utils
+ * This file contains QUI\templateAvadaAgency\Utils
  */
 
-namespace QUI\TemplateArgon;
+namespace QUI\templateAvadaAgency;
 
 use QUI;
 
 /**
- * Help Class for Template Argon
+ * Help Class for Template Avada Agency
  *
- * @package QUI\TemplateArgon
+ * @package QUI\templateAvadaAgency
  * @author www.pcsg.de (Michael Danielczok)
  *
  * @return array
@@ -26,7 +26,7 @@ class Utils
     {
         try {
             return QUI\Cache\Manager::get(
-                'quiqqer/templateArgon/' . $params['Site']->getId()
+                'quiqqer/templateAvadaAgency/' . $params['Site']->getId()
             );
         } catch (QUI\Exception $Exception) {
         }
@@ -50,32 +50,32 @@ class Utils
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
-                $showHeader     = $Project->getConfig('templateArgon.settings.showHeaderStartPage');
-                $showBreadcrumb = $Project->getConfig('templateArgon.settings.showBreadcrumbStartPage');
+                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
+                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbStartPage');
                 break;
 
             case 'layout/noSidebar':
-                $showHeader     = $Project->getConfig('templateArgon.settings.showHeaderNoSidebar');
-                $showBreadcrumb = $Project->getConfig('templateArgon.settings.showBreadcrumbNoSidebar');
+                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbNoSidebar');
                 break;
 
             case 'layout/rightSidebar':
-                $showHeader     = $Project->getConfig('templateArgon.settings.showHeaderRightSidebar');
-                $showBreadcrumb = $Project->getConfig('templateArgon.settings.showBreadcrumbRightSidebar');
+                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
+                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
-                $showHeader     = $Project->getConfig('templateArgon.settings.showHeaderLeftSidebar');
-                $showBreadcrumb = $Project->getConfig('templateArgon.settings.showBreadcrumbLeftSidebar');
+                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
+                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbLeftSidebar');
                 break;
         }
 
 
-        $showPageTitle = $params['Site']->getAttribute('templateArgon.showTitle');
-        $showPageShort = $params['Site']->getAttribute('templateArgon.showShort');
+        $showPageTitle = $params['Site']->getAttribute('templateAvadaAgency.showTitle');
+        $showPageShort = $params['Site']->getAttribute('templateAvadaAgency.showShort');
 
         /* site own show header */
-        switch ($params['Site']->getAttribute('templateArgon.showEmotion')) {
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showEmotion')) {
             case 'show':
                 $showHeader = true;
                 break;
@@ -86,10 +86,10 @@ class Utils
         $settingsCSS = include 'settings.css.php';
 
         $config += array(
-            'quiTplType'     => $Project->getConfig('templateArgon.settings.standardType'),
+            'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
             'showHeader'     => $showHeader,
             'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
+            'settingsCSS'    => '' . $settingsCSS . '',
             'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
             'showPageShort'  => $showPageShort
@@ -97,7 +97,7 @@ class Utils
 
         // set cache
         QUI\Cache\Manager::set(
-            'quiqqer/templateArgon/' . $params['Site']->getId(),
+            'quiqqer/templateAvadaAgency/' . $params['Site']->getId(),
             $config
         );
 

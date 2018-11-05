@@ -12,8 +12,10 @@
 
     <!-- [begin] css combine -->
     {fontawesome}
+    {*unsemantic*}
 
     <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/unsemantic-wrapper.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/fonts.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/avada-agency.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css"/>
@@ -28,12 +30,12 @@
     <!-- [end] css combine -->
 
 
-    {*$settingsCSS*}
+    {$settingsCSS}
 
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
 
-
+bbbbb{$settingsCSS}aaaaaaa
 <div id="multiple-blog-page">
 
     <!-- site-navigation start -->
@@ -53,7 +55,8 @@
                 <div class="navbar-brand">
                     <!--<span class="sr-only">{$Site->getAttribute('title')}</span>-->
                     <a href="{url id=1}">
-                        {image image=$Project->getMedia()->getLogoImage() width=100 class="img-responsive center-block"}
+                        {image image=$Project->getMedia()->getLogoImage() width=100
+                        class="img-responsive center-block"}
                     </a>
                 </div>
                 <!-- navbar logo -->
@@ -64,7 +67,7 @@
             <div class="collapse navbar-collapse" id="main-nav-collapse">
                 <ul class="nav navbar-nav navbar-right text-uppercase">
 
-                    {assign var=children value=$Site->getNavigation()}
+                    {assign var=children value=$Project->firstChild()->getNavigation()}
                     {foreach from=$children item=Child}
 
                     {assign var=subnavigation value=$Child->getNavigation()}
@@ -73,7 +76,7 @@
                     <li {if count($subnavigation)}class="dropdown"{/if}>
                         <a href="{url site=$Child}"
                            {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
-                            {$Child->getAttribute('title')}
+                            <span>{$Child->getAttribute('title')}</span>
                         </a>
                         {if count($subnavigation)}
                         <ul class="dropdown-menu">
@@ -97,25 +100,45 @@
 
 
     <!-- header begin -->
-    <header class="page-head">
+    <header class="page-head"
+            style="{if $imageEmotion}background-image: url({image src=$imageEmotion onlysrc='true'});{/if}"
+    >
         <div class="header-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         {$Breadcrumb->create()}
-
-<!--                        <ol class="breadcrumb">
-                            <li><a href="#">blog</a></li>
-                            <li class="active">multiple blog</li>
-                        </ol>-->
-                        <!-- end of /.breadcrumb -->
-
                     </div>
                 </div>
             </div> <!-- /.container -->
         </div> <!-- /.header-wrapper -->
     </header> <!-- /.page-head (header end) -->
+
+    <!-- header suffix  -->
+    <div class="headerSuffix">
+        {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+        {foreach $headerSuffix as $Brick}
+
+        {assign var=noPadding value=''}
+        {if $Brick->getSetting('noPadding')}
+            {assign var=noPadding value='no-padding'}
+        {/if}
+
+            {if $Brick->getSetting( 'brickFullWidth' )}
+            <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                    {$Brick->create()}
+            </section>
+            {else}
+            <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                <div class="container">
+                    {$Brick->create()}
+                </div>
+            </section>
+            {/if}
+        {/foreach}
+    </div>
 
 
     <section class="blog-content">
@@ -612,41 +635,7 @@
 
 <!-- page -->
 <div class="body-container">
-    <!-- header -->
-    {strip}
-    <header class="page-header">
-        {if $Site->getAttribute('image_emotion')}
-        {image src=$Site->getAttribute('image_emotion') class="header-img"
-        title=$Site->getAttribute('title')}
-        {/if}
-        <div class="page-header-container grid-container">
-            {if $Site->getAttribute('templateArgon.showTitle')}
-            <h1 class="page-header-text-title">
-                {$Site->getAttribute('title')}
-            </h1>
-            {/if}
 
-            {if $Site->getAttribute('templateArgon.showShort') &&
-            $Site->getAttribute('short')}
-            <div class="page-header-text-wrapper">
-                <div class="page-header-text-wrapper-short">
-                    {$Site->getAttribute('short')}
-                </div>
-            </div>
-            {/if}
-        </div>
-    </header>
-    {/strip}
-
-    <!-- header suffix -->
-    <!-- breadcrumb -->
-    {if $showBreadcrumb}
-    <div class="template-breadcrumb">
-        <div class="">
-            {$Breadcrumb->create()}
-        </div>
-    </div>
-    {/if}
 
     <div class="headerSuffix">
         <!-- header suffix  -->
