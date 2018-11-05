@@ -33,7 +33,7 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 /**
  * Template config
  */
-$templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
+$templateSettings = QUI\TemplateAvadaAgency\Utils::getConfig([
     'Project'  => $Project,
     'Site'     => $Site,
     'Template' => $Template

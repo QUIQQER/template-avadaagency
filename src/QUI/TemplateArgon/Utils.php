@@ -1,10 +1,10 @@
 <?php
 
 /**
- * This file contains QUI\templateAvadaAgency\Utils
+ * This file contains QUI\TemplateAvadaAgency\Utils
  */
 
-namespace QUI\templateAvadaAgency;
+namespace QUI\TemplateAvadaAgency;
 
 use QUI;
 
