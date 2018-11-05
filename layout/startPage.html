@@ -16,7 +16,7 @@
 </section>
 {/foreach}
 
-<div role="main">
+<section role="main" class="template-section">
     <header class="content-header">
         <h1 itemprop="name">
             {$Site->getAttribute('title')}
@@ -29,7 +29,7 @@
     </header>
 
     {$Template->getBody()}
-</div>
+</section>
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}

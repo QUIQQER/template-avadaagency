@@ -10,6 +10,13 @@ header {
     margin-bottom: 1.3em;
 }
 
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+    margin-top: 0;
+}
+
 .template-section {
     padding: 1.7129em 0;
 }
