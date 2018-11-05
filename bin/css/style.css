@@ -6,6 +6,10 @@
     padding: 1.7129em 0;
 }
 
+.start-page .template-section {
+    padding: 5.6285em 0;
+}
+
 .no-padding,
 .template-section.no-padding {
     padding-bottom: 0;
@@ -15,6 +19,12 @@
 /***************/
 /* page header */
 /***************/
+.page-head {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .page-head .header-wrapper {
     align-items: center;
     display: flex;
