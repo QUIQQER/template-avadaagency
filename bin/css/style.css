@@ -6,6 +6,10 @@ section {
     padding: 0;
 }
 
+header {
+    margin-bottom: 1.3em;
+}
+
 .template-section {
     padding: 1.7129em 0;
 }

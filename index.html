@@ -133,7 +133,9 @@
             <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
                 <div class="container">
-                    {$Brick->create()}
+                    <div class="row">
+                        {$Brick->create()}
+                    </div>
                 </div>
             </section>
             {/if}
@@ -141,8 +143,8 @@
     </div>
 
     <!-- content -->
-    <div class="{cycle values='' reset=true}">
-        <div class="main-content">
+    <div class="{cycle values='' reset=true} container">
+        <div class="main-content row">
             {$Template->getLayout()}
         </div>
     </div>
@@ -167,7 +169,9 @@
         <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
             <div class="container">
-                {$Brick->create()}
+                <div class="row">
+                    {$Brick->create()}
+                </div>
             </div>
         </section>
         {/if}
@@ -190,7 +194,7 @@
     <div class="page-footer page-footer-copyright">
         <div class="container">
             <p class="text-center">
-                {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+                {locale group="quiqqer/template-avadaagency" var="copyright.text" year=$smarty.now|date_format:'%Y'}
             </p>
         </div>
     </div>
