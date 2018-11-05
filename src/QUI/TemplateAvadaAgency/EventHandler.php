@@ -1,9 +1,9 @@
 <?php
 /**
- * This file contains \QUI\TemplateArgon\EventHandler
+ * This file contains \QUI\TemplateAvadaAgency\EventHandler
  */
 
-namespace QUI\TemplateArgon;
+namespace QUI\TemplateAvadaAgency;
 
 use QUI;
 
@@ -22,7 +22,7 @@ class EventHandler
     public static function onProjectConfigSave()
     {
         try {
-            QUI\Cache\Manager::clear('quiqqer/templateArgon');
+            QUI\Cache\Manager::clear('quiqqer/templateAvadaAgency');
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
         }
@@ -36,7 +36,7 @@ class EventHandler
     public static function onSiteSave()
     {
         try {
-            QUI\Cache\Manager::clear('quiqqer/templateArgon');
+            QUI\Cache\Manager::clear('quiqqer/templateAvadaAgency');
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
         }

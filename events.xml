@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
-    <event on="onProjectConfigSave" fire="\QUI\TemplateArgon\EventHandler::onProjectConfigSave" />
-    <event on="onSiteSave" fire="\QUI\TemplateArgon\EventHandler::onSiteSave"/>
+    <event on="onProjectConfigSave" fire="\QUI\TemplateAvadaAgency\EventHandler::onProjectConfigSave" />
+    <event on="onSiteSave" fire="\QUI\TemplateAvadaAgency\EventHandler::onSiteSave"/>
 </events>
