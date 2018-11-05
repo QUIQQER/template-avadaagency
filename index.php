@@ -39,7 +39,6 @@ $templateSettings = QUI\TemplateAvadaAgency\Utils::getConfig([
     'Template' => $Template
 ]);
 
-
 /**
  * body class
  */

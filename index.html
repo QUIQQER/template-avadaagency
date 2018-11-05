@@ -140,58 +140,97 @@
         {/foreach}
     </div>
 
-
-
-
-<!-- content -->
-<div class="{cycle values='' reset=true}">
-    <div class="main-content">
-        {$Template->getLayout()}
-    </div>
-</div>
-
-<div class="prefixFooter">
-    <!-- footer prefix-->
-    {cycle assign=cy values='brick-even-suffix,brick-odd-suffix' reset=true}
-    {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
-    {foreach $footerPrefix as $Brick}
-    <div class="footerPrefix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
-                    brick-{$Brick->getAttribute('id')}-wrapper">
-        <div class="">
-            <section>
-                {$Brick->create()}
-            </section>
+    <!-- content -->
+    <div class="{cycle values='' reset=true}">
+        <div class="main-content">
+            {$Template->getLayout()}
         </div>
     </div>
-    {/foreach}
-</div>
 
-<!-- footer -->
-{if $Template->getAttribute('template-footer')}
-<footer class="page-footer clear-fix">
-    <div class="page-footer-container ">
-        {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
-        {if !empty($footer)}
-        <div class="">
-            <div class="">
-                {foreach from=$footer item=Brick}
-                    {$Brick->addCSSClass('page-footer-brick')}
-                    {$Brick->create()}
-                {/foreach}
-            </div>
-        </div>
+    <!-- footer  prefix-->
+    <div class="prefixFooter">
+        {cycle assign=cy values='brick-even-suffix,brick-odd-suffix' reset=true}
+        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+        {foreach $footerPrefix as $Brick}
+
+        {assign var=noPadding value=''}
+        {if $Brick->getSetting('noPadding')}
+            {assign var=noPadding value='no-padding'}
         {/if}
+
+        {if $Brick->getSetting( 'brickFullWidth' )}
+        <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
+                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+            {$Brick->create()}
+        </section>
+        {else}
+        <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+            <div class="container">
+                {$Brick->create()}
+            </div>
+        </section>
+        {/if}
+        {/foreach}
     </div>
 
-    <div class="page-footer-copyright">
-        <div class="">
-            <div class="page-footer-copyright">
-                {locale group="quiqqer/template-argon" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+                {if !empty($footer)}
+                    {foreach from=$footer item=Brick}
+                        {$Brick->addCSSClass('page-footer-brick')}
+                        {$Brick->create()}
+                    {/foreach}
+                {/if}
             </div>
         </div>
+    </footer>
+    <div class="page-footer page-footer-copyright">
+        <div class="container">
+            <p class="text-center">
+                {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+            </p>
+        </div>
     </div>
-</footer>
-{/if}
+
+
+    <!-- footer-navigation start -->
+    <nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+
+                <!-- navbar logo -->
+                <div class="navbar-brand">
+                    <span class="sr-only">&copy; {$Project->get(1)->getAttribute('title')}</span>
+                    <a href="{url id=1}">
+                        &copy; {$Project->get(1)->getAttribute('title')}
+                    </a>
+                </div>
+                <!-- navbar logo -->
+
+            </div><!-- /.navbar-header -->
+
+            <!-- nav links -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right text-capitalize">
+
+                    {assign var=children value=$Project->firstChild()->getNavigation()}
+                    {foreach from=$children item=Child}
+                    <li>
+                    <a href="{url site=$Child}">
+                        <span>{$Child->getAttribute('title')}</span>
+                    </a>
+                    </li><!-- end of /.dropdown -->
+                    {/foreach}
+                </ul>
+            </div><!-- nav links -->
+
+        </div><!-- /.container -->
+    </nav>
+    <!-- footer-navigation end -->
 
 
 <!-- [begin] js combine -->

@@ -65,6 +65,8 @@ if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentFont')) {
     $colorMainContentFont = $Project->getConfig('templateAvadaAgency.settings.colorMainContentFont');
 }
 
+$colorFooterLinksLighter = $Convert->colorBrightness($colorFooterLinks, 0.9);
+
 $navBarHeight = (int)$Project->getConfig('templateAvadaAgency.settings.navBarHeight');
 $headerHeight = (int)$Project->getConfig('templateAvadaAgency.settings.headerHeight');
 $bgColorSwitcherPrefix = $Project->getConfig('templateAvadaAgency.settings.bgColorSwitcherPrefix');
@@ -269,12 +271,12 @@ button:hover,
     color: <?php echo $colorFooterFont; ?>;
 }
 
-footer a {
+.page-footer a {
     color: <?php echo $colorFooterLinks; ?>;
 }
 
-footer a:hover {
-    color: <?php echo $colorFooterLinks; ?>;
+.page-footer a:hover {
+    color: <?php echo $colorFooterLinksLighter; ?>;
 }
 
 /* pagination */

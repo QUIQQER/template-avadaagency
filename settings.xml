@@ -86,7 +86,7 @@
                     </conf>
                     <conf name="colorFooterFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#333333</defaultvalue>
+                        <defaultvalue>#969595</defaultvalue>
                     </conf>
                     <conf name="colorFooterLinks">
                         <type><![CDATA[string]]></type>
