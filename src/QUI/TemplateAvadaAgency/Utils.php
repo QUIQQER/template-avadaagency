@@ -89,7 +89,7 @@ class Utils
             'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
             'showHeader'     => $showHeader,
             'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '' . $settingsCSS . '',
+            'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
             'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
             'showPageShort'  => $showPageShort
