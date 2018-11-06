@@ -278,7 +278,7 @@
             </locale>
 
         <!-- Navbar colors -->
-        <locale name="settings.navBarMainColor.text">
+        <locale name="settings.navBarBgColor.text">
             <de><![CDATA[Menü Hintergrundfarbe]]></de>
             <en><![CDATA[Nav background color]]></en>
         </locale>

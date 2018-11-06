@@ -46,6 +46,22 @@ img {
     font-size: 12px;
 }
 
+/**************/
+/* navigation */
+/**************/
+#mainNavigation {
+    border-radius: 0;
+}
+
+#mainNavigation .navbar-nav li a {
+    transition: unset;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: rgba(0,0,0,0.1);
+}
+
 /***************/
 /* page header */
 /***************/

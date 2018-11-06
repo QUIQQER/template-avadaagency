@@ -2,28 +2,18 @@
 
 $Convert = new \QUI\Utils\Convert();
 
-$navBarMainColor      = '#2d4d88';
-$navBarFontColor      = '#ffffff';
-$mobileFontColor      = '#ffffff';
-$mobileMenuBackground = '#252122';
+$navBarBgColor      = '#ffffff';
+$navBarFontColor      = '#969595';
 
-if ($Project->getConfig('templateAvadaAgency.settings.navBarMainColor')) {
-    $navBarMainColor = $Project->getConfig('templateAvadaAgency.settings.navBarMainColor');
+if ($Project->getConfig('templateAvadaAgency.settings.navBarBgColor')) {
+    $navBarBgColor = $Project->getConfig('templateAvadaAgency.settings.navBarBgColor');
 }
 
 if ($Project->getConfig('templateAvadaAgency.settings.navBarFontColor')) {
     $navBarFontColor = $Project->getConfig('templateAvadaAgency.settings.navBarFontColor');
 }
 
-if ($Project->getConfig('templateAvadaAgency.settings.mobileFontColor')) {
-    $mobileFontColor = $Project->getConfig('templateAvadaAgency.settings.mobileFontColor');
-}
-
-if ($Project->getConfig('templateAvadaAgency.settings.mobileMenuBackground')) {
-    $mobileMenuBackground = $Project->getConfig('templateAvadaAgency.settings.mobileMenuBackground');
-}
-
-$navBarMainColorLighter = $Convert->colorBrightness($navBarMainColor, 0.9);
+$navBarBgColorLighter = $Convert->colorBrightness($navBarBgColor, 0.9);
 
 /**
  * colors
@@ -83,19 +73,16 @@ ob_start();
  */
 
 /* nav bar */
-.header-bar {
-    background: <?php echo $navBarMainColor; ?>;
+#mainNavigation {
+    background-color: <?php echo $navBarBgColor; ?>;
 }
 
-/* mobile nav background */
-.slideout-menu .page-menu {
-    background: <?php echo $mobileMenuBackground; ?>;
+.dropdown-menu {
+    background-color: <?php echo $navBarBgColorLighter; ?>;
 }
 
-.slideout-menu .page-navigation-home,
-.slideout-menu .left-menu-a,
-.slideout-menu .page-menu-close {
-    color: <?php echo $mobileFontColor; ?>;
+#mainNavigation .navbar-nav li a {
+    color: <?php echo $navBarFontColor; ?>;
 }
 
 .page-header-navigation-sub-list,
@@ -103,7 +90,7 @@ ob_start();
 .header-bar-search:hover,
 .quiqqer-menu-megaMenu-list-item-menu.control-background,
 .quiqqer-menu-megaMenu-list-item:hover {
-    background: <?php echo $navBarMainColorLighter; ?>;
+    background: <?php echo $navBarBgColorLighter; ?>;
 }
 
 
@@ -353,16 +340,6 @@ button:hover,
 
 <?php }; ?>
 
-@media screen and (max-width: 767px) {
-    .mobile-bar-social {
-        background: <?php echo $Convert->colorBrightness($mobileMenuBackground, 0.9) ?>;
-    }
-
-    .mobile-bar-social-container a,
-    .mobile-bar-social-title {
-        color: <?php echo $mobileFontColor ?>;
-    }
-}
 
 <?php
 

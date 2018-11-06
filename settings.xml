@@ -16,13 +16,13 @@
                     </conf>-->
 
                     <!-- nav bar -->
-                    <conf name="navBarMainColor">
+                    <conf name="navBarBgColor">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#2d4d88</defaultvalue>
+                        <defaultvalue>#ffffff</defaultvalue>
                     </conf>
                     <conf name="navBarFontColor">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#ffffff</defaultvalue>
+                        <defaultvalue>#969595</defaultvalue>
                     </conf>
 
                     <!-- show header -->
@@ -299,11 +299,11 @@
                             </title>
 
                             <!-- nav bar / menu colors -->
-                            <input conf="templateAvadaAgency.settings.navBarMainColor"
+                            <input conf="templateAvadaAgency.settings.navBarBgColor"
                                    type="color">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.navBarMainColor.text"
+                                            var="settings.navBarBgColor.text"
                                     />
                                 </text>
                             </input>
