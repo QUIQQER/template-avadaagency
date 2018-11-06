@@ -252,11 +252,11 @@ button:hover,
     color: <?php echo $colorFooterFont; ?> !important;
 }
 
-.page-footer h2,
+/*.page-footer h2,
 .page-footer h3,
 .page-footer h4 {
-    color: <?php echo $colorFooterFont; ?>;
-}
+    color: <?php /*echo $colorFooterFont; */?>;
+}*/
 
 .page-footer a {
     color: <?php echo $colorFooterLinks; ?>;

@@ -123,6 +123,14 @@
                         <defaultvalue>center</defaultvalue>
                     </conf>
                 </section>
+
+                <!-- footer template -->
+                <section name="templateAvadaAgency.settings.footerTemplate">
+                    <conf name="active">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>center</defaultvalue>
+                    </conf>
+                </section>
             </config>
 
             <window>
@@ -339,7 +347,30 @@
                                     />
                                 </description>
                             </input>
+                        </settings>
 
+                        <!-- footer template -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.footerTemplate">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.title"
+                                />
+                            </title>
+
+                            <input conf="templateAvadaAgency.settings.footerTemplate.active"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.active.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.active.desc"
+                                    />
+                                </description>
+                            </input>
                         </settings>
 
                         <!-- Colors -->

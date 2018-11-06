@@ -46,6 +46,11 @@ img {
     font-size: 12px;
 }
 
+.page-footer .container:not(:first-child) {
+    margin-top: 30px;
+}
+
+
 /**************/
 /* navigation */
 /**************/

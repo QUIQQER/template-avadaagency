@@ -38,7 +38,7 @@
 
     <!-- site-navigation start -->
     {fetch template="template/navigation.html" Project=$Project Site=$Site}
-    
+
     <!-- header begin -->
     {if $showHeader}
         {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb}
@@ -109,7 +109,13 @@
     </div>
 
     <!-- page footer -->
-    {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
+    <footer class="page-footer">
+        {if $footerTemplate}
+            {fetch template="template/footerTemplate.html" BricksManager=$BricksManager Site=$Site}
+        {/if}
+
+        {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
+    </footer>
 
     <!-- footer copyright -->
     {fetch template="template/footerCopyright.html"}

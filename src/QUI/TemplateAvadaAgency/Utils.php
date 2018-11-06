@@ -87,16 +87,26 @@ class Utils
                 $showHeader = false;
         }*/
 
+        /**
+         * Template footer settings
+         */
+        $footerTemplate = false;
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.active')) {
+            $footerTemplate = $Project->getConfig('templateAvadaAgency.settings.footerTemplate.active');
+        }
+
+
         $settingsCSS = include 'settings.css.php';
 
         $config += [
-            'quiTplType'    => $Project->getConfig('templateAvadaAgency.settings.standardType'),
-            'showHeader'    => $showHeader,
-            'showFooterNav' => $showFooterNav,
-            'settingsCSS'   => '<style>' . $settingsCSS . '</style>',
-            'typeClass'     => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
-            'showPageTitle' => $showPageTitle,
-            'showPageShort' => $showPageShort
+            'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
+            'showHeader'     => $showHeader,
+            'showFooterNav'  => $showFooterNav,
+            'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
+            'typeClass'      => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
+            'showPageTitle'  => $showPageTitle,
+            'showPageShort'  => $showPageShort,
+            'footerTemplate' => $footerTemplate
         ];
 
         // set cache
