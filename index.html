@@ -17,6 +17,7 @@
     <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/unsemantic-wrapper.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_TPL_DIR}bin/css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/avada-agency.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css"/>
 
@@ -126,12 +127,12 @@
 
             {if $Brick->getSetting( 'brickFullWidth' )}
             <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
                     {$Brick->create()}
             </section>
             {else}
             <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
                 <div class="container">
                     <div class="row">
                         {$Brick->create()}
@@ -162,12 +163,12 @@
 
         {if $Brick->getSetting( 'brickFullWidth' )}
         <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
-                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
             {$Brick->create()}
         </section>
         {else}
         <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
-                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section">
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
             <div class="container">
                 <div class="row">
                     {$Brick->create()}

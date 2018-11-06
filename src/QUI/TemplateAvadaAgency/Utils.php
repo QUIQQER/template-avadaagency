@@ -59,6 +59,11 @@ class Utils
                 $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbNoSidebar');
                 break;
 
+            case 'layout/noSidebarSmall':
+                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbNoSidebar');
+                break;
+
             case 'layout/rightSidebar':
                 $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
                 $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbRightSidebar');

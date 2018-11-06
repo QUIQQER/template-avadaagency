@@ -10,11 +10,19 @@ header {
     margin-bottom: 1.3em;
 }
 
+.page-head {
+    margin-bottom: 0;
+}
+
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child {
     margin-top: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 .template-section {

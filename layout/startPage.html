@@ -4,14 +4,14 @@
 
 {if !empty( $prefixContentBricks )}
 {foreach from=$prefixContentBricks item=Brick}
-<div class="template-section">
+<div class="template-section clearfix">
     {$Brick->create()}
 </div>
 {/foreach}
 {/if}
 
 {foreach from=$bricks item=Brick}
-<section class="template-section startpage-section">
+<section class="template-section startpage-section clearfix">
     {$Brick->create()}
 </section>
 {/foreach}
@@ -33,7 +33,7 @@
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
-<div class="template-section">
+<div class="template-section clearfix">
     {$Brick->create()}
 </div>
 {/foreach}

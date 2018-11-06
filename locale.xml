@@ -142,26 +142,48 @@
             dzięki czemu możesz dopasować wygląd Twojego serwisu do własnych potrzeb.]]></pl>
         </locale>
 
-        <locale name="admin.layout.leftSidebar">
-            <de><![CDATA[Linke Sidebar]]></de>
-            <en><![CDATA[Left sidebar]]></en>
-        </locale>
+        <!-- Layouts -->
         <locale name="admin.layout.startpage">
             <de><![CDATA[Landingpage (Startpage)]]></de>
-            <en><![CDATA[Landingpage]]></en>
+            <en><![CDATA[Landingpage (start page)]]></en>
         </locale>
-        <locale name="admin.layout.rightSidebar">
-            <de><![CDATA[Rechte Sidebar]]></de>
-            <en><![CDATA[Right sidebar]]></en>
+        <locale name="admin.layout.startpage.desc">
+            <de><![CDATA[Layout für Startseite.]]></de>
+            <en><![CDATA[Layout for start page.]]></en>
         </locale>
         <locale name="admin.layout.noSidebar">
             <de><![CDATA[Keine Sidebar]]></de>
             <en><![CDATA[No sidebar]]></en>
         </locale>
-        <locale name="admin.layout.leftSidebar.description">
-            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
-            <en><![CDATA[]]></en>
+        <locale name="admin.layout.noSidebar.desc">
+            <de><![CDATA[Der Inhalt erstreckt sich über die gesamte Breite der Seite.]]></de>
+            <en><![CDATA[Content extends across the entire width of the page.]]></en>
         </locale>
+        <locale name="admin.layout.noSidebarSmall">
+            <de><![CDATA[Keine Sidebar - schmaller Inhalt]]></de>
+            <en><![CDATA[No sidebar - narrow content]]></en>
+        </locale>
+        <locale name="admin.layout.noSidebarSmall.desc">
+            <de><![CDATA[Layout geeignet für Blog oder News Einträge.]]></de>
+            <en><![CDATA[Layout suitable for blog or news entries.]]></en>
+        </locale>
+        <locale name="admin.layout.leftSidebar">
+            <de><![CDATA[Linke Sidebar]]></de>
+            <en><![CDATA[Left sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.leftSidebar.desc">
+            <de><![CDATA[Im linken Sidebar können Bausteine platziert werden.]]></de>
+            <en><![CDATA[Bricks can be placed in the left sidebar.]]></en>
+        </locale>
+        <locale name="admin.layout.rightSidebar">
+            <de><![CDATA[Rechte Sidebar]]></de>
+            <en><![CDATA[Right sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.rightSidebar.desc">
+            <de><![CDATA[Im rechten Sidebar können Bausteine platziert werden.]]></de>
+            <en><![CDATA[Bricks can be placed in the right sidebar.]]></en>
+        </locale>
+
         <locale name="bricks.Startpage3Box.title">
             <de><![CDATA[Baustein: 3er Baustein auf der Startseite]]></de>
             <en><![CDATA[]]></en>
@@ -256,6 +278,11 @@
             <de><![CDATA[Kein Sidebar]]></de>
             <en><![CDATA[No sidebar]]></en>
             <pl><![CDATA[Układ bez kolumn]]></pl>
+        </locale>
+        <locale name="showHeaderNoSidebarSmall.text">
+            <de><![CDATA[Keine Sidebar - schmaller Inhalt]]></de>
+            <en><![CDATA[No sidebar - narrow content]]></en>
+            <pl><![CDATA[Układ bez kolumn - wąski układ]]></pl>
         </locale>
 
         <locale name="showHeaderLeftSidebar.text">
@@ -580,43 +607,7 @@
             <pl><![CDATA[GitLab]]></pl>
         </locale>
 
-        <!-- extra buttons -->
-        <locale name="linkSimpleGrey">
-            <de><![CDATA[Link: simple (grau)]]></de>
-            <en><![CDATA[Link: simple (grey)]]></en>
-        </locale>
-        <locale name="linkSimpleColor">
-            <de><![CDATA[Link: simple (color)]]></de>
-            <en><![CDATA[Link: simple (color)]]></en>
-        </locale>
-        <locale name="LinkSlideUpGrey">
-            <de><![CDATA[Link: slide up (grau)]]></de>
-            <en><![CDATA[Link: slide up (grey)]]></en>
-        </locale>
-        <locale name="LinkSlideUpColor">
-            <de><![CDATA[Link: slide up (color)]]></de>
-            <en><![CDATA[Link: slide up (color)]]></en>
-        </locale>
-        <locale name="LinkSlideRightGrey">
-            <de><![CDATA[Link: slide right (grey)]]></de>
-            <en><![CDATA[Link: slide right (grey)]]></en>
-        </locale>
 
-        <locale name="templateButton.small">
-            <de><![CDATA[Button: klein]]></de>
-            <en><![CDATA[Button: small]]></en>
-            <pl><![CDATA[Button: mały]]></pl>
-        </locale>
-        <locale name="templateButton.medium">
-            <de><![CDATA[Button: normal]]></de>
-            <en><![CDATA[Button: medium]]></en>
-            <pl><![CDATA[Button: średni]]></pl>
-        </locale>
-        <locale name="templateButton.large">
-            <de><![CDATA[Button: groß]]></de>
-            <en><![CDATA[Button: large]]></en>
-            <pl><![CDATA[Button: duży]]></pl>
-        </locale>
 
         <!-- site settings -->
 
