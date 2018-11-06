@@ -36,83 +36,12 @@
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
 
-
     <!-- site-navigation start -->
-    <nav id="mainNavigation" class="navbar navbar-dafault main-navigation" role="navigation">
-        <div class="container">
-
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- navbar logo -->
-                <div class="navbar-brand">
-                    <!--<span class="sr-only">{$Site->getAttribute('title')}</span>-->
-                    <a href="{url id=1}">
-                        {image image=$Project->getMedia()->getLogoImage() width=100
-                        class="img-responsive center-block"}
-                    </a>
-                </div>
-                <!-- navbar logo -->
-
-            </div><!-- /.navbar-header -->
-
-            <!-- nav links -->
-            <div class="collapse navbar-collapse" id="main-nav-collapse">
-                <ul class="nav navbar-nav navbar-right text-uppercase">
-
-                    {assign var=children value=$Project->firstChild()->getNavigation()}
-                    {foreach from=$children item=Child}
-
-                    {assign var=subnavigation value=$Child->getNavigation()}
-
-
-                    <li {if count($subnavigation)}class="dropdown"{/if}>
-                        <a href="{url site=$Child}"
-                           {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
-                            <span>{$Child->getAttribute('title')}</span>
-                        </a>
-                        {if count($subnavigation)}
-                        <ul class="dropdown-menu">
-                            {foreach from=$subnavigation item=SubChild}
-                                <li>
-                                    <a href="{url site=$SubChild}">
-                                        {$SubChild->getAttribute('title')}
-                                    </a>
-                                </li>
-                            {/foreach}
-                        </ul><!-- end of /.dropdown-menu -->
-                        {/if}
-                    </li><!-- end of /.dropdown -->
-                    {/foreach}
-                </ul>
-            </div><!-- nav links -->
-
-        </div><!-- /.container -->
-    </nav>
-    <!-- site-navigation end -->
-
-
+    {fetch template="template/navigation.html" Project=$Project Site=$Site}
+    
     <!-- header begin -->
     {if $showHeader}
-    <header class="page-head"
-            style="{if $imageEmotion}background-image: url({image src=$imageEmotion onlysrc='true'});{/if}"
-    >
-        <div class="header-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        {$Breadcrumb->create()}
-                    </div>
-                </div>
-            </div> <!-- /.container -->
-        </div> <!-- /.header-wrapper -->
-    </header> <!-- /.page-head (header end) -->
+        {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb}
     {/if}
 
     <!-- header suffix  -->
@@ -179,31 +108,15 @@
         {/foreach}
     </div>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
-                {if !empty($footer)}
-                    {foreach from=$footer item=Brick}
-                        {$Brick->addCSSClass('page-footer-brick')}
-                        {$Brick->create()}
-                    {/foreach}
-                {/if}
-            </div>
-        </div>
-    </footer>
-    <div class="page-footer page-footer-copyright">
-        <div class="container">
-            <p class="text-center">
-                {locale group="quiqqer/template-avadaagency" var="copyright.text" year=$smarty.now|date_format:'%Y'}
-            </p>
-        </div>
-    </div>
+    <!-- page footer -->
+    {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
 
+    <!-- footer copyright -->
+    {fetch template="template/footerCopyright.html"}
 
     <!-- footer nav  -->
     {if $showFooterNav}
-        {fetch template="template/footerNav.html" Project=$Project}
+        {fetch template="template/footerNavigation.html" Project=$Project Site=$Site}
     {/if}
 
 
