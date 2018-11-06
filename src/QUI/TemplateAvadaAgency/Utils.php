@@ -31,11 +31,16 @@ class Utils
         } catch (QUI\Exception $Exception) {
         }
 
-        $config = array();
+        $config = [];
 
         /* @var $Project QUI\Projects\Project */
         $Project  = $params['Project'];
         $Template = $params['Template'];
+
+        $showFooterNav = false;
+        if ($Project->getConfig('templateAvadaAgency.settings.footer.showFooterNav')) {
+            $showFooterNav = $Project->getConfig('templateAvadaAgency.settings.footer.showFooterNav');
+        }
 
         /**
          * no header?
@@ -45,33 +50,27 @@ class Utils
          * own site type
          */
 
-        $showHeader     = false;
-        $showBreadcrumb = false;
+        $showHeader = false;
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
-                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
-                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbStartPage');
+                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
                 break;
 
             case 'layout/noSidebar':
-                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
-                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbNoSidebar');
+                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
                 break;
 
             case 'layout/noSidebarSmall':
-                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
-                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbNoSidebar');
+                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
                 break;
 
             case 'layout/rightSidebar':
-                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
-                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbRightSidebar');
+                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
-                $showHeader     = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
-                $showBreadcrumb = $Project->getConfig('templateAvadaAgency.settings.showBreadcrumbLeftSidebar');
+                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
                 break;
         }
 
@@ -80,25 +79,25 @@ class Utils
         $showPageShort = $params['Site']->getAttribute('templateAvadaAgency.showShort');
 
         /* site own show header */
-        switch ($params['Site']->getAttribute('templateAvadaAgency.showEmotion')) {
+        /*switch ($params['Site']->getAttribute('templateAvadaAgency.showEmotion')) {
             case 'show':
                 $showHeader = true;
                 break;
             case 'hide':
                 $showHeader = false;
-        }
+        }*/
 
         $settingsCSS = include 'settings.css.php';
 
-        $config += array(
-            'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
-            'showHeader'     => $showHeader,
-            'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
-            'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
-            'showPageTitle'  => $showPageTitle,
-            'showPageShort'  => $showPageShort
-        );
+        $config += [
+            'quiTplType'    => $Project->getConfig('templateAvadaAgency.settings.standardType'),
+            'showHeader'    => $showHeader,
+            'showFooterNav' => $showFooterNav,
+            'settingsCSS'   => '<style>' . $settingsCSS . '</style>',
+            'typeClass'     => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
+            'showPageTitle' => $showPageTitle,
+            'showPageShort' => $showPageShort
+        ];
 
         // set cache
         QUI\Cache\Manager::set(
