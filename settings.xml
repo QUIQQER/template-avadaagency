@@ -78,14 +78,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#dddddd</defaultvalue>
                     </conf>
-                    <conf name="colorMainContentBg">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#ffffff</defaultvalue>
-                    </conf>
-                    <conf name="colorMainContentFont">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#333333</defaultvalue>
-                    </conf>
                 </section>
 
                 <!-- footer -->
@@ -805,30 +797,6 @@
                                             />
                                 </text>
                             </input>
-
-                            <text>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="settings.contentColor.text"
-                                />
-                            </text>
-
-                            <input conf="templateAvadaAgency.settings.colorMainContentBg"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorMainContentBackground.text"
-                                            />
-                                </text>
-                            </input>
-                            <input conf="templateAvadaAgency.settings.colorMainContentFont"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorMainContentFont.text"
-                                            />
-                                </text>
-                            </input>
-
                         </settings>
                     </category>
                 </categories>
@@ -837,8 +805,11 @@
         </settings>
 
         <wysiwyg class="page-content">
-            <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/avada-agency.css"/>
+            <css src="URL_OPT_DIR/quiqqer/bootstrap/bin/css/bootstrap.css"/>
+            <css src="URL_OPT_DIR/quiqqer/bootstrap/bin/css/unsemantic-wrapper.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/fonts.css"/>
+            <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/animate.css"/>
+            <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/avada-agency.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/style.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/editor.css"/>
         </wysiwyg>

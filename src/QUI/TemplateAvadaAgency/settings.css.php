@@ -18,14 +18,12 @@ $navBarBgColorLighter = $Convert->colorBrightness($navBarBgColor, 0.9);
 /**
  * colors
  */
-
 $colorFooterBackground = '#414141';
 $colorFooterFont       = '#D1D1D1';
+$colorFooterLinks      = '#DDDDDD';
 $colorMain             = '#dd151b';
 $buttonFontColor       = '#ffffff';
-$colorFooterLinks      = '#DDDDDD';
 $colorMainContentBg    = '#ffffff';
-$colorMainContentFont  = '#5d5d5d';
 
 if ($Project->getConfig('templateAvadaAgency.settings.colorFooterBackground')) {
     $colorFooterBackground = $Project->getConfig('templateAvadaAgency.settings.colorFooterBackground');
@@ -51,13 +49,8 @@ if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentBg')) {
     $colorMainContentBg = $Project->getConfig('templateAvadaAgency.settings.colorMainContentBg');
 }
 
-if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentFont')) {
-    $colorMainContentFont = $Project->getConfig('templateAvadaAgency.settings.colorMainContentFont');
-}
-
 $colorFooterLinksLighter = $Convert->colorBrightness($colorFooterLinks, 0.9);
 
-$navBarHeight = (int)$Project->getConfig('templateAvadaAgency.settings.navBarHeight');
 $headerHeight = (int)$Project->getConfig('templateAvadaAgency.settings.headerHeight');
 $bgColorSwitcherPrefix = $Project->getConfig('templateAvadaAgency.settings.bgColorSwitcherPrefix');
 $bgColorSwitcherSuffix = $Project->getConfig('templateAvadaAgency.settings.bgColorSwitcherSuffix');
@@ -85,86 +78,17 @@ ob_start();
     color: <?php echo $navBarFontColor; ?>;
 }
 
-.page-header-navigation-sub-list,
-.page-header-navigation li:hover,
-.header-bar-search:hover,
-.quiqqer-menu-megaMenu-list-item-menu.control-background,
-.quiqqer-menu-megaMenu-list-item:hover {
-    background: <?php echo $navBarBgColorLighter; ?>;
-}
-
-
-.header-bar,
-.header-bar-inner a,
-.header-bar-inner a:link,
-.header-bar-inner a:active,
-.header-bar-inner a:visited,
-.header-bar-inner a:hover {
-    color: <?php echo $navBarFontColor; ?>;
-}
-
-.color-main {
-    color: <?php echo $colorMain; ?>;
-}
-
-.qui-sitetypes-sitemap-block-category .control-background {
-    background: <?php echo $colorMain; ?>;
-}
-
-.page-header-logo-img {
-    max-height: <?php echo 'calc(' . $navBarHeight . 'px - 20px)'; ?>;
-}
-
-.header-bar,
-.header-bar-2,
-.header-bar-inner-nav,
-.page-header-navigation-entry,
-.header-bar-search,
-.header-bar-search:before,
-.page-header-navigation-entry:before,
-.header-bar-inner-logo {
-    height: <?php echo $navBarHeight; ?>px;
-}
-
-.header-bar-search,
-.page-header-navigation-entry,
-.fa-chevron-down-mobile,
-.quiqqer-menu-megaMenu-list-item,
-.hide-on-desktop .quiqqer-menu-megaMenu-mobile,
-.quiqqer-menu-megaMenu-mobile-search,
-.header-bar-suggestSearch {
-    line-height: <?php echo $navBarHeight; ?>px;
-}
-
-.quiqqer-fa-levels-icon:hover,
-.quiqqer-navigation-level-1 a:hover,
-a.quiqqer-navigation-home:hover {
-    color: <?php echo $colorMain; ?>;
-}
-
-.quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
-    color: <?php echo $colorMain; ?>;
-}
-
+.color-main,
 .control-color,
-.mainColor,
-.mainColorHover:hover,
-.template-breadcrumb .quiqqer-breadcrumb ul li:last-child a span:last-child {
+.mainColor {
     color: <?php echo $colorMain; ?>;
 }
 
-.tpl-Argon-row a.qui-tags-tag:hover {
-    border: 1px solid <?php echo $colorMain; ?>;
-    color: <?php echo $colorMain; ?>;
-}
-
-#page input[type='checkbox']:checked + label::before,
-#page input[type='radio']:checked + label::before,
 .pace .pace-progress {
     background-color: <?php echo $colorMain; ?>;
 }
 
-input[type='submit'],
+/*input[type='submit'],
 input[type='reset'],
 input[type='button'],
 button,
@@ -176,75 +100,29 @@ a.template-button,
 button.qui-button-active,
 button.qui-button:active,
 button.qui-button:hover {
-    background-color: <?php echo $colorMain; ?>;
-    color: <?php echo $buttonFontColor; ?>;
-    border: 2px solid <?php echo $colorMain; ?>;
+    background-color: <?php /*echo $colorMain; */?>;
+    color: <?php /*echo $buttonFontColor; */?>;
+    border: 2px solid <?php /*echo $colorMain; */?>;
 }
 
 .button:hover {
     background: none;
+}*/
+
+button,
+.button {
+    background-color: <?php echo $colorMain; ?>;
+    color: <?php echo $buttonFontColor; ?>;
 }
 
-a.template-button:hover {
-    color: <?php echo $colorMain; ?>
-}
-
-#page .button.special {
-    background: none !important;
-    color: <?php echo $colorMainContentFont; ?>;
-}
-
-#page .button.special:hover {
-    border: 3px solid <?php echo $colorMain; ?>;
-}
-
-body,
-.mainFontColor {
-    color: <?php echo $colorMainContentFont; ?> !important;
-}
-
-textarea:hover,
-textarea:focus,
-input:hover,
-input:focus,
-select:hover,
-select:focus {
-/*    box-shadow: 0 0 0 2px */<?php //echo $colorMain; ?>/*;*/
-    border-color: <?php echo $colorMain; ?>;
-}
-
-.main-content-color-bg {
-    background-color: <?php echo $colorMainContentBg; ?>;
-}
-
-a,
-a.link-simple-color,
-a.slide-up-color {
-    color: <?php echo $colorMain; ?>;
-}
-
-a.link-slide-up-color::before {
-    background: <?php echo $colorMain; ?>;
-
-}
-
-.quiqqer-content a:hover:after {
-    color: <?php echo $colorMain; ?>;
-}
-
-input[type='submit']:hover,
-input[type='reset']:hover,
-input[type='button']:hover,
 button:hover,
-.button-active,
-.button:active,
 .button:hover {
-    color: <?php echo $colorMain; ?>;
+    background-color: <?php echo $Convert->colorBrightness($colorMain, 0.8); ?>;
+    color: <?php echo $buttonFontColor; ?>;
 }
 
-.page-footer button {
-    background: <?php echo $colorMain; ?>;
-    color: #ffffff;
+a {
+    color: <?php echo $colorMain; ?>;
 }
 
 .page-footer {
@@ -269,10 +147,6 @@ button:hover,
     color: <?php echo $colorFooterFont; ?> !important;
 }
 
-/*.footer-links li:hover a {
-    color: <?php /*echo $colorFooterLinksLighter; */?> !important;
-}*/
-
 .page-footer a {
     color: <?php echo $colorFooterLinks; ?>;
 }
@@ -282,23 +156,23 @@ button:hover,
 }
 
 /* pagination */
-.quiqqer-sheets-desktop a:hover {
-    border: 1px solid <?php echo $colorMain; ?> !important;
-    background-color: <?php echo $colorMain; ?>;
+/*.quiqqer-sheets-desktop a:hover {
+    border: 1px solid <?php /*echo $colorMain; */?> !important;
+    background-color: <?php /*echo $colorMain; */?>;
 }
 
 .quiqqer-sheets-desktop-limits a:hover {
-    color: <?php echo $colorMain; ?>;
+    color: <?php /*echo $colorMain; */?>;
 }
 
 .control-background-active {
-    background: <?php echo $colorMain; ?> !important;
+    background: <?php /*echo $colorMain; */?> !important;
     color: #FFFFFF !important;
 }
 
 .control-background {
-    background: <?php echo $colorMain; ?>;
-}
+    background: <?php /*echo $colorMain; */?>;
+}*/
 
 /**
  * background color prefix suffix switcher
@@ -340,21 +214,6 @@ button:hover,
 
 <?php };
 ?>
-
-/**
- * Menüposition
- */
-<?php  if ($navPos == 'fix') { ?>
-.header-bar {
-    position: fixed !important;
-}
-
-.body-container {
-    top: <?php echo $navBarHeight; ?>px;
-}
-
-<?php }; ?>
-
 
 <?php
 

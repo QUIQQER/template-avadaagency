@@ -10,6 +10,22 @@ header {
     margin-bottom: 1.3em;
 }
 
+textarea {
+    min-height: 160px;
+}
+
+label {
+    font-weight: normal;
+}
+
+button,
+.button {
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
 .page-head {
     margin-bottom: 0;
 }
@@ -57,10 +73,6 @@ img {
 
 .footer-news-image .fa {
     font-size: 2em;
-}
-
-.footer-news p a {
-    font-size: 1.1em;
 }
 
 .page-footer a,
@@ -129,4 +141,11 @@ img {
 
 .quiqqer-breadcrumb-list li:last-child a .quiqqer-breadcrumb-link-text {
     color: #fff;
+}
+
+/***********/
+/* contact */
+/***********/
+.quiqqer-simple-contact-button {
+    margin-top: 2em;
 }
