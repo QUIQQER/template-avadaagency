@@ -91,8 +91,9 @@ class Utils
          * Template footer settings
          */
         $footerTemplate = false;
-        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.active')) {
-            $footerTemplate = $Project->getConfig('templateAvadaAgency.settings.footerTemplate.active');
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.enable')) {
+            $footerTemplate = $Project->getConfig('templateAvadaAgency.settings.footerTemplate.enable');
+            $config         += self::getFooterTemplate($Project);
         }
 
 
@@ -116,5 +117,155 @@ class Utils
         );
 
         return $config;
+    }
+
+    /**
+     * @param $Project \QUI\Projects\Project
+     * @return array
+     */
+    private static function getFooterTemplate($Project)
+    {
+        $footerTemplateConfig = [];
+        $where['active']      = 1;
+
+        // default
+        $footerTemplateConfig['footerTemplate'] = [
+            'linksBox'  => null,
+            'recent'    => null,
+            'shortText' => null
+        ];
+
+        /**
+         * Links box
+         */
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBox.show')) {
+            $linksBoxTitle = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBox.title'
+            );
+
+            // order the box in footer
+            $linksBoxPriority = 1;
+            if ($Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBox.priority'
+            )) {
+                $linksBoxPriority = $Project->getConfig(
+                    'templateAvadaAgency.settings.footerTemplate.linksBox.priority'
+                );
+            }
+
+            $parents = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBox.sites'
+            );
+
+            $sites = QUI\Projects\Site\Utils::getSitesByInputList($Project, $parents, [
+                'where' => $where,
+                'limit' => 10,
+                'order' => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBox.sites.order')
+            ]);
+
+            $footerTemplateConfig['footerTemplate']['linksBox'] = [
+                'title'    => $linksBoxTitle,
+                'sites'    => $sites,
+                'priority' => $linksBoxPriority
+            ];
+        }
+
+        /**
+         * Links box (second / more links)
+         */
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBoxMore.show')) {
+            $linksBoxTitle = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBoxMore.title'
+            );
+
+            // order the box in footer
+            $linksBoxPriority = 1;
+            if ($Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBoxMore.priority'
+            )) {
+                $linksBoxPriority = $Project->getConfig(
+                    'templateAvadaAgency.settings.footerTemplate.linksBoxMore.priority'
+                );
+            }
+
+            $parents = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.linksBoxMore.sites'
+            );
+
+            $sites = QUI\Projects\Site\Utils::getSitesByInputList($Project, $parents, [
+                'where' => $where,
+                'limit' => 10,
+                'order' => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBoxMore.sites.order')
+            ]);
+
+            $footerTemplateConfig['footerTemplate']['linksBoxMore'] = [
+                'title'    => $linksBoxTitle,
+                'sites'    => $sites,
+                'priority' => $linksBoxPriority
+            ];
+        }
+
+        /**
+         * Recent (blog / news)
+         */
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.recent.show')) {
+            $linksBoxTitle = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.recent.title'
+            );
+
+            // order the box in footer
+            $linksBoxPriority = 1;
+            if ($Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.recent.priority'
+            )) {
+                $linksBoxPriority = $Project->getConfig(
+                    'templateAvadaAgency.settings.footerTemplate.recent.priority'
+                );
+            }
+
+            $parents = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.recent.sites'
+            );
+
+            $sites = QUI\Projects\Site\Utils::getSitesByInputList($Project, $parents, [
+                'where' => $where,
+                'limit' => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.recent.limit'),
+                'order' => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.recent.sites.order')
+            ]);
+
+            $footerTemplateConfig['footerTemplate']['recent'] = [
+                'title'    => $linksBoxTitle,
+                'sites'    => $sites,
+                'priority' => $linksBoxPriority
+            ];
+        }
+
+        /**
+         * Short text
+         */
+        if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.show')) {
+            $linksBoxTitle = $Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.shortText.title'
+            );
+
+            // order the box in footer
+            $linksBoxPriority = 1;
+            if ($Project->getConfig(
+                'templateAvadaAgency.settings.footerTemplate.shortText.priority'
+            )) {
+                $linksBoxPriority = $Project->getConfig(
+                    'templateAvadaAgency.settings.footerTemplate.shortText.priority'
+                );
+            }
+
+            $footerTemplateConfig['footerTemplate']['shortText'] = [
+                'title'    => $linksBoxTitle,
+                'content'  => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.content'),
+                'priority' => $linksBoxPriority
+            ];
+        }
+
+
+        return $footerTemplateConfig;
     }
 }

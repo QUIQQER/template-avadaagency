@@ -23,7 +23,7 @@ $colorFooterBackground = '#414141';
 $colorFooterFont       = '#D1D1D1';
 $colorMain             = '#dd151b';
 $buttonFontColor       = '#ffffff';
-$colorFooterLinks      = '#E6E6E6';
+$colorFooterLinks      = '#DDDDDD';
 $colorMainContentBg    = '#ffffff';
 $colorMainContentFont  = '#5d5d5d';
 
@@ -252,10 +252,25 @@ button:hover,
     color: <?php echo $colorFooterFont; ?> !important;
 }
 
-/*.page-footer h2,
-.page-footer h3,
-.page-footer h4 {
-    color: <?php /*echo $colorFooterFont; */?>;
+.page-footer p {
+    color: <?php echo $colorFooterFont; ?> !important;
+}
+
+.footer-nav {
+    background: <?php echo $Convert->colorBrightness($colorFooterBackground, -0.9) ; ?>;
+    color: <?php echo $colorFooterFont; ?> !important;
+}
+
+.footer-links li a {
+    color: <?php echo $colorFooterLinks; ?> !important;
+}
+
+.footer-links li a:before {
+    color: <?php echo $colorFooterFont; ?> !important;
+}
+
+/*.footer-links li:hover a {
+    color: <?php /*echo $colorFooterLinksLighter; */?> !important;
 }*/
 
 .page-footer a {
@@ -263,7 +278,7 @@ button:hover,
 }
 
 .page-footer a:hover {
-    color: <?php echo $colorFooterLinksLighter; ?>;
+    color: <?php echo $Convert->colorBrightness($colorFooterLinks, 0.25); ?> !important;
 }
 
 /* pagination */

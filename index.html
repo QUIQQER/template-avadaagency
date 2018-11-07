@@ -111,7 +111,8 @@
     <!-- page footer -->
     <footer class="page-footer">
         {if $footerTemplate}
-            {fetch template="template/footerTemplate.html" BricksManager=$BricksManager Site=$Site}
+            {fetch template="template/footerTemplate.html" BricksManager=$BricksManager
+            Site=$Site footerTemplate=$footerTemplate}
         {/if}
 
         {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}

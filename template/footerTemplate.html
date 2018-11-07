@@ -1,108 +1,85 @@
 <div class="container">
-    <div class="row">
+    <div class="row" style="display: flex; flex-wrap: wrap;">
 
+        {if $footerTemplate['linksBox']}
         <!-- useful links -->
-        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
-            <h4>Useful Links</h4>
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['linksBox']['priority']}">
+            {if $footerTemplate['linksBox']['title']}
+                <h4>{$footerTemplate['linksBox']['title']}</h4>
+            {/if}
             <ul class="row footer-links">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Mobile</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Services</a></li>
-                </div>
-
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    <li><a href="#">Organization</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Media</a></li>
-                    <li><a href="#">24/7</a></li>
-                    <li><a href="#">Right Way</a></li>
+                <div class="col-xs-12">
+                    {foreach from=$footerTemplate['linksBox']['sites'] item=Child}
+                    <li><a href="{url site=$Child}">{$Child->getAttribute('title')}</a></li>
+                    {/foreach}
                 </div>
             </ul>
         </div>
+        {/if}
 
+        {if $footerTemplate['linksBoxMore']}
+        <!-- useful links -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['linksBoxMore']['priority']}">
+            {if $footerTemplate['linksBoxMore']['title']}
+            <h4>{$footerTemplate['linksBoxMore']['title']}</h4>
+            {/if}
+            <ul class="row footer-links">
+                <div class="col-xs-12">
+                    {foreach from=$footerTemplate['linksBoxMore']['sites'] item=Child}
+                    <li><a href="{url site=$Child}">{$Child->getAttribute('title')}</a></li>
+                    {/foreach}
+                </div>
+            </ul>
+        </div>
+        {/if}
+
+        {if $footerTemplate['recent']}
         <!-- recent news -->
-        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
-            <h4>Recent News</h4>
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['recent']['priority']}">
+            {if $footerTemplate['recent']['title']}
+                <h4>{$footerTemplate['recent']['title']}</h4>
+            {/if}
 
+            {foreach from=$footerTemplate['recent']['sites'] item=Child}
             <div class="row footer-news">
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <img src="assets/img/intro.jpg" class="img-responsive center-block" alt="recent news 1">
+                <div class="col-md-4 col-sm-4 col-xs-6 footer-news-image" style="text-align: center;">
+                    {image src=$Child->getAttribute('image_site') width="200" type="resize"
+                    title="{$Child->getAttribute('title')}" alt="{$Child->getAttribute('title')}"
+                    class="img-responsive center-block"}
                 </div>
                 <div class="col-md-8 col-sm-4 col-xs-6">
                     <div class="row">
                         <p class="text-capitalize">
-                            <a href="#">
-                                a clear website gives more experience to the visitors
+                            <a href="{url site=$Child}">
+                                {$Child->getAttribute('title')}
                             </a>
                         </p>
-                        <p class="news-date">Dec 12,2015</p>
-                    </div>
-                </div>
-            </div> <!-- /.footer-news -->
-
-            <div class="row footer-news">
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <img src="assets/img/intro.jpg" class="img-responsive center-block" alt="recent news 2">
-                </div>
-                <div class="col-md-8 col-sm-4 col-xs-6">
-                    <div class="row">
-                        <p class="text-capitalize">
-                            <a href="#">
-                                a clear website gives more experience to the visitors
-                            </a>
+                        <p class="news-date">
+                            {locale_date date=$Child->getAttribute('release_from')}
                         </p>
-                        <p class="news-date">Dec 12,2015</p>
                     </div>
                 </div>
-            </div> <!-- /.footer-news -->
-        </div> <!-- /.footer-widget -->
-
-        <!-- news-letter -->
-        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
-            <h4>E-News-Letter</h4>
-
-            <p>Sign up for our mailing list to get latest updates and offers</p>
-            <div class="input-group margin-bottom-sm">
-                <input class="form-control" type="text" placeholder="Email address">
-                <span class="input-group-addon">
-                                    <i class="fa fa-paper-plane fa-fw"></i>
-                                </span>
             </div>
-            <p>We respect your privacy</p>
-        </div> <!-- /.footer-widget -->
+            {/foreach}
+        </div>
+        {/if}
 
-        <!-- about avada agency -->
-        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget">
-            <h4>Avada Agency</h4>
+        {if $footerTemplate['shortText']}
+        <!-- short text -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['shortText']['priority']}">
+            {if $footerTemplate['shortText']['title']}
+                <h4>{$footerTemplate['shortText']['title']}</h4>
+            {/if}
 
-            <p>
-                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
-            </p>
-
-            <div class="footer-address">
-                <p>
-                    1-800-123-HELLO  <br>
-                    example@mail.com
-                </p>
+            <div class="footer-widget-shortText">
+                {$footerTemplate['shortText']['content']|unescape:"html"}
             </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="footer-share-button">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul> <!-- /.footer-share-button -->
-                </div>
-            </div>
-        </div> <!-- /.footer-widget -->
+        </div>
+        {/if}
 
     </div>
 </div>

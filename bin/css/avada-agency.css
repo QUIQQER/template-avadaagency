@@ -548,9 +548,9 @@ footer .input-group span.input-group-addon {
 	color: #969595;
 }
 
-.footer-links li:hover a {
+/*.footer-links li:hover a {
 	color: #ffffff;
-}
+}*/
 
 .footer-links li a:before {
 	color: #fff;
@@ -567,10 +567,6 @@ footer .input-group span.input-group-addon {
 	margin-bottom: 5px;
 	margin-top: -4px;
 	line-height: 1.45em;
-}
-
-.footer-news p a {
-	color: #ffffff;
 }
 
 .footer-news p.news-date {

@@ -68,7 +68,7 @@
                     </conf>
                     <conf name="colorFooterBackground">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#eeeeee</defaultvalue>
+                        <defaultvalue>#313131</defaultvalue>
                     </conf>
                     <conf name="colorFooterFont">
                         <type><![CDATA[string]]></type>
@@ -76,7 +76,7 @@
                     </conf>
                     <conf name="colorFooterLinks">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#333333</defaultvalue>
+                        <defaultvalue>#dddddd</defaultvalue>
                     </conf>
                     <conf name="colorMainContentBg">
                         <type><![CDATA[string]]></type>
@@ -86,49 +86,97 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#333333</defaultvalue>
                     </conf>
-
-                    <!-- social -->
-                    <conf name="social.show.nav">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>0</defaultvalue>
-                    </conf>
-                    <conf name="social.show.footer">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>0</defaultvalue>
-                    </conf>
-                    <conf name="social.facebook">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="social.twitter">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="social.google">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="social.youtube">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="social.github">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="social.gitlab">
-                        <type><![CDATA[string]]></type>
-                    </conf>
                 </section>
 
                 <!-- footer -->
                 <section name="templateAvadaAgency.settings.footer">
                     <conf name="showFooterNav">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>center</defaultvalue>
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                 </section>
 
                 <!-- footer template -->
                 <section name="templateAvadaAgency.settings.footerTemplate">
-                    <conf name="active">
+                    <conf name="enable">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <!-- links box -->
+                    <conf name="linksBox.show">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="linksBox.title">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>center</defaultvalue>
+                    </conf>
+                    <conf name="linksBox.priority">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="linksBox.sites">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="linksBox.sites.order">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <!-- links box second -->
+                    <conf name="linksBoxMore.show">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="linksBoxMore.title">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="linksBoxMore.priority">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="linksBoxMore.sites">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="linksBoxMore.sites.order">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <!-- recent -->
+                    <conf name="recent.show">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="recent.title">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="recent.priority">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="recent.sites">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="recent.limit">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>2</defaultvalue>
+                    </conf>
+                    <conf name="recent.sites.order">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <!-- short text -->
+                    <conf name="shortText.show">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="shortText.title">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="shortText.content">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="shortText.priority">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                 </section>
             </config>
@@ -327,7 +375,7 @@
 
                         <!-- footer settings -->
                         <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.settings.footer">
+                                  name="templateAvadaAgency.settings.footer" data-table-closed="true">
                             <title>
                                 <locale group="quiqqer/template-avadaagency"
                                         var="settings.footer.title"
@@ -347,29 +395,352 @@
                                     />
                                 </description>
                             </input>
-                        </settings>
 
-                        <!-- footer template -->
-                        <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.settings.footerTemplate">
-                            <title>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="settings.footerTemplate.title"
-                                />
-                            </title>
-
-                            <input conf="templateAvadaAgency.settings.footerTemplate.active"
+                            <input conf="templateAvadaAgency.settings.footerTemplate.enable"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.footerTemplate.active.text"
+                                            var="settings.footerTemplate.enable.text"
                                     />
                                 </text>
                                 <description>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.footerTemplate.active.desc"
+                                            var="settings.footerTemplate.enable.desc"
                                     />
                                 </description>
+                            </input>
+                        </settings>
+
+                        <!-- Footer template: Box with URLs -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.footerTemplate">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.linksBox"
+                                />
+                            </title>
+
+                            <!-- show -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.linksBox.show"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.show"
+                                    />
+                                </text>
+                            </input>
+                            <!-- title -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.linksBox.title"
+                                    type="text">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.title"
+                                    />
+                                </text>
+                            </input>
+                            <!-- priority -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.linksBox.priority"
+                                   type="number">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.priority"
+                                    />
+                                </text>
+                            </input>
+                            <!-- sites -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.linksBox.sites"
+                                    type="text" data-qui="controls/projects/project/site/Select">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.sites"
+                                    />
+                                </text>
+                            </input>
+                            <!-- site order -->
+                            <select conf="templateAvadaAgency.settings.footerTemplate.linksBox.sites.order">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.sites.order"
+                                    />
+                                </text>
+
+                                <option value=""/>
+                                <option value="name ASC" selected="selected">
+                                    <locale group="quiqqer/system" var="name_asc"/>
+                                </option>
+                                <option value="name DESC">
+                                    <locale group="quiqqer/system" var="name_desc"/>
+                                </option>
+                                <option value="title ASC">
+                                    <locale group="quiqqer/system" var="title_asc"/>
+                                </option>
+                                <option value="title DESC">
+                                    <locale group="quiqqer/system" var="title_desc"/>
+                                </option>
+                                <option value="c_date ASC">
+                                    <locale group="quiqqer/system" var="c_date_asc"/>
+                                </option>
+                                <option value="c_date DESC">
+                                    <locale group="quiqqer/system" var="c_date_desc"/>
+                                </option>
+                                <option value="e_date ASC">
+                                    <locale group="quiqqer/system" var="e_date_asc"/>
+                                </option>
+                                <option value="e_date DESC">
+                                    <locale group="quiqqer/system" var="e_date_desc"/>
+                                </option>
+                                <option value="release_from ASC">
+                                    <locale group="quiqqer/system" var="release_from_asc"/>
+                                </option>
+                                <option value="release_from DESC">
+                                    <locale group="quiqqer/system" var="release_from_desc"/>
+                                </option>
+                                <option value="order_field ASC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_asc"/>
+                                </option>
+                                <option value="order_field DESC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_desc"/>
+                                </option>
+                            </select>
+                        </settings>
+
+                        <!-- Footer template: Second box with URLs -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.footerTemplate">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.linksBoxMore"
+                                />
+                            </title>
+
+                            <!-- show -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.show"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.show"
+                                    />
+                                </text>
+                            </input>
+                            <!-- title -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.title"
+                                    type="text">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.title"
+                                    />
+                                </text>
+                            </input>
+                            <!-- priority -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.priority"
+                                   type="number">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.priority"
+                                    />
+                                </text>
+                            </input>
+                            <!-- sites -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.sites"
+                                    type="text" data-qui="controls/projects/project/site/Select">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.sites"
+                                    />
+                                </text>
+                            </input>
+                            <!-- site order -->
+                            <select conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.sites.order">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.linksBox.sites.order"
+                                    />
+                                </text>
+
+                                <option value=""/>
+                                <option value="name ASC" selected="selected">
+                                    <locale group="quiqqer/system" var="name_asc"/>
+                                </option>
+                                <option value="name DESC">
+                                    <locale group="quiqqer/system" var="name_desc"/>
+                                </option>
+                                <option value="title ASC">
+                                    <locale group="quiqqer/system" var="title_asc"/>
+                                </option>
+                                <option value="title DESC">
+                                    <locale group="quiqqer/system" var="title_desc"/>
+                                </option>
+                                <option value="c_date ASC">
+                                    <locale group="quiqqer/system" var="c_date_asc"/>
+                                </option>
+                                <option value="c_date DESC">
+                                    <locale group="quiqqer/system" var="c_date_desc"/>
+                                </option>
+                                <option value="e_date ASC">
+                                    <locale group="quiqqer/system" var="e_date_asc"/>
+                                </option>
+                                <option value="e_date DESC">
+                                    <locale group="quiqqer/system" var="e_date_desc"/>
+                                </option>
+                                <option value="release_from ASC">
+                                    <locale group="quiqqer/system" var="release_from_asc"/>
+                                </option>
+                                <option value="release_from DESC">
+                                    <locale group="quiqqer/system" var="release_from_desc"/>
+                                </option>
+                                <option value="order_field ASC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_asc"/>
+                                </option>
+                                <option value="order_field DESC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_desc"/>
+                                </option>
+                            </select>
+                        </settings>
+
+                        <!-- Footer template: recent (news / blog) -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.footerTemplate">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.recent"
+                                />
+                            </title>
+                            <!-- show -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.recent.show"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.show"
+                                    />
+                                </text>
+                            </input>
+                            <!-- title -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.recent.title"
+                                    type="text">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.title"
+                                    />
+                                </text>
+                            </input>
+                            <!-- priority -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.recent.priority"
+                                   type="number">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.priority"
+                                    />
+                                </text>
+                            </input>
+                            <!-- sites -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.recent.sites"
+                                    type="text" data-qui="controls/projects/project/site/Select">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.sites"
+                                    />
+                                </text>
+                            </input>
+                            <!-- limit -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.recent.limit"
+                                   type="number">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.limit"
+                                    />
+                                </text>
+                            </input>
+                            <!-- site order -->
+                            <select conf="templateAvadaAgency.settings.footerTemplate.recent.sites.order">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.recent.sites.order"
+                                    />
+                                </text>
+
+                                <option value=""/>
+                                <option value="name ASC" selected="selected">
+                                    <locale group="quiqqer/system" var="name_asc"/>
+                                </option>
+                                <option value="name DESC">
+                                    <locale group="quiqqer/system" var="name_desc"/>
+                                </option>
+                                <option value="title ASC">
+                                    <locale group="quiqqer/system" var="title_asc"/>
+                                </option>
+                                <option value="title DESC">
+                                    <locale group="quiqqer/system" var="title_desc"/>
+                                </option>
+                                <option value="c_date ASC">
+                                    <locale group="quiqqer/system" var="c_date_asc"/>
+                                </option>
+                                <option value="c_date DESC">
+                                    <locale group="quiqqer/system" var="c_date_desc"/>
+                                </option>
+                                <option value="e_date ASC">
+                                    <locale group="quiqqer/system" var="e_date_asc"/>
+                                </option>
+                                <option value="e_date DESC">
+                                    <locale group="quiqqer/system" var="e_date_desc"/>
+                                </option>
+                                <option value="release_from ASC">
+                                    <locale group="quiqqer/system" var="release_from_asc"/>
+                                </option>
+                                <option value="release_from DESC">
+                                    <locale group="quiqqer/system" var="release_from_desc"/>
+                                </option>
+                                <option value="order_field ASC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_asc"/>
+                                </option>
+                                <option value="order_field DESC">
+                                    <locale group="quiqqer/quiqqer" var="order_field_desc"/>
+                                </option>
+                            </select>
+                        </settings>
+
+                        <!-- Footer template: Short text -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.footerTemplate">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.shortText"
+                                />
+                            </title>
+                            <!-- show -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.shortText.show"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.shortText.show"
+                                    />
+                                </text>
+                            </input>
+                            <!-- title -->
+                            <input  conf="templateAvadaAgency.settings.footerTemplate.shortText.title"
+                                    type="text">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.shortText.title"
+                                    />
+                                </text>
+                            </input>
+                            <!-- priority -->
+                            <textarea conf="templateAvadaAgency.settings.footerTemplate.shortText.content"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.shortText.content"
+                                    />
+                                </text>
+                            </textarea>
+                            <!-- priority -->
+                            <input conf="templateAvadaAgency.settings.footerTemplate.shortText.priority"
+                                   type="number">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footerTemplate.shortText.priority"
+                                    />
+                                </text>
                             </input>
                         </settings>
 
@@ -459,104 +830,6 @@
                             </input>
 
                         </settings>
-
-                        <!-- social icons -->
-                        <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.social.settings">
-                            <title>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="social.settings.title"
-                                />
-                            </title>
-
-                            <!-- show social on nav? -->
-                            <input conf="templateAvadaAgency.settings.social.show.nav"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.show.nav"
-                                    />
-                                </text>
-                            </input>
-
-                            <!-- show social on the footer? -->
-                            <input conf="templateAvadaAgency.settings.social.show.footer"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.show.footer"
-                                    />
-                                </text>
-                            </input>
-
-                            <text>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="social.linksNote"
-                                />
-                            </text>
-
-                            <!-- facebook -->
-                            <input conf="templateAvadaAgency.settings.social.facebook"
-                                   placeholder="https://www.facebook.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.facebook"
-                                    />
-                                </text>
-                            </input>
-                            <!-- twitter -->
-                            <input conf="templateAvadaAgency.settings.social.twitter"
-                                   placeholder="https://www.twitter.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.twitter"
-                                    />
-                                </text>
-                            </input>
-                            <!-- google -->
-                            <input conf="templateAvadaAgency.settings.social.google"
-                                   placeholder="https://www.google.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.google"
-                                    />
-                                </text>
-                            </input>
-                            <!-- youtube -->
-                            <input conf="templateAvadaAgency.settings.social.youtube"
-                                   placeholder="https://www.youtube.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.youtube"
-                                    />
-                                </text>
-                            </input>
-                            <!-- github -->
-                            <input conf="templateAvadaAgency.settings.social.github"
-                                   placeholder="https://www.github.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.github"
-                                    />
-                                </text>
-                            </input>
-                            <!-- gitlab -->
-                            <input conf="templateAvadaAgency.settings.social.gitlab"
-                                   placeholder="https://www.gitlab.com"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="social.gitlab"
-                                    />
-                                </text>
-                            </input>
-                        </settings>
-
                     </category>
                 </categories>
 

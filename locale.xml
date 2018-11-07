@@ -301,6 +301,96 @@
             <en><![CDATA[If enabled, navigation will be shown at the bottom of the footer (without submenu - only the first level).]]></en>
         </locale>
 
+        <!-- Footer template -->
+        <locale name="settings.footerTemplate.show">
+            <de><![CDATA[Vorgefertigter Template Footer anzeigen?]]></de>
+            <en><![CDATA[Show prefabricated template footer?]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.enable.desc">
+            <de><![CDATA[Es wird empfohlen in den nachfolgenden Abschnitten von <strong>Footer Template</strong> die Einstellungen vorzunehmen: Links, Weitere Links, Letzte Beiträge, Kurzer Text]]></de>
+            <en><![CDATA[It is recommended to make the settings in the following sections of <strong>Footer Template</strong>: Links, More Links, Recent Entries, Short Text]]></en>
+        </locale>
+        <!-- links box -->
+        <locale name="settings.footerTemplate.linksBox">
+            <de><![CDATA[Footer Template: Links]]></de>
+            <en><![CDATA[Footer Template: links]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.sites">
+            <de><![CDATA[Seiten]]></de>
+            <en><![CDATA[Sites]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.sites.order">
+            <de><![CDATA[Reihenfolge der Seiten]]></de>
+            <en><![CDATA[Links order]]></en>
+        </locale>
+        <!-- links box second -->
+        <locale name="settings.footerTemplate.linksBoxMore">
+            <de><![CDATA[Footer Template: weitere Links]]></de>
+            <en><![CDATA[Footer Template: more links]]></en>
+        </locale>
+        <!-- recent (blog / news) -->
+        <locale name="settings.footerTemplate.recent">
+            <de><![CDATA[Footer Template: letze Beiträge (für News / Blog)]]></de>
+            <en><![CDATA[Footer template: recent entries (for news / blog)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.sites">
+            <de><![CDATA[Seiten]]></de>
+            <en><![CDATA[Sites]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.limit">
+            <de><![CDATA[Limit]]></de>
+            <en><![CDATA[Limit]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.sites.order">
+            <de><![CDATA[Reihenfolge der Seiten]]></de>
+            <en><![CDATA[Links order]]></en>
+        </locale>
+        <!-- Short text -->
+        <locale name="settings.footerTemplate.shortText">
+            <de><![CDATA[Footer Template: kurzer Text]]></de>
+            <en><![CDATA[Footer template: short text]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.content">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+
         <!-- Colors -->
         <locale name="settings.color.title">
             <de><![CDATA[Farbverwaltung]]></de>
@@ -363,47 +453,6 @@
             <en><![CDATA[Sort]]></en>
         </locale>
 
-        <!-- social icons -->
-        <locale name="social.settings.title">
-            <de><![CDATA[Social Icons]]></de>
-            <en><![CDATA[Social icons]]></en>
-        </locale>
-        <locale name="social.show.nav">
-            <de><![CDATA[Anzeigen im Menü]]></de>
-            <en><![CDATA[Show in nav]]></en>
-        </locale>
-        <locale name="social.show.footer">
-            <de><![CDATA[Anzeigen im Footer]]></de>
-            <en><![CDATA[Show in footer]]></en>
-        </locale>
-        <locale name="social.linksNote" html="true">
-            <de><![CDATA[Bitte Links mit <strong>https://</strong> verwenden, z.B. https://www.facebook.com]]></de>
-            <en><![CDATA[Please use only hyperlinks with <strong>https://</strong>, e.g. https://www.facebook.com]]></en>
-        </locale>
-        <locale name="social.facebook">
-            <de><![CDATA[Facebook]]></de>
-            <en><![CDATA[Facebook]]></en>
-        </locale>
-        <locale name="social.twitter">
-            <de><![CDATA[Twitter]]></de>
-            <en><![CDATA[Twitter]]></en>
-        </locale>
-        <locale name="social.google">
-            <de><![CDATA[Google Plus]]></de>
-            <en><![CDATA[Google Plus]]></en>
-        </locale>
-        <locale name="social.youtube">
-            <de><![CDATA[YouTube]]></de>
-            <en><![CDATA[YouTube]]></en>
-        </locale>
-        <locale name="social.github">
-            <de><![CDATA[GitHub]]></de>
-            <en><![CDATA[GitHub]]></en>
-        </locale>
-        <locale name="social.gitlab">
-            <de><![CDATA[GitLab]]></de>
-            <en><![CDATA[GitLab]]></en>
-        </locale>
 
 
 
