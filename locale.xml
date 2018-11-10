@@ -374,6 +374,56 @@
             <de><![CDATA[Footer Template: kurzer Text]]></de>
             <en><![CDATA[Footer template: short text]]></en>
         </locale>
+        <locale name="settings.footerTemplate.shortText.info" html="true">
+            <de><![CDATA[Wenn Sie den Text ändern wollen, bearbeiten Sie die Sprachvariable <strong>settings.footerTemplate.shortText.content</strong> (zu finden in Menü: Verwaltung -> Sprachvariablen).]]></de>
+            <en><![CDATA[If you want to change the text, edit the language variable <strong>settings.footerTemplate.shortText.content</strong> (to find in the menu: Administration -> Translator).]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.content" html="true">
+            <de><![CDATA[<p>
+                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+                            </p>
+
+                            <p style="color: #eee;">
+                                1-800-123-HELLO  <br>
+                                example@mail.com
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="footer-share-button">
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>]]></de>
+            <en><![CDATA[<p>
+                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+                            </p>
+
+                            <p style="color: #eee;">
+                                1-800-123-HELLO  <br>
+                                example@mail.com
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="footer-share-button">
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>]]></en>
+        </locale>
         <locale name="settings.footerTemplate.shortText.show">
             <de><![CDATA[Anzeigen]]></de>
             <en><![CDATA[Show]]></en>
@@ -381,10 +431,6 @@
         <locale name="settings.footerTemplate.shortText.title">
             <de><![CDATA[Überschrift]]></de>
             <en><![CDATA[Title]]></en>
-        </locale>
-        <locale name="settings.footerTemplate.shortText.content">
-            <de><![CDATA[Priorität (Reihenfolge)]]></de>
-            <en><![CDATA[Priority (order)]]></en>
         </locale>
         <locale name="settings.footerTemplate.shortText.priority">
             <de><![CDATA[Priorität (Reihenfolge)]]></de>

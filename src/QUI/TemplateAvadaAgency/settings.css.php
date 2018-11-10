@@ -127,24 +127,24 @@ a {
 
 .page-footer {
     background: <?php echo $colorFooterBackground; ?>;
-    color: <?php echo $colorFooterFont; ?> !important;
+    color: <?php echo $colorFooterFont; ?>;
 }
 
 .page-footer p {
-    color: <?php echo $colorFooterFont; ?> !important;
+    color: <?php echo $colorFooterFont; ?>;
 }
 
 .footer-nav {
     background: <?php echo $Convert->colorBrightness($colorFooterBackground, -0.9) ; ?>;
-    color: <?php echo $colorFooterFont; ?> !important;
+    color: <?php echo $colorFooterFont; ?>;
 }
 
 .footer-links li a {
-    color: <?php echo $colorFooterLinks; ?> !important;
+    color: <?php echo $colorFooterLinks; ?>;
 }
 
 .footer-links li a:before {
-    color: <?php echo $colorFooterFont; ?> !important;
+    color: <?php echo $colorFooterFont; ?>;
 }
 
 .page-footer a {
@@ -152,7 +152,7 @@ a {
 }
 
 .page-footer a:hover {
-    color: <?php echo $Convert->colorBrightness($colorFooterLinks, 0.25); ?> !important;
+    color: <?php echo $Convert->colorBrightness($colorFooterLinks, 0.25); ?>;
 }
 
 /* pagination */

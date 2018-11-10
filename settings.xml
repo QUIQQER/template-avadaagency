@@ -698,6 +698,11 @@
                                         var="settings.footerTemplate.shortText"
                                 />
                             </title>
+                            <text>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.footerTemplate.shortText.info"
+                                />
+                            </text>
                             <!-- show -->
                             <input conf="templateAvadaAgency.settings.footerTemplate.shortText.show"
                                    type="checkbox">
@@ -716,15 +721,6 @@
                                     />
                                 </text>
                             </input>
-                            <!-- priority -->
-                            <textarea conf="templateAvadaAgency.settings.footerTemplate.shortText.content"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.footerTemplate.shortText.content"
-                                    />
-                                </text>
-                            </textarea>
                             <!-- priority -->
                             <input conf="templateAvadaAgency.settings.footerTemplate.shortText.priority"
                                    type="number">
