@@ -130,9 +130,10 @@ class Utils
 
         // default
         $footerTemplateConfig['footerTemplate'] = [
-            'linksBox'  => null,
-            'recent'    => null,
-            'shortText' => null
+            'linksBox'     => null,
+            'linksBoxMore' => null,
+            'recent'       => null,
+            'shortText'    => null
         ];
 
         /**
