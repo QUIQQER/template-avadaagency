@@ -208,8 +208,8 @@ a {
     height: <?php echo $headerHeight; ?>px !important;
 }
 
-.header-img {
-    align-self: <?php echo $headerImagePosition; ?>;
+.page-head {
+    background-position: <?php echo $headerImagePosition; ?>;
 }
 
 <?php };
