@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+
+        {if $footerTemplate['linksBox']}
+        <!-- useful links -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['linksBox']['priority']}">
+            {if $footerTemplate['linksBox']['title']}
+                <h4>{$footerTemplate['linksBox']['title']}</h4>
+            {/if}
+            <ul class="row footer-links">
+                <div class="col-xs-12">
+                    {foreach from=$footerTemplate['linksBox']['sites'] item=Child}
+                    <li><a href="{url site=$Child}">{$Child->getAttribute('title')}</a></li>
+                    {/foreach}
+                </div>
+            </ul>
+        </div>
+        {/if}
+
+        {if $footerTemplate['linksBoxMore']}
+        <!-- useful links -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['linksBoxMore']['priority']}">
+            {if $footerTemplate['linksBoxMore']['title']}
+            <h4>{$footerTemplate['linksBoxMore']['title']}</h4>
+            {/if}
+            <ul class="row footer-links">
+                <div class="col-xs-12">
+                    {foreach from=$footerTemplate['linksBoxMore']['sites'] item=Child}
+                    <li><a href="{url site=$Child}">{$Child->getAttribute('title')}</a></li>
+                    {/foreach}
+                </div>
+            </ul>
+        </div>
+        {/if}
+
+        {if $footerTemplate['recent']}
+        <!-- recent news -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['recent']['priority']}">
+            {if $footerTemplate['recent']['title']}
+                <h4>{$footerTemplate['recent']['title']}</h4>
+            {/if}
+
+            {foreach from=$footerTemplate['recent']['sites'] item=Child}
+            <div class="row footer-news">
+                <div class="col-md-4 col-sm-4 col-xs-6 footer-news-image" style="text-align: center;">
+                    {image src=$Child->getAttribute('image_site') width="200" type="resize"
+                    title="{$Child->getAttribute('title')}" alt="{$Child->getAttribute('title')}"
+                    class="img-responsive center-block"}
+                </div>
+                <div class="col-md-8 col-sm-4 col-xs-6">
+                    <div class="row">
+                        <p class="text-capitalize">
+                            <a href="{url site=$Child}">
+                                {$Child->getAttribute('title')}
+                            </a>
+                        </p>
+                        <p class="news-date">
+                            {locale_date date=$Child->getAttribute('release_from')}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/foreach}
+        </div>
+        {/if}
+
+        {if $footerTemplate['shortText']}
+        <!-- short text -->
+        <div class="col-md-3 col-sm-6 col-xs-6 footer-widget"
+             style="order: {$footerTemplate['shortText']['priority']}">
+            {if $footerTemplate['shortText']['title']}
+                <h4>{$footerTemplate['shortText']['title']}</h4>
+            {/if}
+
+            <div class="footer-widget-shortText">
+                {locale group="quiqqer/template-avadaagency" var="settings.footerTemplate.shortText.content"}
+            </div>
+        </div>
+        {/if}
+
+    </div>
+</div>

@@ -1,167 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
-    <groups name="quiqqer/template-argon" datatype="php,js">
+    <groups name="quiqqer/template-avadaagency" datatype="php,js">
 
         <!-- template bricks -->
         <locale name="promosliderBackground">
             <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
             <en><![CDATA[Set the background color (only by full width)]]></en>
-            <pl><![CDATA[Wybierz kolor tła (tylko przy pełnej szerokości)]]></pl>
         </locale>
 
         <locale name="showBrickTitle">
             <de><![CDATA[Baustein Titel]]></de>
             <en><![CDATA[Brick title]]></en>
-            <pl><![CDATA[Tytuł]]></pl>
         </locale>
 
         <locale name="brickFullWidth">
-            <de><![CDATA[Volle Breite]]></de>
-            <en><![CDATA[Full width]]></en>
-            <pl><![CDATA[Pełna szerokość]]></pl>
+            <de><![CDATA[Template Avada Agency: Baustein erstreckt sich über die gesamte Breite der Seite]]></de>
+            <en><![CDATA[Template Avada Agency: extend to the full width of the page]]></en>
         </locale>
         <locale name="noPadding">
-            <de><![CDATA[Kein Abstand von oben und unten]]></de>
-            <en><![CDATA[No space top and bottom]]></en>
-            <pl><![CDATA[Bez odstępów od góry i dołu]]></pl>
+            <de><![CDATA[Template Avada Agency: kein Abstand von oben und unten]]></de>
+            <en><![CDATA[Template Avada Agency: no space top and bottom]]></en>
         </locale>
 
         <!-- areas -->
         <locale name="area.footer.title">
             <de><![CDATA[Fußzeile der Seite (Footer)]]></de>
             <en><![CDATA[Footer brick area]]></en>
-            <pl><![CDATA[Stopka strony]]></pl>
         </locale>
         <locale name="area.footer.description">
             <de><![CDATA[Bausteinzone des Footer]]></de>
             <en><![CDATA[Brick area of the footer]]></en>
-            <pl><![CDATA[Miejsce na umieszczenie pluginów w stopce.]]></pl>
         </locale>
 
         <locale name="area.startpageContent.title">
             <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
             <en><![CDATA[Content area (Landingpage)]]></en>
-            <pl><![CDATA[Główna zawartość strony (strona główna)]]></pl>
         </locale>
         <locale name="area.startpageContent.description">
             <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
             <en><![CDATA[Brick area of a landingpage layout]]></en>
-            <pl><![CDATA[Dodatkowe miejsce na pluginy w głównej części strony w przypadku układu bez kolumn.]]></pl>
         </locale>
 
         <locale name="area.sidebar.left.title">
             <de><![CDATA[Linke Bausteinzone]]></de>
             <en><![CDATA[Left brick area]]></en>
-            <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.left.description">
             <de><![CDATA[Bausteinzone links neben dem Inhalt]]></de>
             <en><![CDATA[Brick area to the left of the content]]></en>
-            <pl><![CDATA[Układ strony z kolumną po lewej stronie.]]></pl>
         </locale>
 
         <locale name="area.sidebar.right.title">
             <de><![CDATA[Rechte Bausteinzone]]></de>
             <en><![CDATA[Right brick area]]></en>
-            <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.right.description">
             <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
             <en><![CDATA[Brickarea to the right of the content]]></en>
-            <pl><![CDATA[Układ strony z kolumną po prawej stronie.]]></pl>
         </locale>
 
         <locale name="area.noSidebar.title">
             <de><![CDATA[Inhalts-Zone]]></de>
             <en><![CDATA[Content area]]></en>
-            <pl><![CDATA[Główna zawartość (bez kolumn)]]></pl>
         </locale>
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
             <en><![CDATA[Content area of no sidebar layout]]></en>
-            <pl><![CDATA[Główna zawartość układu bez kolumn]]></pl>
         </locale>
 
         <locale name="area.sidebar.prefix.content.title">
             <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
             <en><![CDATA[Prefix area]]></en>
-            <pl><![CDATA[Prefix]]></pl>
         </locale>
         <locale name="area.sidebar.prefix.content.description">
             <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
             <en><![CDATA[Brick area before the content]]></en>
-            <pl><![CDATA[Miejsce na widgety przed główna zawartością]]></pl>
         </locale>
 
         <locale name="area.sidebar.suffix.content.title">
             <de><![CDATA[Unterhalb des Inhaltes (Content Suffix)]]></de>
             <en><![CDATA[Suffix area]]></en>
-            <pl><![CDATA[Suffix]]></pl>
         </locale>
         <locale name="area.sidebar.suffix.content.description">
             <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
             <en><![CDATA[Brick area after the content]]></en>
-            <pl><![CDATA[Miejsce na widgety po głównej zawartości]]></pl>
         </locale>
 
         <locale name="area.headerSuffix.title">
             <de><![CDATA[Unterhalb des Kopfbereiches (Header Suffix)]]></de>
             <en><![CDATA[Header suffix]]></en>
-            <pl><![CDATA[Suffix nagłówka]]></pl>
         </locale>
         <locale name="area.headerSuffix.description">
             <de><![CDATA[Bausteinzone nach dem Header]]></de>
             <en><![CDATA[Brick area after the header]]></en>
-            <pl><![CDATA[Miejsce na widgety po nagłówku strony]]></pl>
         </locale>
 
         <locale name="area.footerPrefix.title">
             <de><![CDATA[Oberhalb der Fußzeile (Footer Prefix)]]></de>
             <en><![CDATA[Footer Prefix]]></en>
-            <pl><![CDATA[Prefix stopki]]></pl>
         </locale>
         <locale name="area.footerPrefix.description">
             <de><![CDATA[Bausteinzone vor dem Footer]]></de>
             <en><![CDATA[Brick area before the footer]]></en>
-            <pl><![CDATA[Miejsce na widgety przed stopka strony]]></pl>
         </locale>
 
-
-
         <locale name="package.title">
-            <de><![CDATA[Argon]]></de>
-            <en><![CDATA[Argon]]></en>
-            <pl><![CDATA[Business Pro]]></pl>
+            <de><![CDATA[Avada Agency]]></de>
+            <en><![CDATA[Avada Agency]]></en>
         </locale>
         <locale name="package.description">
             <de><![CDATA[Template für aussagekräftige Internetseiten mit
             vielen Einstellungsmöglichkeiten.]]></de>
             <en><![CDATA[Advanced template with a modern design and settings.]]></en>
-            <pl><![CDATA[Zaawansowany template z dopracowanym designem, który wyróżni Twoją stronę
-            internetową na tle innych. Duże pole do popisu dają rozmaite ustawienia,
-            dzięki czemu możesz dopasować wygląd Twojego serwisu do własnych potrzeb.]]></pl>
         </locale>
 
-        <locale name="admin.layout.leftSidebar">
-            <de><![CDATA[Linke Sidebar]]></de>
-            <en><![CDATA[Left sidebar]]></en>
-        </locale>
+        <!-- Layouts -->
         <locale name="admin.layout.startpage">
             <de><![CDATA[Landingpage (Startpage)]]></de>
-            <en><![CDATA[Landingpage]]></en>
+            <en><![CDATA[Landingpage (start page)]]></en>
         </locale>
-        <locale name="admin.layout.rightSidebar">
-            <de><![CDATA[Rechte Sidebar]]></de>
-            <en><![CDATA[Right sidebar]]></en>
+        <locale name="admin.layout.startpage.desc">
+            <de><![CDATA[Layout für Startseite.]]></de>
+            <en><![CDATA[Layout for start page.]]></en>
         </locale>
         <locale name="admin.layout.noSidebar">
             <de><![CDATA[Keine Sidebar]]></de>
             <en><![CDATA[No sidebar]]></en>
         </locale>
-        <locale name="admin.layout.leftSidebar.description">
-            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
-            <en><![CDATA[]]></en>
+        <locale name="admin.layout.noSidebar.desc">
+            <de><![CDATA[Der Inhalt erstreckt sich über die gesamte Breite der Seite.]]></de>
+            <en><![CDATA[Content extends across the entire width of the page.]]></en>
         </locale>
+        <locale name="admin.layout.noSidebarSmall">
+            <de><![CDATA[Keine Sidebar - schmaller Inhalt]]></de>
+            <en><![CDATA[No sidebar - narrow content]]></en>
+        </locale>
+        <locale name="admin.layout.noSidebarSmall.desc">
+            <de><![CDATA[Layout geeignet für Blog oder News Einträge.]]></de>
+            <en><![CDATA[Layout suitable for blog or news entries.]]></en>
+        </locale>
+        <locale name="admin.layout.leftSidebar">
+            <de><![CDATA[Linke Sidebar]]></de>
+            <en><![CDATA[Left sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.leftSidebar.desc">
+            <de><![CDATA[Im linken Sidebar können Bausteine platziert werden.]]></de>
+            <en><![CDATA[Bricks can be placed in the left sidebar.]]></en>
+        </locale>
+        <locale name="admin.layout.rightSidebar">
+            <de><![CDATA[Rechte Sidebar]]></de>
+            <en><![CDATA[Right sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.rightSidebar.desc">
+            <de><![CDATA[Im rechten Sidebar können Bausteine platziert werden.]]></de>
+            <en><![CDATA[Bricks can be placed in the right sidebar.]]></en>
+        </locale>
+
         <locale name="bricks.Startpage3Box.title">
             <de><![CDATA[Baustein: 3er Baustein auf der Startseite]]></de>
             <en><![CDATA[]]></en>
@@ -176,8 +170,8 @@
             <en><![CDATA[Continue Reading]]></en>
         </locale>
         <locale name="copyright.text" html="true">
-            <de><![CDATA[&copy; [year] - Template <em>Business Pro</em> umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER</a>]]></de>
-            <en><![CDATA[&copy; [year] - Theme <em>Business Pro</em> realized with <a href="https://www.quiqqer.com">QUIQQER</a>]]></en>
+            <de><![CDATA[&copy; [year] - Template <em>Avada Agency</em> umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER</a>]]></de>
+            <en><![CDATA[&copy; [year] - Theme <em>Avada Agency</em> realized with <a href="https://www.quiqqer.com">QUIQQER</a>]]></en>
         </locale>
         <locale name="copyright.link" html="true">
             <de><![CDATA[Startseite]]></de>
@@ -186,316 +180,288 @@
         <locale name="nav.button.close" html="true">
             <de><![CDATA[Menü schließen]]></de>
             <en><![CDATA[Close menu]]></en>
-            <pl><![CDATA[Zamknij menu]]></pl>
         </locale>
         
         <!-- settings -->
-        <locale name="templateBusinessPro.settings.menu.title">
-            <de><![CDATA[Template Einstellungen: Business Pro]]></de>
-            <en><![CDATA[Template settings: Business Pro]]></en>
-            <pl><![CDATA[Ustawienia szablonu: Business Pro]]></pl>
+        <locale name="settings.menu.title">
+            <de><![CDATA[Template Einstellungen: Avada Agency]]></de>
+            <en><![CDATA[Template settings: Avada Agency]]></en>
         </locale>
 
         <!-- Background Color Switcher-->
-        <locale name="templateBusinessPro.settings.bgColorSwitcher.title">
+        <locale name="settings.bgColorSwitcher.title">
             <de><![CDATA[Prefix / Suffix Hintegrundfarbe wechseln]]></de>
             <en><![CDATA[Change prefix / suffix background]]></en>
-            <pl><![CDATA[Naprzemienne tło przestrzeni prefix / suffix ]]></pl>
         </locale>
-        <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
+        <locale name="settings.bgColorSwitcher.display">
             <de><![CDATA[Aktivieren]]></de>
             <en><![CDATA[On]]></en>
-            <pl><![CDATA[Włącz]]></pl>
         </locale>
-        <locale name="templateBusinessPro.settings.bgColorSwitcher.hide">
+        <locale name="settings.bgColorSwitcher.hide">
             <de><![CDATA[Deaktivieren]]></de>
             <en><![CDATA[Off]]></en>
-            <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
         <!-- Background Color Switcher Prefix -->
-        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
+        <locale name="settings.bgColorSwitcherPrefix.text">
             <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Swich background color]]></en>
+            <en><![CDATA[Switch background color]]></en>
         </locale>
-        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.description">
+        <locale name="settings.bgColorSwitcherPrefix.description">
             <de><![CDATA[(...)]]></de>
             <en><![CDATA[(...)]]></en>
         </locale>
         <!-- Background Color Switcher Suffix -->
-        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.text">
+        <locale name="settings.bgColorSwitcherSuffix.text">
             <de><![CDATA[Suffix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Swich background color]]></en>
+            <en><![CDATA[Switch background color]]></en>
         </locale>
-        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.description">
+        <locale name="settings.bgColorSwitcherSuffix.description">
             <de><![CDATA[(...)]]></de>
             <en><![CDATA[(...)]]></en>
         </locale>
 
         <!-- header settings -->
-        <locale name="templateBusinessPro.header.settings.title">
+        <locale name="header.settings.title">
             <de><![CDATA[Header Einstellungen]]></de>
             <en><![CDATA[Header settings]]></en>
-            <pl><![CDATA[Ustawienia nagłówka]]></pl>
         </locale>
 
         <!-- show header? -->
         <locale name="showHeader.text">
             <de><![CDATA[Header anzeigen?]]></de>
             <en><![CDATA[Display header?]]></en>
-            <pl><![CDATA[Pokazać nagłówek (header wraz z obrazkiem)?]]></pl>
         </locale>
-
         <locale name="showHeaderStartPage.text">
             <de><![CDATA[Startpage]]></de>
             <en><![CDATA[Start page]]></en>
-            <pl><![CDATA[Układ bez kolumn (strona startowa)]]></pl>
         </locale>
-
         <locale name="showHeaderNoSidebar.text">
             <de><![CDATA[Kein Sidebar]]></de>
             <en><![CDATA[No sidebar]]></en>
-            <pl><![CDATA[Układ bez kolumn]]></pl>
         </locale>
-
+        <locale name="showHeaderNoSidebarSmall.text">
+            <de><![CDATA[Keine Sidebar - schmaller Inhalt]]></de>
+            <en><![CDATA[No sidebar - narrow content]]></en>
+        </locale>
         <locale name="showHeaderLeftSidebar.text">
             <de><![CDATA[Linke Sidebar]]></de>
             <en><![CDATA[Left sidebar]]></en>
-            <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
-
         <locale name="showHeaderRightSidebar.text">
             <de><![CDATA[Rechte Sidebar]]></de>
             <en><![CDATA[Rright sidebar]]></en>
-            <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
 
-
-        <!-- search setting -->
-        <locale name="navbar.search.text">
-            <de><![CDATA[Suchen]]></de>
-            <en><![CDATA[Search]]></en>
-            <pl><![CDATA[Szukaj]]></pl>
-        </locale>
-
-        <locale name="templateBusinessPro.settings.search.text">
-            <de><![CDATA[Suche in Navigation]]></de>
-            <en><![CDATA[Search]]></en>
-            <pl><![CDATA[Pole wyszukiwania]]></pl>
-        </locale>
-            <locale name="templateBusinessPro.settings.search.input">
-                <de><![CDATA[Eingabefeld]]></de>
-                <en><![CDATA[Input field]]></en>
-                <pl><![CDATA[Pole wyszukiwania]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.search.inputAndIcon">
-                <de><![CDATA[Clickbare Icon]]></de>
-                <en><![CDATA[Search icon]]></en>
-                <pl><![CDATA[Ikona do klkniecia]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.search.inputAndIconVisible">
-                <de><![CDATA[Eingabefeld mit Icon]]></de>
-                <en><![CDATA[Input field and icon]]></en>
-                <pl><![CDATA[Pole wprowadzania z ikoną]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.search.hide">
-                <de><![CDATA[Ausgeschaltet]]></de>
-                <en><![CDATA[Disabled]]></en>
-                <pl><![CDATA[Wyłączone]]></pl>
-            </locale>
-
-
-
-        <!-- breadcrumb settings -->
-        <locale name="templateBusinessPro.breadcrumb.settings.title">
-            <de><![CDATA[Brotkrumennavigation Einstellungen (breadcrumb)]]></de>
-            <en><![CDATA[Breadcrumb settings]]></en>
-            <pl><![CDATA[Pokazać breadcrumb ("nawigacja okruszkowa")?]]></pl>
-        </locale>
-        <!-- show breadcrumb? -->
-        <locale name="showBreadcrumb.text">
-            <de><![CDATA[Brotkrumennavigation anzeigen?]]></de>
-            <en><![CDATA[Display breadcrumb?]]></en>
-            <pl><![CDATA[Pokazać breadcrumb?]]></pl>
-        </locale>
-
-        <locale name="showBreadcrumbStartPage.text">
-            <de><![CDATA[Startpage]]></de>
-            <en><![CDATA[Start page]]></en>
-            <pl><![CDATA[Układ bez kolumn (strona startowa)]]></pl>
-        </locale>
-
-        <locale name="showBreadcrumbNoSidebar.text">
-            <de><![CDATA[Kein Sidebar]]></de>
-            <en><![CDATA[No sidebar]]></en>
-            <pl><![CDATA[Układ bez kolumn]]></pl>
-        </locale>
-
-        <locale name="showBreadcrumbLeftSidebar.text">
-            <de><![CDATA[Linke Sidebar]]></de>
-            <en><![CDATA[Left sidebar]]></en>
-            <pl><![CDATA[Układ z lewą kolumną]]></pl>
-        </locale>
-
-        <locale name="showBreadcrumbRightSidebar.text">
-            <de><![CDATA[Rechte Sidebar]]></de>
-            <en><![CDATA[Rright sidebar]]></en>
-            <pl><![CDATA[Układ z prawą kolumną]]></pl>
-        </locale>
-        
-
-        <!-- Header Größe-->
-        <locale name="templateBusinessPro.header.settings.height.text">
-            <de><![CDATA[Höhe des Headerbildes einstellen]]></de>
-            <en><![CDATA[Header image size settings]]></en>
-            <pl><![CDATA[Ustawienia wysokość obrazka nagłówka]]></pl>
-        </locale>
-
-        <locale name="templateBusinessPro.header.settings.height.enable.text">
-            <de><![CDATA[Feste Höhe des Headers]]></de>
-            <en><![CDATA[Fixed size of the header]]></en>
-            <pl><![CDATA[Stała wysokość nagłówka (header)]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.header.settings.height.value.text">
-            <de><![CDATA[Höhe (in Pixel)]]></de>
-            <en><![CDATA[Height (in pixel)]]></en>
-            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
+        <!-- Header height-->
+        <locale name="header.settings.height.text">
+            <de><![CDATA[Höhe des Headers (in Pixel)]]></de>
+            <en><![CDATA[Height of the header (in pixel)]]></en>
         </locale>
 
         <!-- Position des Bildes im Header-->
-        <locale name="templateBusinessPro.settings.headerImagePosition.text">
+        <locale name="settings.headerImagePosition.text">
             <de><![CDATA[Position des Bildes wählen:]]></de>
             <en><![CDATA[Choose position of the image:]]></en>
         </locale>
-
-        <locale name="templateBusinessPro.settings.headerImagePosition.start">
-            <de><![CDATA[Oben]]></de>
-            <en><![CDATA[Top]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.headerImagePosition.center">
-            <de><![CDATA[Mitte]]></de>
-            <en><![CDATA[Middle]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.headerImagePosition.end">
-            <de><![CDATA[Unten]]></de>
-            <en><![CDATA[Bottom]]></en>
-        </locale>
-
-
-        <!-- Navbar settings -->
-        <locale name="templateBusinessPro.settings.navBar.title">
-            <de><![CDATA[Navigationsbar Einstellungen]]></de>
-            <en><![CDATA[Nav bar settings]]></en>
-            <pl><![CDATA[Ustawienia paska nawigacyjnego]]></pl>
-        </locale>
-
-        <locale name="templateBusinessPro.settings.navBar.Height.text">
-            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
-            <en><![CDATA[Nav bar Height (in pixel)]]></en>
-            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navBar.Height.text">
-            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
-            <en><![CDATA[Nav bar Height (in pixel)]]></en>
-            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
-        </locale>
-        <!-- Menüposition -->
-        <locale name="templateBusinessPro.settings.navPos.text">
-            <de><![CDATA[Menüposition]]></de>
-            <en><![CDATA[Menu position]]></en>
-            <pl><![CDATA[Pasek nawigacyjny]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.description">
-            <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
-                             an gleicher Stelle auf der Seite befinden soll.]]></de>
-            <en><![CDATA[Set the menu position]]></en>
-            <pl><![CDATA[Ustawienie pozwala określić, czy pasek z menu będzie "przylepiony" na górze,
-                czy przewijany wraz ze stroną]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.fix">
-            <de><![CDATA[fix]]></de>
-            <en><![CDATA[fixed]]></en>
-            <pl><![CDATA[przylepiony]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.scroll">
-            <de><![CDATA[scrollbar]]></de>
-            <en><![CDATA[scroll]]></en>
-            <pl><![CDATA[przewijany]]></pl>
-        </locale>
+            <locale name="settings.headerImagePosition.start">
+                <de><![CDATA[Oben]]></de>
+                <en><![CDATA[Top]]></en>
+            </locale>
+            <locale name="settings.headerImagePosition.center">
+                <de><![CDATA[Mitte]]></de>
+                <en><![CDATA[Middle]]></en>
+            </locale>
+            <locale name="settings.headerImagePosition.end">
+                <de><![CDATA[Unten]]></de>
+                <en><![CDATA[Bottom]]></en>
+            </locale>
 
         <!-- Navbar colors -->
-        <locale name="templateBusinessPro.settings.navBarMainColor.text">
+        <locale name="settings.navBarBgColor.text">
             <de><![CDATA[Menü Hintergrundfarbe]]></de>
             <en><![CDATA[Nav background color]]></en>
-            <pl><![CDATA[Kolor tła nawigacji]]></pl>
         </locale>
-        <locale name="templateBusinessPro.settings.navBarFontColor.text">
+        <locale name="settings.navBarFontColor.text">
             <de><![CDATA[Menü Schriftfarbe]]></de>
             <en><![CDATA[Nav font color]]></en>
-            <pl><![CDATA[Kolor czcionki]]></pl>
         </locale>
 
-        <locale name="templateBusinessPro.settings.mobileFontColor">
-            <de><![CDATA[Mobile Menü Fontfarbe]]></de>
-            <en><![CDATA[Mobile Nav font color]]></en>
-            <pl><![CDATA[Kolor czcionki nawigacji (mobile)]]></pl>
+        <!-- Footer -->
+        <locale name="settings.footer.title">
+            <de><![CDATA[Footer (Fußnote)]]></de>
+            <en><![CDATA[Footer]]></en>
         </locale>
-        <locale name="templateBusinessPro.settings.mobileMenuBackground">
-            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
-            <en><![CDATA[Mobile nav background color]]></en>
-            <pl><![CDATA[Kolor tła nawigacji (mobile)]]]></pl>
+        <locale name="settings.footer.showFooterNav.text">
+            <de><![CDATA[Navigation in Footer anzeigen?]]></de>
+            <en><![CDATA[Show navigation in footer?]]></en>
         </locale>
-
-
-
-        <!-- Share -->
-        <locale name="templateBusinessPro.settings.search.title">
-            <de><![CDATA[Suchen-Button]]></de>
-            <en><![CDATA[Search button]]></en>
-            <pl><![CDATA[Wyszukiwanie]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchShow.text">
-            <de><![CDATA[Suche in Navigationsmenü anzeigen]]></de>
-            <en><![CDATA[Show search button in nav bar]]></en>
-            <pl><![CDATA[Pokarz przycisk wyszukiwania]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchLink.text">
-            <de><![CDATA[Suchseite]]></de>
-            <en><![CDATA[Search page]]></en>
-            <pl><![CDATA[Strona z wyszukiwarką]]></pl>
+        <locale name="settings.footer.showFooterNav.desc">
+            <de><![CDATA[Wenn eingeschaltet, wird im Footer ganz unten Navigation eingeblendet (ohne Submenü - nur die erste Ebene).]]></de>
+            <en><![CDATA[If enabled, navigation will be shown at the bottom of the footer (without submenu - only the first level).]]></en>
         </locale>
 
+        <!-- Footer template -->
+        <locale name="settings.footerTemplate.show">
+            <de><![CDATA[Vorgefertigter Template Footer anzeigen?]]></de>
+            <en><![CDATA[Show prefabricated template footer?]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.enable.desc">
+            <de><![CDATA[Es wird empfohlen in den nachfolgenden Abschnitten von <strong>Footer Template</strong> die Einstellungen vorzunehmen: Links, Weitere Links, Letzte Beiträge, Kurzer Text]]></de>
+            <en><![CDATA[It is recommended to make the settings in the following sections of <strong>Footer Template</strong>: Links, More Links, Recent Entries, Short Text]]></en>
+        </locale>
+        <!-- links box -->
+        <locale name="settings.footerTemplate.linksBox">
+            <de><![CDATA[Footer Template: Links]]></de>
+            <en><![CDATA[Footer Template: links]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.sites">
+            <de><![CDATA[Seiten]]></de>
+            <en><![CDATA[Sites]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.linksBox.sites.order">
+            <de><![CDATA[Reihenfolge der Seiten]]></de>
+            <en><![CDATA[Links order]]></en>
+        </locale>
+        <!-- links box second -->
+        <locale name="settings.footerTemplate.linksBoxMore">
+            <de><![CDATA[Footer Template: weitere Links]]></de>
+            <en><![CDATA[Footer Template: more links]]></en>
+        </locale>
+        <!-- recent (blog / news) -->
+        <locale name="settings.footerTemplate.recent">
+            <de><![CDATA[Footer Template: letze Beiträge (für News / Blog)]]></de>
+            <en><![CDATA[Footer template: recent entries (for news / blog)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.sites">
+            <de><![CDATA[Seiten]]></de>
+            <en><![CDATA[Sites]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.limit">
+            <de><![CDATA[Limit]]></de>
+            <en><![CDATA[Limit]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.recent.sites.order">
+            <de><![CDATA[Reihenfolge der Seiten]]></de>
+            <en><![CDATA[Links order]]></en>
+        </locale>
+        <!-- Short text -->
+        <locale name="settings.footerTemplate.shortText">
+            <de><![CDATA[Footer Template: kurzer Text]]></de>
+            <en><![CDATA[Footer template: short text]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.info" html="true">
+            <de><![CDATA[Wenn Sie den Text ändern wollen, bearbeiten Sie die Sprachvariable <strong>settings.footerTemplate.shortText.content</strong> (zu finden in Menü: Verwaltung -> Sprachvariablen).]]></de>
+            <en><![CDATA[If you want to change the text, edit the language variable <strong>settings.footerTemplate.shortText.content</strong> (to find in the menu: Administration -> Translator).]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.content" html="true">
+            <de><![CDATA[<p>
+                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+                            </p>
+
+                            <p style="color: #eee;">
+                                1-800-123-HELLO  <br>
+                                example@mail.com
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="footer-share-button">
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>]]></de>
+            <en><![CDATA[<p>
+                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+                            </p>
+
+                            <p style="color: #eee;">
+                                1-800-123-HELLO  <br>
+                                example@mail.com
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="footer-share-button">
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.show">
+            <de><![CDATA[Anzeigen]]></de>
+            <en><![CDATA[Show]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.title">
+            <de><![CDATA[Überschrift]]></de>
+            <en><![CDATA[Title]]></en>
+        </locale>
+        <locale name="settings.footerTemplate.shortText.priority">
+            <de><![CDATA[Priorität (Reihenfolge)]]></de>
+            <en><![CDATA[Priority (order)]]></en>
+        </locale>
 
         <!-- Colors -->
-        <locale name="templateBusinessPro.settings.color.title">
+        <locale name="settings.color.title">
             <de><![CDATA[Farbverwaltung]]></de>
             <en><![CDATA[Color management]]></en>
-            <pl><![CDATA[Kolory]]></pl>
         </locale>
-
         <locale name="template.settings.mobileMenuBackground">
             <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
             <en><![CDATA[Mobile nav background color]]></en>
-            <pl><![CDATA[Kolor tła nawigacji (mobile)]]]></pl>
         </locale>
         <locale name="template.settings.mobileMenuBackground.desc">
             <de><![CDATA[Die Einstellung ist nur in mobiler Ansicht sichtbar. So kann man die unterschiedlichen
                 Ebenen farblich unterscheiden.]]></de>
             <en><![CDATA[This setting works only for mobile.]]></en>
-            <pl><![CDATA[Efekt tego ustawienia jest widoczny przy przeglądaniu strony na urządzeniach przenośnych.
-                W ten sposób można odróżnić menu mobilne od nagłówka strony.]]></pl>
         </locale>
 
-        <locale name="templateBusinessPro.settings.footerColor.text">
+        <locale name="settings.footerColor.text">
             <de><![CDATA[Footer]]></de>
             <en><![CDATA[Footer]]></en>
         </locale>
-        <locale name="templateBusinessPro.settings.contentColor.text">
+        <locale name="settings.contentColor.text">
             <de><![CDATA[Inhalt]]></de>
             <en><![CDATA[Content]]></en>
         </locale>
 
-        <locale name="template.settings.colorFooterBackground.text" html="true">
+        <locale name="template.settings.colorFooterBackground.text">
             <de><![CDATA[Footer Hintegrundfarbe]]></de>
             <en><![CDATA[Footer background color]]></en>
         </locale>
@@ -533,135 +499,41 @@
             <en><![CDATA[Sort]]></en>
         </locale>
 
-        <!-- social icons -->
-        <locale name="social.settings.title">
-            <de><![CDATA[Social Icons]]></de>
-            <en><![CDATA[Social icons]]></en>
-            <pl><![CDATA[Media spolecznosciowe (social icons)]]></pl>
-        </locale>
-        <locale name="social.show.nav">
-            <de><![CDATA[Anzeigen im Menü]]></de>
-            <en><![CDATA[Show in nav]]></en>
-            <pl><![CDATA[Wlacz w nawigacji]]></pl>
-        </locale>
-        <locale name="social.show.footer">
-            <de><![CDATA[Anzeigen im Footer]]></de>
-            <en><![CDATA[Show in footer]]></en>
-            <pl><![CDATA[Wlacz w stopce]]></pl>
-        </locale>
-        <locale name="social.linksNote" html="true">
-            <de><![CDATA[Bitte Links mit <strong>http:///</strong> oder <strong>https:///</strong> verwenden, z.B. https:///www.facebook.com]]></de>
-            <en><![CDATA[Please use only hyperlinks with <strong>http:///</strong> or <strong>https:///</strong>, e.g. https:///www.facebook.com]]></en>
-            <pl><![CDATA[Proszę używać linków z <strong>http:///</strong> albo <strong>https:///</strong>, na przyklad: https:///www.facebook.com]]></pl>
-        </locale>
-        <locale name="social.facebook">
-            <de><![CDATA[Facebook]]></de>
-            <en><![CDATA[Facebook]]></en>
-            <pl><![CDATA[Facebook]]></pl>
-        </locale>
-        <locale name="social.twitter">
-            <de><![CDATA[Twitter]]></de>
-            <en><![CDATA[Twitter]]></en>
-            <pl><![CDATA[Twitter]]></pl>
-        </locale>
-        <locale name="social.google">
-            <de><![CDATA[Google Plus]]></de>
-            <en><![CDATA[Google Plus]]></en>
-            <pl><![CDATA[Google Plus]]></pl>
-        </locale>
-        <locale name="social.youtube">
-            <de><![CDATA[YouTube]]></de>
-            <en><![CDATA[YouTube]]></en>
-            <pl><![CDATA[YouTube]]></pl>
-        </locale>
-        <locale name="social.github">
-            <de><![CDATA[GitHub]]></de>
-            <en><![CDATA[GitHub]]></en>
-            <pl><![CDATA[GitHub]]></pl>
-        </locale>
-        <locale name="social.gitlab">
-            <de><![CDATA[GitLab]]></de>
-            <en><![CDATA[GitLab]]></en>
-            <pl><![CDATA[GitLab]]></pl>
-        </locale>
 
-        <!-- extra buttons -->
-        <locale name="linkSimpleGrey">
-            <de><![CDATA[Link: simple (grau)]]></de>
-            <en><![CDATA[Link: simple (grey)]]></en>
-        </locale>
-        <locale name="linkSimpleColor">
-            <de><![CDATA[Link: simple (color)]]></de>
-            <en><![CDATA[Link: simple (color)]]></en>
-        </locale>
-        <locale name="LinkSlideUpGrey">
-            <de><![CDATA[Link: slide up (grau)]]></de>
-            <en><![CDATA[Link: slide up (grey)]]></en>
-        </locale>
-        <locale name="LinkSlideUpColor">
-            <de><![CDATA[Link: slide up (color)]]></de>
-            <en><![CDATA[Link: slide up (color)]]></en>
-        </locale>
-        <locale name="LinkSlideRightGrey">
-            <de><![CDATA[Link: slide right (grey)]]></de>
-            <en><![CDATA[Link: slide right (grey)]]></en>
-        </locale>
 
-        <locale name="templateButton.small">
-            <de><![CDATA[Button: klein]]></de>
-            <en><![CDATA[Button: small]]></en>
-            <pl><![CDATA[Button: mały]]></pl>
-        </locale>
-        <locale name="templateButton.medium">
-            <de><![CDATA[Button: normal]]></de>
-            <en><![CDATA[Button: medium]]></en>
-            <pl><![CDATA[Button: średni]]></pl>
-        </locale>
-        <locale name="templateButton.large">
-            <de><![CDATA[Button: groß]]></de>
-            <en><![CDATA[Button: large]]></en>
-            <pl><![CDATA[Button: duży]]></pl>
-        </locale>
 
         <!-- site settings -->
 
-        <locale name="templateBusinessPro.siteSettings">
-            <de><![CDATA[Template Business Pro: Einstellungen]]></de>
-            <en><![CDATA[Template Business Pro: settings]]></en>
-            <pl><![CDATA[Template Business Pro: ustawienia]]></pl>
+        <locale name="siteSettings">
+            <de><![CDATA[Template Avada Agency: Einstellungen]]></de>
+            <en><![CDATA[Template Avada Agency: settings]]></en>
         </locale>
 
         <locale name="siteSettings.showEmotion">
             <de><![CDATA[Header]]></de>
             <en><![CDATA[Header]]></en>
-            <pl><![CDATA[Nagłówek]]></pl>
         </locale>
             <locale name="siteSettings.showEmotion.default">
                 <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
                 <en><![CDATA[Default template setting]]></en>
-                <pl><![CDATA[Zastosuj ustawienia szablonu (template)]]></pl>
             </locale>
             <locale name="siteSettings.showEmotion.show">
                 <de><![CDATA[Anzeigen]]></de>
                 <en><![CDATA[Show]]></en>
-                <pl><![CDATA[Pokaż]]></pl>
             </locale>
             <locale name="siteSettings.showEmotion.hide">
                 <de><![CDATA[Verstecken]]></de>
                 <en><![CDATA[Hide]]></en>
-                <pl><![CDATA[Ukryj]]></pl>
             </locale>
 
         <!-- Title & short -->
         <locale name="siteSettings.showTitle">
             <de><![CDATA[Überschrift anzeigen]]></de>
             <en><![CDATA[Show title]]></en>
-            <pl><![CDATA[Wyświetlić tytuł]]></pl>
         </locale>
         <locale name="siteSettings.showShort">
             <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
             <en><![CDATA[Show short descriptions]]></en>
-            <pl><![CDATA[Wyświetlić opis strony]]></pl>
         </locale>
 
     </groups>

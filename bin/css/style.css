@@ -2,13 +2,124 @@
     max-height: 200%;
 }
 
+section {
+    padding: 0;
+}
+
+header {
+    margin-bottom: 1.3em;
+}
+
+textarea {
+    min-height: 160px;
+}
+
+label {
+    font-weight: normal;
+}
+
+button,
+.button {
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
+.page-head {
+    margin-bottom: 0;
+}
+
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.template-section {
+    padding: 1.7129em 0;
+}
+
+.start-page .template-section {
+    padding: 5.6285em 0;
+}
+
+.no-padding,
+.template-section.no-padding {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/***************/
+/* page footer */
+/***************/
+.page-footer-copyright {
+    font-size: 12px;
+}
+
+.page-footer .container:not(:first-child) {
+    margin-top: 30px;
+}
+
+/* template footer */
+.footer-widget {
+    flex: 1 0 auto;
+}
+
+.footer-news-image .fa {
+    font-size: 2em;
+}
+
+.page-footer a,
+.footer-nav li a {
+    transition: unset;
+}
+
+
+/**************/
+/* navigation */
+/**************/
+#mainNavigation {
+    border-radius: 0;
+}
+
+#mainNavigation .navbar-nav li a {
+    transition: unset;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/***************/
+/* page header */
+/***************/
+.page-head {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-head .header-wrapper {
+    align-items: center;
+    display: flex;
+    height: 170px; /* default, can be overwritten by template settings */
+    padding: 0;
+}
+
 /**********************/
 /* quiqqer breadcrumb */
 /**********************/
 .quiqqer-breadcrumb-list {
     background-color: transparent;
-    font-size: 15px;
     float: right;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -30,4 +141,11 @@
 
 .quiqqer-breadcrumb-list li:last-child a .quiqqer-breadcrumb-link-text {
     color: #fff;
+}
+
+/***********/
+/* contact */
+/***********/
+.quiqqer-simple-contact-button {
+    margin-top: 2em;
 }

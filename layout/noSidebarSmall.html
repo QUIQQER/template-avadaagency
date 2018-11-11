@@ -1,10 +1,9 @@
 
-{assign var=rightSideBar value=$BricksManager->getBricksByArea('rightSidebar', $Site)}
+{assign var=noSidebarBricks value=$BricksManager->getBricksByArea('noSidebar', $Site)}
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
-<div class="page-multible-left col-md-9">
-
+<div class="col-md-8 col-md-offset-2">
     {if !empty( $prefixContentBricks )}
     {foreach from=$prefixContentBricks item=Brick}
     <div class="template-section clearfix">
@@ -14,7 +13,7 @@
     {/if}
 
 
-    <section role="main" class="template-section">
+    <section class="template-section">
         <header class="content-header">
             <h1 itemprop="name">
                 {$Site->getAttribute('title')}
@@ -29,23 +28,21 @@
         {$Template->getBody()}
     </section>
 
+
+    {if !empty( $noSidebarBricks )}
+    {foreach from=$noSidebarBricks item=Brick}
+    <div class="template-section clearfix">
+        {$Brick->create()}
+    </div>
+    {/foreach}
+    {/if}
+
+
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
     <div class="template-section clearfix">
         {$Brick->create()}
     </div>
     {/foreach}
-    {/if}
-</div>
-
-<div class="page-multible-right col-md-3">
-    {if !empty( $rightSideBar)}
-        {foreach from=$rightSideBar item=Brick}
-        <div class="template-section clearfix">
-            {$Brick->create()}
-        </div>
-        {/foreach}
-    {else}
-        &nbsp;
     {/if}
 </div>

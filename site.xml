@@ -6,40 +6,50 @@
         <layout type="layout/startPage"
                 image="bin/layouts/startPage.png">
             <title>
-                <locale group="quiqqer/template-argon" var="admin.layout.startpage" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.startpage" />
             </title>
             <description>
-                <locale group="quiqqer/template-argon" var="admin.layout.startpage.desc" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.startpage.desc" />
             </description>
         </layout>
 
         <layout type="layout/noSidebar"
                 image="bin/layouts/noSidebar.png">
             <title>
-                <locale group="quiqqer/template-argon" var="admin.layout.noSidebar" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.noSidebar" />
             </title>
             <description>
-                <locale group="quiqqer/template-argon" var="admin.layout.noSidebar.desc" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.noSidebar.desc" />
+            </description>
+        </layout>
+
+        <layout type="layout/noSidebarSmall"
+                image="bin/layouts/noSidebar.png">
+            <title>
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.noSidebarSmall" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.noSidebarSmall.desc" />
             </description>
         </layout>
 
         <layout type="layout/leftSidebar"
                 image="bin/layouts/leftSidebar.png">
             <title>
-                <locale group="quiqqer/template-argon" var="admin.layout.leftSidebar" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.leftSidebar" />
             </title>
             <description>
-                <locale group="quiqqer/template-argon" var="admin.layout.leftSidebar.desc" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.leftSidebar.desc" />
             </description>
         </layout>
 
         <layout type="layout/rightSidebar"
                 image="bin/layouts/rightSidebar.png">
             <title>
-                <locale group="quiqqer/template-argon" var="admin.layout.rightSidebar" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.rightSidebar" />
             </title>
             <description>
-                <locale group="quiqqer/template-argon" var="admin.layout.rightSidebar.desc" />
+                <locale group="quiqqer/template-avadaagency" var="admin.layout.rightSidebar.desc" />
             </description>
         </layout>
     </layouts>

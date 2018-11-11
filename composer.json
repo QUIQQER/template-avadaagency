@@ -23,16 +23,15 @@
     "quiqqer\/fontawesome": "4.*|dev-master|dev-dev",
     "quiqqer\/sitetypes": "1.*|dev-master|dev-dev",
     "quiqqer\/menu": "1.*|dev-master|dev-dev",
-    "quiqqer\/unsemantic": "1.*|dev-master|dev-dev",
     "quiqqer\/utils": "1.*|dev-master|dev-dev",
     "quiqqer\/page-transition": "1.*|dev-master|dev-dev",
     "quiqqer\/pace": ">=1.2.0,<2.0.0|dev-master|dev-dev",
     "quiqqer\/buttons": "1.*|dev-master|dev-dev",
-    "quiqqer\/bootstrap": "1.*|dev-master|dev-dev"
+    "quiqqer\/bootstrap": "3.3.*|dev-master|dev-dev"
   },
   "autoload": {
     "psr-4": {
-      "QUI\\TemplateArgon\\": "src/QUI/TemplateArgon"
+      "QUI\\TemplateAvadaAgency\\": "src/QUI/TemplateAvadaAgency"
     }
   }
 }

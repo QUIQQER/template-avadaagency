@@ -1,0 +1,11 @@
+{assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+{if !empty($footer)}
+<div class="container">
+    <div class="row">
+        {foreach from=$footer item=Brick}
+            {$Brick->addCSSClass('page-footer-brick')}
+            {$Brick->create()}
+        {/foreach}
+    </div>
+</div>
+{/if}

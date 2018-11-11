@@ -1,0 +1,30 @@
+<nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <!-- navbar logo -->
+            <div class="navbar-brand">
+                <span class="sr-only">&copy; {$Project->get(1)->getAttribute('title')}</span>
+                <a href="{url id=1}">
+                    &copy; {$Project->get(1)->getAttribute('title')}
+                </a>
+            </div>
+        </div>
+
+        <!-- nav links -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right text-capitalize">
+
+                {assign var=children value=$Project->firstChild()->getNavigation()}
+                {foreach from=$children item=Child}
+                <li>
+                    <a href="{url site=$Child}">
+                        <span>{$Child->getAttribute('title')}</span>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+
+    </div>
+</nav>
