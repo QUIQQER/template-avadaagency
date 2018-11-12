@@ -125,6 +125,7 @@ class Utils
      */
     private static function getFooterTemplate($Project)
     {
+        $lang                 = $Project->getLang();
         $footerTemplateConfig = [];
         $where['active']      = 1;
 
@@ -140,9 +141,14 @@ class Utils
          * Links box
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBox.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.linksBox.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -165,7 +171,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['linksBox'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -175,9 +181,14 @@ class Utils
          * Links box (second / more links)
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBoxMore.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.linksBoxMore.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -200,7 +211,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['linksBoxMore'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -210,9 +221,15 @@ class Utils
          * Recent (blog / news)
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.recent.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.recent.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
+
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -235,7 +252,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['recent'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -245,9 +262,14 @@ class Utils
          * Short text
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.shortText.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -260,7 +282,7 @@ class Utils
             }
 
             $footerTemplateConfig['footerTemplate']['shortText'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'content'  => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.content'),
                 'priority' => $linksBoxPriority
             ];

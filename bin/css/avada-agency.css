@@ -67,10 +67,10 @@
 
 body {
 	background-color: white;
-	font-family: 'Open Sans', sans-serif;;
-	font-weight: 400;
-	line-height: 1.45;
-	color: #333;
+    color: #969595;
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: 400;
+    line-height: 1.45;
 }
 
 *:hover {
@@ -340,31 +340,31 @@ form textarea:focus {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #969595;  
+   color: #969595;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #969595;  
+   color: #969595;
 }
 
-:-ms-input-placeholder {  
-   color: #969595;  
+:-ms-input-placeholder {
+   color: #969595;
 }
 
 /*====================================== 2.5 pagination  ====================================*/
 
-.pagination>.active>a, 
-.pagination>.active>a:focus, 
-.pagination>.active>a:hover, 
-.pagination>.active>span, 
-.pagination>.active>span:focus, 
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
 .pagination>.active>span:hover,
-.pagination>li>a:focus, 
-.pagination>li>a:hover, 
-.pagination>li>span:focus, 
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
 .pagination>li>span:hover {
-    color: #fff;    
-    background-color: #000;    
+    color: #fff;
+    background-color: #000;
     border-color: #000;
 }
 
@@ -388,9 +388,10 @@ form textarea:focus {
 /* =-=--=-=-=-=-=-==-=-=-=-  2.6 Typography   =-=-=-=-==-=-==-====-==-=- */
 
 h1, h2, h3, h4 {
-	margin: 1.414em 0 0.5em;
-	font-weight: inherit;
-	line-height: 1.2;
+    color: #333;
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
 }
 
 h1 {
@@ -412,7 +413,6 @@ h4 {
 }
 
 p {
-	color: #969595;
 	line-height: 1.62em;
 	margin-bottom: 1.3em;
 }
@@ -678,7 +678,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-}   
+}
 
 .header-wrapper .header-wrapper-inner {
     display: table-cell;
@@ -1110,8 +1110,8 @@ section {
 }
 
 .skill h2 {
-    font-size: 30px;    
-    margin-top: 0px;    
+    font-size: 30px;
+    margin-top: 0px;
     text-transform: uppercase;
 }
 
@@ -1526,7 +1526,7 @@ only screen and (max-device-width : 550px){
 }
 
 .author-contact {
-    border: 1px solid #f1f1f1;      
+    border: 1px solid #f1f1f1;
     padding: 10px;
 }
 
@@ -1687,10 +1687,10 @@ only screen and (max-device-width : 550px){
 
 .faq-t {
 	line-height: 1.5em;
-	color: gray;  
-	float: right; 
-	font-weight: 700; 
-	padding-right: 0.62em; 
+	color: gray;
+	float: right;
+	font-weight: 700;
+	padding-right: 0.62em;
 	-webkit-transition: all 200ms;
 	-moz-transition: all 200ms;
 	transition: all 200ms;
@@ -1717,7 +1717,7 @@ only screen and (max-device-width : 550px){
     cursor: pointer;
     font-size: 14px;
     padding: 12px;
-    
+
 }
 
 .faq-q:hover {
@@ -1759,12 +1759,12 @@ aside .tag-widget .tags a:hover {
 			archives
 --------------------------------------------*/
 
-.archive-widget .archives 
+.archive-widget .archives
 {
     padding-left: 0;
     list-style: none;
 }
-.archive-widget .archives li 
+.archive-widget .archives li
 {
     border-bottom: 1px solid #f3f3f3;
     list-style: none;
@@ -1779,7 +1779,7 @@ aside .tag-widget .tags a:hover {
     color: #969595;
 }
 
-.archive-widget .archives li:before 
+.archive-widget .archives li:before
 {
     color: #969595;
     content: "\f0da";
@@ -1807,7 +1807,7 @@ aside .tag-widget .tags a:hover {
     margin: 50px 0px;
 }
 
-#map-canvas 
+#map-canvas
 {
     width: 100%;
     height: 400px;
@@ -1859,7 +1859,7 @@ aside .tag-widget .tags a:hover {
 	margin: 25px 0px 90px 0px;
 }
 
-.contact-form .headline .section-title, 
+.contact-form .headline .section-title,
 .contact-form .headline .section-sub-title {
 	text-transform: none;
 }

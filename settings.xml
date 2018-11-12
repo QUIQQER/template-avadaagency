@@ -60,7 +60,7 @@
                     <!-- colors -->
                     <conf name="colorMain">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#2D4D88</defaultvalue>
+                        <defaultvalue>#252525</defaultvalue>
                     </conf>
                     <conf name="buttonFontColor">
                         <type><![CDATA[string]]></type>
@@ -423,7 +423,7 @@
                             </input>
                             <!-- title -->
                             <input  conf="templateAvadaAgency.settings.footerTemplate.linksBox.title"
-                                    type="text">
+                                    type="text" data-qui="controls/lang/InputMultiLang">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.footerTemplate.linksBox.title"
@@ -516,7 +516,7 @@
                             </input>
                             <!-- title -->
                             <input  conf="templateAvadaAgency.settings.footerTemplate.linksBoxMore.title"
-                                    type="text">
+                                    type="text" data-qui="controls/lang/InputMultiLang">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.footerTemplate.linksBox.title"
@@ -608,7 +608,7 @@
                             </input>
                             <!-- title -->
                             <input  conf="templateAvadaAgency.settings.footerTemplate.recent.title"
-                                    type="text">
+                                    type="text" data-qui="controls/lang/InputMultiLang">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.footerTemplate.recent.title"
@@ -714,7 +714,7 @@
                             </input>
                             <!-- title -->
                             <input  conf="templateAvadaAgency.settings.footerTemplate.shortText.title"
-                                    type="text">
+                                    type="text" data-qui="controls/lang/InputMultiLang">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.footerTemplate.shortText.title"

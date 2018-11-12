@@ -21,7 +21,7 @@ $navBarBgColorLighter = $Convert->colorBrightness($navBarBgColor, 0.9);
 $colorFooterBackground = '#414141';
 $colorFooterFont       = '#D1D1D1';
 $colorFooterLinks      = '#DDDDDD';
-$colorMain             = '#dd151b';
+$colorMain             = '#252525';
 $buttonFontColor       = '#ffffff';
 $colorMainContentBg    = '#ffffff';
 
@@ -125,12 +125,22 @@ a {
     color: <?php echo $colorMain; ?>;
 }
 
+a:hover,
+a:focus {
+    color: <?php echo $Convert->colorBrightness($colorMain, -0.8); ?>;
+}
+
 .page-footer {
     background: <?php echo $colorFooterBackground; ?>;
     color: <?php echo $colorFooterFont; ?>;
 }
 
-.page-footer p {
+.page-footer p,
+.page-footer h1,
+.page-footer h2,
+.page-footer h3,
+.page-footer h4,
+.page-footer h5 {
     color: <?php echo $colorFooterFont; ?>;
 }
 
