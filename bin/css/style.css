@@ -42,11 +42,13 @@ img {
 }
 
 .template-section {
-    padding: 1.7129em 0;
+    padding-top: 1.7129em;
+    padding-bottom: 1.7129em;
 }
 
 .start-page .template-section {
-    padding: 5.6285em 0;
+    padding-top: 5.6285em;
+    padding-bottom: 5.6285em;
 }
 
 .no-padding,

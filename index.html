@@ -13,8 +13,7 @@
     <!-- [begin] css combine -->
     {fontawesome}
 
-    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/unsemantic-wrapper.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap-unsemantic.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/fonts.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/avada-agency.css" rel="stylesheet" type="text/css"/>
@@ -63,7 +62,9 @@
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
                 <div class="container">
                     <div class="row">
-                        {$Brick->create()}
+                        <div class="col-md-12">
+                            {$Brick->create()}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -99,7 +100,9 @@
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
             <div class="container">
                 <div class="row">
-                    {$Brick->create()}
+                    <div class="col-md-12">
+                        {$Brick->create()}
+                    </div>
                 </div>
             </div>
         </section>

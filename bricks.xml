@@ -93,19 +93,6 @@
                 </layout>
 
                 <layout layout="layout/noSidebar">
-                    <area name="noSidebar">
-                        <title>
-                            <locale group="quiqqer/template-avadaagency"
-                                    var="area.noSidebar.title"
-                                    />
-                        </title>
-                        <description>
-                            <locale group="quiqqer/template-avadaagency"
-                                    var="area.noSidebar.description"
-                                    />
-                        </description>
-                    </area>
-
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
                             <locale group="quiqqer/template-avadaagency"

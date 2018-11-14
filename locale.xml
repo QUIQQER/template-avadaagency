@@ -59,15 +59,6 @@
             <en><![CDATA[Brickarea to the right of the content]]></en>
         </locale>
 
-        <locale name="area.noSidebar.title">
-            <de><![CDATA[Inhalts-Zone]]></de>
-            <en><![CDATA[Content area]]></en>
-        </locale>
-        <locale name="area.noSidebar.description">
-            <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
-            <en><![CDATA[Content area of no sidebar layout]]></en>
-        </locale>
-
         <locale name="area.sidebar.prefix.content.title">
             <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
             <en><![CDATA[Prefix area]]></en>
