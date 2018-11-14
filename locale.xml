@@ -100,9 +100,8 @@
             <en><![CDATA[Avada Agency]]></en>
         </locale>
         <locale name="package.description">
-            <de><![CDATA[Template für aussagekräftige Internetseiten mit
-            vielen Einstellungsmöglichkeiten.]]></de>
-            <en><![CDATA[Advanced template with a modern design and settings.]]></en>
+            <de><![CDATA[Modernes und responsives Template für diverse Agenturen oder kleine und mittlere Unternehmen.]]></de>
+            <en><![CDATA[Modern and responsive agency websites or corporate company websites.]]></en>
         </locale>
 
         <!-- Layouts -->
