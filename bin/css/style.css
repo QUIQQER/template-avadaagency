@@ -46,13 +46,17 @@ img {
 }
 
 .template-section {
+    padding-bottom: 1.7129em;
     padding-top: 1.7129em;
+}
+
+.content-body {
     padding-bottom: 1.7129em;
 }
 
 .start-page .template-section {
-    padding-top: 5.6285em;
     padding-bottom: 5.6285em;
+    padding-top: 5.6285em;
 }
 
 .no-padding,
@@ -64,6 +68,11 @@ img {
 /***************/
 /* page footer */
 /***************/
+.page-footer-wrapper {
+    background-size: cover;
+    background-position: center;
+}
+
 .page-footer-copyright {
     font-size: 12px;
 }
@@ -86,7 +95,6 @@ img {
     transition: unset;
 }
 
-
 /**************/
 /* navigation */
 /**************/
@@ -100,16 +108,16 @@ img {
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /***************/
 /* page header */
 /***************/
 .page-head {
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .page-head .header-wrapper {
@@ -157,7 +165,7 @@ img {
 }
 
 /*********************************************************************************/
-/* search site types - standard Suche
+/* search site types
 /*********************************************************************************/
 
 .qui-search-result form {
@@ -176,6 +184,153 @@ img {
 
 .qui-search-result input[type="submit"] {
     flex-grow: 1;
-    order: 3;
     margin: 10px;
+    order: 3;
+}
+
+/****************************/
+/* site type gallery (grid) */
+/****************************/
+/* disable top pagination */
+.quiqqer-gallery-grid .quiqqer-pagination:first-child {
+    display: none;
+}
+
+.quiqqer-gallery-grid-entry-text {
+    text-align: center;
+}
+
+.quiqqer-gallery-grid-list .quiqqer-gallery-grid-entry-text {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.quiqqer-gallery-grid .quiqqer-gallery-grid-entry {
+    width: 33.333%;
+    margin: 0 !important;
+    border: 2px solid #fff;
+    overflow: hidden;
+    padding: 0;
+}
+
+.quiqqer-gallery-grid .quiqqer-gallery-grid-entry-image {
+    height: 200px;
+}
+
+.quiqqer-gallery-grid .quiqqer-gallery-grid-entry-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.quiqqer-gallery-grid .quiqqer-gallery-grid-entry-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.2s all;
+    opacity: 1;
+    color: #fff;
+    transform: translateY(100%);
+}
+
+.quiqqer-gallery-grid-entry:hover .quiqqer-gallery-grid-entry-text {
+    transform: translateY(0);
+}
+
+/**************/
+/* pagination */
+/**************/
+.quiqqer-sheets-desktop {
+    border-radius: 4px;
+    display: flex;
+    margin: 20px 0;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.quiqqer-sheets-desktop > a,
+.quiqqer-sheets-desktop > span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #337ab7;
+    float: left;
+    line-height: 1.42857143;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+
+.quiqqer-sheets-desktop > li:first-child > a,
+.quiqqer-sheets-desktop > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+
+.quiqqer-sheets-desktop > li:last-child > a,
+.quiqqer-sheets-desktop > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.quiqqer-sheets-desktop > a:hover,
+.quiqqer-sheets-desktop > a:focus {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #23527c;
+    z-index: 2;
+}
+
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current,
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current:hover,
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current:focus {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    cursor: default;
+    z-index: 3;
+}
+
+.quiqqer-sheets-desktop > .disabled > span,
+.quiqqer-sheets-desktop > .disabled > span:hover,
+.quiqqer-sheets-desktop > .disabled > span:focus,
+.quiqqer-sheets-desktop > .disabled > a,
+.quiqqer-sheets-desktop > .disabled > a:hover,
+.quiqqer-sheets-desktop > .disabled > a:focus {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* avada agency pagination */
+.quiqqer-pagination .quiqqer-sheets-desktop > a,
+.quiqqer-pagination .quiqqer-sheets-desktop > span {
+    border: 2px solid #dadada;
+    border-radius: 0px;
+    color: #dadada;
+    margin-left: 5px;
+}
+
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current,
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current:focus,
+.quiqqer-sheets-desktop > span.quiqqer-sheets-desktop-current:hover,
+.quiqqer-sheets-desktop > a:focus,
+.quiqqer-sheets-desktop > a:hover {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.quiqqer-sheets-desktop > li:last-child > a,
+.quiqqer-sheets-desktop > li:last-child > span {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.quiqqer-sheets-desktop > li:first-child > a,
+.quiqqer-sheets-desktop > li:first-child > span {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }

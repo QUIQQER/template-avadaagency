@@ -66,18 +66,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#ffffff</defaultvalue>
                     </conf>
-                    <conf name="colorFooterBackground">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#313131</defaultvalue>
-                    </conf>
-                    <conf name="colorFooterFont">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#969595</defaultvalue>
-                    </conf>
-                    <conf name="colorFooterLinks">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#dddddd</defaultvalue>
-                    </conf>
                 </section>
 
                 <!-- footer -->
@@ -85,6 +73,29 @@
                     <conf name="showFooterNav">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="backgroundImage">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="backgroundImage.position">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>center</defaultvalue>
+                    </conf>
+                    <conf name="colorBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#313131</defaultvalue>
+                    </conf>
+                    <conf name="colorBackground.opacity">
+                        <type><![CDATA[number]]></type>
+                        <defaultvalue>100</defaultvalue>
+                    </conf>
+                    <conf name="colorFont">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#969595</defaultvalue>
+                    </conf>
+                    <conf name="colorLinks">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#dddddd</defaultvalue>
                     </conf>
                 </section>
 
@@ -374,6 +385,8 @@
                                 />
                             </title>
 
+
+                            <!-- show nav in footer -->
                             <input conf="templateAvadaAgency.settings.footer.showFooterNav"
                                    type="checkbox">
                                 <text>
@@ -388,6 +401,83 @@
                                 </description>
                             </input>
 
+                            <!-- footer background image -->
+                            <input conf="templateAvadaAgency.settings.footer.backgroundImage"
+                                   type="text" class="media-image">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage.desc"
+                                    />
+                                </description>
+                            </input>
+                            <!-- footer background image position -->
+                            <select conf="templateAvadaAgency.settings.footer.backgroundImage.position">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage.position"
+                                    />
+                                </text>
+
+                                <option value="top">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage.position.top"
+                                    />
+                                </option>
+                                <option value="center" selected="selected">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage.position.center"
+                                    />
+                                </option>
+                                <option value="bottom">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.footer.backgroundImage.position.bottom"
+                                    />
+                                </option>
+                            </select>
+
+                            <!-- footer background color -->
+                            <input conf="templateAvadaAgency.settings.footer.colorBackground"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.footer.colorBackground"
+                                    />
+                                </text>
+                            </input>
+                            <!-- footer background color opacity -->
+                            <input conf="templateAvadaAgency.settings.footer.colorBackground.opacity"
+                                   type="number" min="" max="100">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.footer.colorBackground.opacity"
+                                    />
+                                </text>
+                            </input>
+                            <!-- footer font color -->
+                            <input conf="templateAvadaAgency.settings.footer.colorFont"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.footer.colorFont"
+                                    />
+                                </text>
+                            </input>
+                            <!-- footer links color (url) -->
+                            <input conf="templateAvadaAgency.settings.footer.colorLinks"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.footer.colorLinks"
+                                    />
+                                </text>
+                            </input>
+
+                            <!-- enable / disable footer template -->
                             <input conf="templateAvadaAgency.settings.footerTemplate.enable"
                                    type="checkbox">
                                 <text>
@@ -763,36 +853,6 @@
                                     />
                                 </text>
                             </input>
-
-                            <text>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="settings.footerColor.text"
-                                />
-                            </text>
-                            <input conf="templateAvadaAgency.settings.colorFooterBackground"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorFooterBackground.text"
-                                            />
-                                </text>
-                            </input>
-                            <input conf="templateAvadaAgency.settings.colorFooterFont"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorFooterFont.text"
-                                            />
-                                </text>
-                            </input>
-                            <input conf="templateAvadaAgency.settings.colorFooterLinks"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorFooterLinks.text"
-                                            />
-                                </text>
-                            </input>
                         </settings>
                     </category>
                 </categories>
@@ -801,8 +861,7 @@
         </settings>
 
         <wysiwyg class="page-content">
-            <css src="URL_OPT_DIR/quiqqer/bootstrap/bin/css/bootstrap.css"/>
-            <css src="URL_OPT_DIR/quiqqer/bootstrap/bin/css/unsemantic-wrapper.css"/>
+            <css src="URL_OPT_DIR/quiqqer/bootstrap/bin/css/bootstrap-unsemantic.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/fonts.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/animate.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/css/avada-agency.css"/>

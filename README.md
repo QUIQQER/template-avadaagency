@@ -3,7 +3,8 @@
 QUIQQER Avada Agency
 ====================
 
-Create modern and responsive agency websites or corporate company websites. This template is suitable for small and medium organizations, consultant agencies, travel agencies or other agency websites.
+Create modern and responsive agency websites or corporate company websites. 
+This template is suitable for small and medium organizations, consultant agencies, travel agencies or other agency websites.
 Source: https://github.com/technext/avada-agency-pro
 
 
@@ -30,21 +31,22 @@ Features
 Installation
 ------------
 
-The package name is: quiqqer/template-argon
+The package name is: quiqqer/template-avadaagency
 
 
 Contribute
 ----------
 
-- Issue Tracker: https://dev.quiqqer.com/quiqqer/template-argon/issues 
-- Source Code: https://dev.quiqqer.com/quiqqer/template-argon
+- Issue Tracker: https://dev.quiqqer.com/quiqqer/template-avadaagency/issues 
+- Source Code: https://dev.quiqqer.com/quiqqer/template-avadaagency
 
 
 Support
 -------
 
-If you have found a bug or want to make improvements,
-then you can write an e-mail to support@pcsg.de.
+If you found any flaws, have any wishes or suggestions you can send an email
+to [support@pcsg.de](mailto:support@pcsg.de) to inform us about your concerns. 
+We will try to respond to your request and forward it to the responsible developer.
 
 
 License

@@ -73,7 +73,7 @@
     </div>
 
     <!-- content -->
-    <div class="{cycle values='' reset=true} container">
+    <div class="{cycle values='' reset=true} container main-wrapper">
         <div class="main-content row">
             {$Template->getLayout()}
         </div>
@@ -110,23 +110,25 @@
         {/foreach}
     </div>
 
-    <!-- page footer -->
-    <footer class="page-footer">
-        {if $footerTemplate}
-            {fetch template="template/footerTemplate.html" BricksManager=$BricksManager
-            Site=$Site footerTemplate=$footerTemplate}
+    <div class="page-footer-wrapper">
+        <!-- page footer -->
+        <footer class="page-footer">
+            {if $footerTemplate}
+                {fetch template="template/footerTemplate.html" BricksManager=$BricksManager
+                Site=$Site footerTemplate=$footerTemplate}
+            {/if}
+
+            {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
+        </footer>
+
+        <!-- footer copyright -->
+        {fetch template="template/footerCopyright.html"}
+
+        <!-- footer nav  -->
+        {if $showFooterNav}
+            {fetch template="template/footerNavigation.html" Project=$Project Site=$Site}
         {/if}
-
-        {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
-    </footer>
-
-    <!-- footer copyright -->
-    {fetch template="template/footerCopyright.html"}
-
-    <!-- footer nav  -->
-    {if $showFooterNav}
-        {fetch template="template/footerNavigation.html" Project=$Project Site=$Site}
-    {/if}
+    </div>
 
 
 <!-- [begin] js combine -->

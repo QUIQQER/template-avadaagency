@@ -101,7 +101,7 @@
         </locale>
         <locale name="package.description">
             <de><![CDATA[Modernes und responsives Template für diverse Agenturen oder kleine und mittlere Unternehmen.]]></de>
-            <en><![CDATA[Modern and responsive agency websites or corporate company websites.]]></en>
+            <en><![CDATA[Modern and responsive template for agency websites or corporate company websites.]]></en>
         </locale>
 
         <!-- Layouts -->
@@ -290,6 +290,46 @@
             <de><![CDATA[Wenn eingeschaltet, wird im Footer ganz unten Navigation eingeblendet (ohne Submenü - nur die erste Ebene).]]></de>
             <en><![CDATA[If enabled, navigation will be shown at the bottom of the footer (without submenu - only the first level).]]></en>
         </locale>
+        <locale name="settings.footer.backgroundImage">
+            <de><![CDATA[Hintergrundbild]]></de>
+            <en><![CDATA[Background image]]></en>
+        </locale>
+        <locale name="settings.footer.backgroundImage.desc">
+            <de><![CDATA[Bei einigen Bildern wird empfohlen direkt die Transparenz der Footer Hintertrundfarbe einzustellen.]]></de>
+            <en><![CDATA[For some images it is recommended to directly adjust the transparency of the Footer background color.]]></en>
+        </locale>
+        <locale name="settings.footer.backgroundImage.position">
+            <de><![CDATA[Hintergrundbild]]></de>
+            <en><![CDATA[Background image]]></en>
+        </locale>
+            <locale name="settings.footer.backgroundImage.position.top">
+                <de><![CDATA[Oben]]></de>
+                <en><![CDATA[Top]]></en>
+            </locale>
+            <locale name="settings.footer.backgroundImage.position.center">
+                <de><![CDATA[Zentriert]]></de>
+                <en><![CDATA[Center]]></en>
+            </locale>
+            <locale name="settings.footer.backgroundImage.position.bottom">
+                <de><![CDATA[Unten]]></de>
+                <en><![CDATA[Bottom]]></en>
+            </locale>
+        <locale name="template.settings.footer.colorBackground">
+            <de><![CDATA[Footer Hintegrundfarbe]]></de>
+            <en><![CDATA[Footer background color]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorBackground.opacity">
+            <de><![CDATA[Transparenz der Hintergrundfarbe (0 - 100)]]></de>
+            <en><![CDATA[Opacity of the background color (0 - 100)]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorFont">
+            <de><![CDATA[Footer Schriftfarbe]]></de>
+            <en><![CDATA[Footer font color]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorLinks">
+            <de><![CDATA[Footer Link-Farbe]]></de>
+            <en><![CDATA[Footer link color]]></en>
+        </locale>
 
         <!-- Footer template -->
         <locale name="settings.footerTemplate.show">
@@ -451,18 +491,6 @@
             <en><![CDATA[Content]]></en>
         </locale>
 
-        <locale name="template.settings.colorFooterBackground.text">
-            <de><![CDATA[Footer Hintegrundfarbe]]></de>
-            <en><![CDATA[Footer background color]]></en>
-        </locale>
-        <locale name="template.settings.colorFooterFont.text">
-            <de><![CDATA[Footer Schriftfarbe]]></de>
-            <en><![CDATA[Footer font color]]></en>
-        </locale>
-        <locale name="template.settings.colorFooterLinks.text">
-            <de><![CDATA[Footer Link-Farbe]]></de>
-            <en><![CDATA[Footer link color]]></en>
-        </locale>
         <locale name="template.settings.colorMain.text">
             <de><![CDATA[Hauptfarbe]]></de>
             <en><![CDATA[Main color]]></en>

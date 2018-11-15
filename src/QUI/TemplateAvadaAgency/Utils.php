@@ -288,7 +288,46 @@ class Utils
             ];
         }
 
-
         return $footerTemplateConfig;
+    }
+
+    /**
+     * Convert #hex value to rgb(a)
+     * inspired by https://stackoverflow.com/a/31934345
+     *
+     * returns array...
+     * Array (
+     *     [r] => 25
+     *     [g] => 182
+     *     [b] => 152
+     *     [a] => 1
+     * )
+     *
+     * or string in rgba format...
+     * "255,255,255,1"
+     *
+     * @param $hex
+     * @param bool $alpha
+     * @param bool $rgbaFormat
+     * @return array | string
+     */
+    public static function hexToRgb($hex, $alpha = false, $rgbaFormat = false)
+    {
+        $hex      = str_replace('#', '', $hex);
+        $length   = strlen($hex);
+        $rgb['r'] = hexdec($length == 6 ? substr($hex, 0, 2) : ($length == 3 ? str_repeat(substr($hex, 0, 1), 2) : 0));
+        $rgb['g'] = hexdec($length == 6 ? substr($hex, 2, 2) : ($length == 3 ? str_repeat(substr($hex, 1, 1), 2) : 0));
+        $rgb['b'] = hexdec($length == 6 ? substr($hex, 4, 2) : ($length == 3 ? str_repeat(substr($hex, 2, 1), 2) : 0));
+
+        if ($alpha) {
+            $rgb['a'] = $alpha;
+        }
+
+        //If you'd like to return the rgb(a) in CSS format...
+        if ($rgbaFormat) {
+            return implode(array_keys($rgb)) . '(' . implode(', ', $rgb) . ')';
+        }
+
+        return $rgb;
     }
 }
