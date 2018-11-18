@@ -4,17 +4,53 @@
 
         <settings>
             <config>
-                <section name="templateAvadaAgency.settings">
-
-                    <!--<conf name="bgColorSwitcherPrefix">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>hide</defaultvalue>
+                <section name="templateAvadaAgency.settings.page">
+                    <!-- show page title -->
+                    <conf name="showTitleStartPage">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="bgColorSwitcherSuffix">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>hide</defaultvalue>
-                    </conf>-->
+                    <conf name="showTitleNoSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showTitleNoSidebarSmall">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showTitleLeftSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showTitleRightSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
 
+                    <!-- show page short description -->
+                    <conf name="showShortStartPage">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showShortNoSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showShortNoSidebarSmall">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showShortLeftSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showShortRightSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                </section>
+
+                <section name="templateAvadaAgency.settings">
                     <!-- nav bar -->
                     <conf name="navBarBgColor">
                         <type><![CDATA[string]]></type>
@@ -195,68 +231,110 @@
                         <icon>URL_BIN_DIR/22x22/quiqqer.png</icon>
 
 
-                        <!-- Background Color Switcher Prefix / Suffix -->
+                        <!-- page title & short -->
                         <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.settings.bgColorSwitcher">
+                                  name="templateAvadaAgency.settings.page">
                             <title>
                                 <locale group="quiqqer/template-avadaagency"
-                                        var="settings.bgColorSwitcher.title"
-                                        />
+                                        var="settings.page.title"
+                                />
                             </title>
 
-                            <!-- Background Color Switcher Prefix -->
-                            <select conf="templateAvadaAgency.settings.bgColorSwitcherPrefix">
+                            <!-- Show page title? -->
+                            <text>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.page.showTitle"/>
+                            </text>
+                            <input conf="templateAvadaAgency.settings.page.showTitleStartPage"
+                                   type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcherPrefix.text"
-                                            />
+                                            var="admin.layout.startpage"
+                                    />
                                 </text>
-
-                                <description>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcherPrefix.description"
-                                            />
-                                </description>
-
-                                <option value="hide">
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcher.hide"
-                                            />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcher.display"
-                                            />
-                                </option>
-                            </select>
-
-                            <!-- Background Color Switcher Suffix-->
-                            <select conf="templateAvadaAgency.settings.bgColorSwitcherSuffix">
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showTitleNoSidebar"
+                                   type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcherSuffix.text"
+                                            var="admin.layout.noSidebar"
                                     />
                                 </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showTitleNoSidebarSmall"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.noSidebarSmall"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showTitleLeftSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.leftSidebar"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showTitleRightSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.rightSidebar"
+                                    />
+                                </text>
+                            </input>
 
-                                <description>
+                            <!-- Show page short description? -->
+                            <text>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.page.showShort"/>
+                            </text>
+                            <input conf="templateAvadaAgency.settings.page.showShortStartPage"
+                                   type="checkbox">
+                                <text>
                                     <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcherSuffix.description"
+                                            var="admin.layout.startpage"
                                     />
-                                </description>
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showShortNoSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.noSidebar"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showShortNoSidebarSmall"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.noSidebarSmall"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showShortLeftSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.leftSidebar"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateAvadaAgency.settings.page.showShortRightSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="admin.layout.rightSidebar"
+                                    />
+                                </text>
+                            </input>
 
-                                <option value="hide">
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcher.hide"
-                                    />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="settings.bgColorSwitcher.display"
-                                    />
-                                </option>
-                            </select>
 
                         </settings>
+
 
 
                         <!-- header settings -->
@@ -371,6 +449,39 @@
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.navBarFontColor.text"
+                                    />
+                                </text>
+                            </input>
+                        </settings>
+
+                        <!-- Colors -->
+                        <settings title="templateAvadaAgency.settings"
+                                  name="templateAvadaAgency.settings.color">
+                            <title>
+                                <locale group="quiqqer/template-avadaagency"
+                                        var="settings.color.title"
+                                />
+                            </title>
+
+                            <input conf="templateAvadaAgency.settings.colorMain"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.colorMain.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.colorMain.description"
+                                    />
+                                </description>
+                            </input>
+
+                            <input conf="templateAvadaAgency.settings.buttonFontColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="template.settings.buttonFontColor.text"
                                     />
                                 </text>
                             </input>
@@ -817,39 +928,6 @@
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
                                             var="settings.footerTemplate.shortText.priority"
-                                    />
-                                </text>
-                            </input>
-                        </settings>
-
-                        <!-- Colors -->
-                        <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.settings.color">
-                            <title>
-                                <locale group="quiqqer/template-avadaagency"
-                                        var="settings.color.title"
-                                        />
-                            </title>
-
-                            <input conf="templateAvadaAgency.settings.colorMain"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorMain.text"
-                                            />
-                                </text>
-                                <description>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.colorMain.description"
-                                            />
-                                </description>
-                            </input>
-
-                            <input conf="templateAvadaAgency.settings.buttonFontColor"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-avadaagency"
-                                            var="template.settings.buttonFontColor.text"
                                     />
                                 </text>
                             </input>

@@ -11,16 +11,20 @@
 {/if}
 
 <section role="main" class="template-section clearfix col-md-12">
+    {if $showPageTitle || $showPageShort}
     <header class="content-header">
+        {if $showPageTitle}
         <h1 itemprop="name">
             {$Site->getAttribute('title')}
         </h1>
-        {if $Site->getAttribute('short')}
+        {/if}
+        {if $Site->getAttribute('short') && $showPageShort}
         <div class="content-short" itemprop="description">
             {$Site->getAttribute('short')|nl2br}
         </div>
         {/if}
     </header>
+    {/if}
 
     {$Template->getBody()}
 </section>

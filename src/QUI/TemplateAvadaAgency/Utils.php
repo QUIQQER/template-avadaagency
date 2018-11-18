@@ -51,41 +51,59 @@ class Utils
          */
 
         $showHeader = false;
+        $showPageTitle = true;
+        $showPageShort = true;
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
                 $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleStartPage');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortStartPage');
                 break;
 
             case 'layout/noSidebar':
                 $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleNoSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortNoSidebar');
                 break;
 
             case 'layout/noSidebarSmall':
                 $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleNoSidebarSmall');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortNoSidebarSmall');
                 break;
 
             case 'layout/rightSidebar':
                 $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleRightSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
                 $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleLeftSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortLeftSidebar');
                 break;
         }
 
 
-        $showPageTitle = $params['Site']->getAttribute('templateAvadaAgency.showTitle');
-        $showPageShort = $params['Site']->getAttribute('templateAvadaAgency.showShort');
-
-        /* site own show header */
-        /*switch ($params['Site']->getAttribute('templateAvadaAgency.showEmotion')) {
+        /* site own settings: show page title */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showTitle')) {
             case 'show':
-                $showHeader = true;
+                $showPageTitle = true;
                 break;
             case 'hide':
-                $showHeader = false;
-        }*/
+                $showPageTitle = false;
+        }
+
+        /* site own settings: show page short description */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showShort')) {
+            case 'show':
+                $showPageShort = true;
+                break;
+            case 'hide':
+                $showPageShort = false;
+        }
 
         /**
          * Template footer settings
@@ -95,7 +113,6 @@ class Utils
             $footerTemplate = $Project->getConfig('templateAvadaAgency.settings.footerTemplate.enable');
             $config         += self::getFooterTemplate($Project);
         }
-
 
         $settingsCSS = include 'settings.css.php';
 

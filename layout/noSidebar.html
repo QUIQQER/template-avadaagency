@@ -11,6 +11,7 @@
 {/if}
 
 <section class="template-section clearfix col-md-12">
+    {if $showPageTitle || $showPageShort}
     <header class="content-header">
         <h1 itemprop="name">
             {$Site->getAttribute('title')}
@@ -21,6 +22,7 @@
         </div>
         {/if}
     </header>
+    {/if}
 
     {$Template->getBody()}
 </section>

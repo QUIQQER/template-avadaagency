@@ -106,7 +106,7 @@
 
         <!-- Layouts -->
         <locale name="admin.layout.startpage">
-            <de><![CDATA[Landingpage (Startpage)]]></de>
+            <de><![CDATA[Landingpage (Startseite)]]></de>
             <en><![CDATA[Landingpage (start page)]]></en>
         </locale>
         <locale name="admin.layout.startpage.desc">
@@ -178,41 +178,26 @@
             <en><![CDATA[Template settings: Avada Agency]]></en>
         </locale>
 
-        <!-- Background Color Switcher-->
-        <locale name="settings.bgColorSwitcher.title">
-            <de><![CDATA[Prefix / Suffix Hintegrundfarbe wechseln]]></de>
-            <en><![CDATA[Change prefix / suffix background]]></en>
+        <!-- page title and desc-->
+        <locale name="settings.page.title">
+            <de><![CDATA[Seiten Einstellungen]]></de>
+            <en><![CDATA[Page settings]]></en>
         </locale>
-        <locale name="settings.bgColorSwitcher.display">
-            <de><![CDATA[Aktivieren]]></de>
-            <en><![CDATA[On]]></en>
+        <locale name="settings.page.showTitle">
+                <de><![CDATA[Seitentitel auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
+                <en><![CDATA[Show page title on the following page types? Each page can overwrite this setting.]]></en>
         </locale>
-        <locale name="settings.bgColorSwitcher.hide">
-            <de><![CDATA[Deaktivieren]]></de>
-            <en><![CDATA[Off]]></en>
-        </locale>
-
-        <!-- Background Color Switcher Prefix -->
-        <locale name="settings.bgColorSwitcherPrefix.text">
-            <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Switch background color]]></en>
-        </locale>
-        <locale name="settings.bgColorSwitcherPrefix.description">
-            <de><![CDATA[(...)]]></de>
-            <en><![CDATA[(...)]]></en>
-        </locale>
-        <!-- Background Color Switcher Suffix -->
-        <locale name="settings.bgColorSwitcherSuffix.text">
-            <de><![CDATA[Suffix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Switch background color]]></en>
-        </locale>
-        <locale name="settings.bgColorSwitcherSuffix.description">
-            <de><![CDATA[(...)]]></de>
-            <en><![CDATA[(...)]]></en>
+        <locale name="settings.page.showShort">
+            <de><![CDATA[Kurzbeschreibung auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
+            <en><![CDATA[Show page short description on the following page types? Each page can overwrite this setting.]]></en>
         </locale>
 
         <!-- header settings -->
-        <locale name="header.settings.title">
+        <locale name="settings.page.title">
+            <de><![CDATA[Header Einstellungen]]></de>
+            <en><![CDATA[Header settings]]></en>
+        </locale>
+        <locale name="settings.page.title">
             <de><![CDATA[Header Einstellungen]]></de>
             <en><![CDATA[Header settings]]></en>
         </locale>
@@ -251,8 +236,8 @@
 
         <!-- Position des Bildes im Header-->
         <locale name="settings.headerImagePosition.text">
-            <de><![CDATA[Position des Bildes wählen:]]></de>
-            <en><![CDATA[Choose position of the image:]]></en>
+            <de><![CDATA[Position des Bildes]]></de>
+            <en><![CDATA[Position of the image]]></en>
         </locale>
             <locale name="settings.headerImagePosition.start">
                 <de><![CDATA[Oben]]></de>
@@ -527,32 +512,43 @@
             <en><![CDATA[Template Avada Agency: settings]]></en>
         </locale>
 
-        <locale name="siteSettings.showEmotion">
-            <de><![CDATA[Header]]></de>
-            <en><![CDATA[Header]]></en>
-        </locale>
-            <locale name="siteSettings.showEmotion.default">
-                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
-                <en><![CDATA[Default template setting]]></en>
-            </locale>
-            <locale name="siteSettings.showEmotion.show">
-                <de><![CDATA[Anzeigen]]></de>
-                <en><![CDATA[Show]]></en>
-            </locale>
-            <locale name="siteSettings.showEmotion.hide">
-                <de><![CDATA[Verstecken]]></de>
-                <en><![CDATA[Hide]]></en>
-            </locale>
-
         <!-- Title & short -->
         <locale name="siteSettings.showTitle">
             <de><![CDATA[Überschrift anzeigen]]></de>
             <en><![CDATA[Show title]]></en>
         </locale>
+        <locale name="siteSettings.showTitle">
+            <de><![CDATA[Überschrift anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+        </locale>
+            <locale name="siteSettings.showTitle.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+            </locale>
+            <locale name="siteSettings.showTitle.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+            </locale>
+            <locale name="siteSettings.showTitle.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+            </locale>
         <locale name="siteSettings.showShort">
             <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
             <en><![CDATA[Show short descriptions]]></en>
         </locale>
+            <locale name="siteSettings.showShort.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+            </locale>
+            <locale name="siteSettings.showShort.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+            </locale>
+            <locale name="siteSettings.showShort.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+            </locale>
 
     </groups>
 </locales>
