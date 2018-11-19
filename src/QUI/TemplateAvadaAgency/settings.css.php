@@ -121,6 +121,15 @@ ob_start();
     color: <?php echo $colorMain; ?>;
 }
 
+.control-background {
+    background: <?php echo $colorMain;?>;
+}
+
+/* for example gallery */
+.control-background .control-color {
+    color: <?php echo $buttonFontColor;?>;
+}
+
 .pace .pace-progress {
     background-color: <?php echo $colorMain; ?>;
 }
@@ -192,19 +201,6 @@ a:focus {
 .page-footer a:hover {
     color: <?php echo $Convert->colorBrightness($colorFooterLinks, 0.25); ?>;
 }
-
-.control-background-active {
-    background: <?php /*echo $colorMain; */?> !important;
-    color: #FFFFFF !important;
-}
-
-.control-background {
-    background: <?php /*echo $colorMain; */?>;
-}
-
-*
-
-/
 
 /**
  * background color prefix suffix switcher
