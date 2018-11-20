@@ -15,7 +15,6 @@
 
                     <!-- navbar logo -->
                     <div class="navbar-brand">
-                        <!--<span class="sr-only">{$Site->getAttribute('title')}</span>-->
                         <a href="{url id=1}">
                             {image image=$Project->getMedia()->getLogoImage() width=200
                             class="img-responsive center-block"}
@@ -34,8 +33,13 @@
 
                         {assign var=subnavigation value=$Child->getNavigation()}
 
+                        {assign var="active" value=''}
 
-                        <li {if count($subnavigation)}class="dropdown"{/if}>
+                        {if $Site->getAttribute('id') === $Child->getAttribute('id')}
+                            {assign var="active" value='active'}
+                        {/if}
+
+                        <li class="{if count($subnavigation)}dropdown{/if} {$active}">
                         <a href="{url site=$Child}"
                            {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
                         <span>{$Child->getAttribute('title')}</span>

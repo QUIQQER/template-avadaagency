@@ -14,6 +14,11 @@ a header {
     margin-bottom: 0;
 }
 
+a.btn,
+a.button {
+    text-decoration: none;
+}
+
 textarea {
     min-height: 160px;
 }
@@ -100,6 +105,18 @@ img {
 /**************/
 #mainNavigation {
     border-radius: 0;
+    border: none;
+}
+
+#mainNavigation .navbar-brand {
+    height: 70px;
+    padding: 5px 15px;
+}
+
+#mainNavigation .navbar-brand a {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 #mainNavigation .navbar-nav li a {

@@ -185,7 +185,8 @@ a:focus {
     background: <?php echo $colorFooterNavBackground ; ?>;
     color: <?php echo $colorFooterFont; ?>;
 }
-
+.footer-nav .navbar-brand a,
+.footer-nav li a,
 .footer-links li a {
     color: <?php echo $colorFooterLinks; ?>;
 }
