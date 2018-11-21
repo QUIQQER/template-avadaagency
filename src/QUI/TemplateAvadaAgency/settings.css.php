@@ -135,7 +135,9 @@ ob_start();
 }
 
 button,
-.button {
+.button,
+button[type=submit],
+input[type="submit"] {
     background-color: <?php echo $colorMain; ?>;
     color: <?php echo $buttonFontColor; ?>;
 }
