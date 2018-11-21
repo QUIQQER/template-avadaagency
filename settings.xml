@@ -210,9 +210,6 @@
                     <conf name="shortText.title">
                         <type><![CDATA[string]]></type>
                     </conf>
-                    <conf name="shortText.content">
-                        <type><![CDATA[string]]></type>
-                    </conf>
                     <conf name="shortText.priority">
                         <type><![CDATA[number]]></type>
                         <defaultvalue>1</defaultvalue>

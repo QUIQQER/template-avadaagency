@@ -16,15 +16,8 @@ a header {
 
 a.btn,
 a.button {
+    fold-weight: normal;
     text-decoration: none;
-}
-
-textarea {
-    min-height: 160px;
-}
-
-label {
-    font-weight: normal;
 }
 
 button,
@@ -48,6 +41,20 @@ h5:first-child {
 
 img {
     max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+}
+
+textarea {
+    min-height: 160px;
+}
+
+label {
+    font-weight: normal;
 }
 
 .template-section {

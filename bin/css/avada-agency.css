@@ -493,10 +493,6 @@ blockquote footer {
 	content: "\f101";
 }
 
-li {
-	list-style: none;
-}
-
 .section-title {
 	margin-bottom: 5px;
 	text-transform: uppercase;
@@ -545,6 +541,7 @@ footer .input-group span.input-group-addon {
 }
 
 .footer-links li {
+	list-style: none;
 	margin-bottom: 10px;
 }
 

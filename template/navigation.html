@@ -39,10 +39,10 @@
                             {assign var="active" value='active'}
                         {/if}
 
-                        <li class="{if count($subnavigation)}dropdown{/if} {$active}">
-                        <a href="{url site=$Child}"
-                           {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
-                        <span>{$Child->getAttribute('title')}</span>
+                        <li class="{if count($subnavigation)}dropdown{/if} {$active} child-page-id-{$Child->getAttribute('id')}">
+                            <a href="{url site=$Child}"
+                               {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
+                            <span>{$Child->getAttribute('title')}</span>
                         </a>
                         {if count($subnavigation)}
                         <ul class="dropdown-menu">
