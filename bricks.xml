@@ -21,6 +21,19 @@
             <!-- global areas -->
 
             <areas>
+                <area name="header" inheritance="1" priority="1">
+                    <title>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="area.header.title"
+                        />
+                    </title>
+                    <description>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="area.header.description"
+                        />
+                    </description>
+                </area>
+
                 <area name="headerSuffix" inheritance="1" priority="1">
                     <title>
                         <locale group="quiqqer/template-avadaagency"

@@ -77,6 +77,15 @@
             <en><![CDATA[Brick area after the content]]></en>
         </locale>
 
+        <locale name="area.header.title">
+            <de><![CDATA[Kopfbereiches (Header)]]></de>
+            <en><![CDATA[Header]]></en>
+        </locale>
+        <locale name="area.header.description">
+            <de><![CDATA[Die Bausteinzone ist für Bausteine vorgesehen, die explizit im Kopfbereich platziert werden sollen - in der Regel platziert man hier einen Baustein.]]></de>
+            <en><![CDATA[The brick area is intended for bricks that are to be placed explicitly in the header area - usually one brick is placed here.]]></en>
+        </locale>
+
         <locale name="area.headerSuffix.title">
             <de><![CDATA[Unterhalb des Kopfbereiches (Header Suffix)]]></de>
             <en><![CDATA[Header suffix]]></en>

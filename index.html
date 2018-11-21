@@ -37,6 +37,36 @@
     <!-- site-navigation start -->
     {fetch template="template/navigation.html" Project=$Project Site=$Site}
 
+    <!-- header suffix area -->
+    <div class="headerArea">
+        {assign var=header value=$BricksManager->getBricksByArea('header', $Site)}
+        {foreach $header as $Brick}
+
+            {assign var=noPadding value=''}
+            {if $Brick->getSetting('noPadding')}
+                {assign var=noPadding value='no-padding'}
+            {/if}
+
+            {if $Brick->getSetting( 'brickFullWidth' )}
+            <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                {$Brick->create()}
+            </section>
+            {else}
+            <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                                brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {$Brick->create()}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/if}
+        {/foreach}
+    </div>
+
     <!-- header begin -->
     {if $showHeader}
         {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb showBreadcrumb=$showBreadcrumb}
