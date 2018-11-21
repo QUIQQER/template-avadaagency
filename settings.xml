@@ -4,7 +4,13 @@
 
         <settings>
             <config>
-                <section name="templateAvadaAgency.settings.page">
+                <section name="templateAvadaAgency.settings.general">
+                    <!-- breadcrumb -->
+                    <conf name="breadcrumb">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>displayInHeader</defaultvalue>
+                    </conf>
+
                     <!-- show page title -->
                     <conf name="showTitleStartPage">
                         <type><![CDATA[bool]]></type>
@@ -230,19 +236,44 @@
 
                         <!-- page title & short -->
                         <settings title="templateAvadaAgency.settings"
-                                  name="templateAvadaAgency.settings.page">
+                                  name="templateAvadaAgency.settings.general">
                             <title>
                                 <locale group="quiqqer/template-avadaagency"
-                                        var="settings.page.title"
+                                        var="settings.general.title"
                                 />
                             </title>
+
+                            <!-- Breadcrumb -->
+                            <select conf="templateAvadaAgency.settings.general.breadcrumb">
+                                <text>
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.general.breadcrumb"
+                                    />
+                                </text>
+
+                                <option value="displayInHeader">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.general.breadcrumb.displayInHeader"
+                                    />
+                                </option>
+                                <option value="displayUnderHeader">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.general.breadcrumb.displayUnderHeader"
+                                    />
+                                </option>
+                                <option value="hide">
+                                    <locale group="quiqqer/template-avadaagency"
+                                            var="settings.general.breadcrumb.hide"
+                                    />
+                                </option>
+                            </select>
 
                             <!-- Show page title? -->
                             <text>
                                 <locale group="quiqqer/template-avadaagency"
-                                        var="settings.page.showTitle"/>
+                                        var="settings.general.showTitle"/>
                             </text>
-                            <input conf="templateAvadaAgency.settings.page.showTitleStartPage"
+                            <input conf="templateAvadaAgency.settings.general.showTitleStartPage"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -250,7 +281,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showTitleNoSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showTitleNoSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -258,7 +289,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showTitleNoSidebarSmall"
+                            <input conf="templateAvadaAgency.settings.general.showTitleNoSidebarSmall"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -266,7 +297,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showTitleLeftSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showTitleLeftSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -274,7 +305,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showTitleRightSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showTitleRightSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -286,9 +317,9 @@
                             <!-- Show page short description? -->
                             <text>
                                 <locale group="quiqqer/template-avadaagency"
-                                        var="settings.page.showShort"/>
+                                        var="settings.general.showShort"/>
                             </text>
-                            <input conf="templateAvadaAgency.settings.page.showShortStartPage"
+                            <input conf="templateAvadaAgency.settings.general.showShortStartPage"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -296,7 +327,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showShortNoSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showShortNoSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -304,7 +335,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showShortNoSidebarSmall"
+                            <input conf="templateAvadaAgency.settings.general.showShortNoSidebarSmall"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -312,7 +343,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showShortLeftSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showShortLeftSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"
@@ -320,7 +351,7 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateAvadaAgency.settings.page.showShortRightSidebar"
+                            <input conf="templateAvadaAgency.settings.general.showShortRightSidebar"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-avadaagency"

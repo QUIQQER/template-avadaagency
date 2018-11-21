@@ -3,6 +3,7 @@
 
     <!-- global attributes -->
     <attributes>
+        <attribute>templateAvadaAgency.breadcrumb</attribute>
         <attribute>templateAvadaAgency.showHeader</attribute>
         <attribute>templateAvadaAgency.showTitle</attribute>
         <attribute>templateAvadaAgency.showShort</attribute>
@@ -15,6 +16,31 @@
                     <locale group="quiqqer/template-avadaagency"
                             var="siteSettings"/>
                 </title>
+
+                <!-- breadcrumb -->
+                <!-- Locale from site.xml -->
+                <select conf="templateAvadaAgency.breadcrumb">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.breadcrumb.default"/>
+                    </option>
+                    <option value="displayInHeader">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.breadcrumb.displayInHeader"/>
+                    </option>
+                    <option value="displayUnderHeader">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb.displayUnderHeader"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb.hide"/>
+                    </option>
+                </select>
 
                 <!-- show header title -->
                 <select conf="templateAvadaAgency.showHeader">

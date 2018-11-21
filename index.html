@@ -39,7 +39,19 @@
 
     <!-- header begin -->
     {if $showHeader}
-        {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb}
+        {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb showBreadcrumb=$showBreadcrumb}
+    {/if}
+
+    {if $showBreadcrumb == 'displayUnderHeader'}
+    <div class="breadcrumb-under-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {$Breadcrumb->create()}
+                </div>
+            </div>
+        </div>
+    </div>
     {/if}
 
     <!-- header suffix  -->

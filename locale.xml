@@ -178,28 +178,36 @@
             <en><![CDATA[Template settings: Avada Agency]]></en>
         </locale>
 
-        <!-- page title and desc-->
-        <locale name="settings.page.title">
-            <de><![CDATA[Seiten Einstellungen]]></de>
-            <en><![CDATA[Page settings]]></en>
+        <!-- breadcrumb -->
+        <locale name="settings.general.breadcrumb">
+            <de><![CDATA[Wo soll der Breadcrumb angezeigt werden]]></de>
+            <en><![CDATA[Where should the breadcrumb be displayed?]]></en>
         </locale>
-        <locale name="settings.page.showTitle">
+            <locale name="settings.general.breadcrumb.displayInHeader">
+                <de><![CDATA[Im Header]]></de>
+                <en><![CDATA[Display in header]]></en>
+            </locale>
+            <locale name="settings.general.breadcrumb.displayUnderHeader">
+                <de><![CDATA[Unter dem Header]]></de>
+                <en><![CDATA[Display under the header]]></en>
+            </locale>
+            <locale name="settings.general.breadcrumb.hide">
+                <de><![CDATA[Breadcrumb nicht anzeigen]]></de>
+                <en><![CDATA[Do not show the breadcrumb]]></en>
+            </locale>
+
+        <!-- page title and desc-->
+        <locale name="settings.general.title">
+            <de><![CDATA[Allgemeine Template Einstellungen]]></de>
+            <en><![CDATA[General template settings]]></en>
+        </locale>
+        <locale name="settings.general.showTitle">
                 <de><![CDATA[Seitentitel auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
                 <en><![CDATA[Show page title on the following page types? Each page can overwrite this setting.]]></en>
         </locale>
-        <locale name="settings.page.showShort">
+        <locale name="settings.general.showShort">
             <de><![CDATA[Kurzbeschreibung auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
             <en><![CDATA[Show page short description on the following page types? Each page can overwrite this setting.]]></en>
-        </locale>
-
-        <!-- header settings -->
-        <locale name="settings.page.title">
-            <de><![CDATA[Header Einstellungen]]></de>
-            <en><![CDATA[Header settings]]></en>
-        </locale>
-        <locale name="settings.page.title">
-            <de><![CDATA[Header Einstellungen]]></de>
-            <en><![CDATA[Header settings]]></en>
         </locale>
 
         <!-- show header? -->
@@ -516,6 +524,16 @@
         <locale name="siteSettings">
             <de><![CDATA[Template Avada Agency: Einstellungen]]></de>
             <en><![CDATA[Template Avada Agency: settings]]></en>
+        </locale>
+
+        <!-- breadcrumb -->
+        <locale name="siteSettings.breadcrumb.default">
+            <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+            <en><![CDATA[Default template setting]]></en>
+        </locale>
+        <locale name="siteSettings.breadcrumb.displayInHeader">
+            <de><![CDATA[Im Header (Breadcrumb wird nicht angezeigt wenn Header deaktiviert ist)]]></de>
+            <en><![CDATA[In header (breadcrumb will be not displayed if header is disabled)]]></en>
         </locale>
 
         <!-- Header -->

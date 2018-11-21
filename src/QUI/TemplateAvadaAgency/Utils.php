@@ -44,45 +44,44 @@ class Utils
 
         /**
          * no header?
-         * no breadcrumb?
          * Body Class
          *
          * own site type
          */
 
-        $showHeader = false;
+        $showHeader    = false;
         $showPageTitle = true;
         $showPageShort = true;
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
-                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleStartPage');
-                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortStartPage');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleStartPage');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortStartPage');
                 break;
 
             case 'layout/noSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
-                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleNoSidebar');
-                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortNoSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleNoSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortNoSidebar');
                 break;
 
             case 'layout/noSidebarSmall':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
-                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleNoSidebarSmall');
-                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortNoSidebarSmall');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleNoSidebarSmall');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortNoSidebarSmall');
                 break;
 
             case 'layout/rightSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
-                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleRightSidebar');
-                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortRightSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleRightSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
-                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.page.showTitleLeftSidebar');
-                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.page.showShortLeftSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleLeftSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortLeftSidebar');
                 break;
         }
 
@@ -105,13 +104,37 @@ class Utils
                 $showPageShort = false;
         }
 
-        /* site own settings: show header short description */
+        /* site own settings: show header */
         switch ($params['Site']->getAttribute('templateAvadaAgency.showHeader')) {
             case 'show':
                 $showHeader = true;
                 break;
             case 'hide':
                 $showHeader = false;
+        }
+
+        /**
+         * Breadcrumb
+         */
+        $showBreadcrumb = 'displayInHeader';
+        switch ($Project->getConfig('templateAvadaAgency.settings.general.breadcrumb')) {
+            case 'displayUnderHeader':
+                $showBreadcrumb = 'displayUnderHeader';
+                break;
+            case 'hide':
+                $showBreadcrumb = false;
+        }
+
+        /* site own settings: breadcrumb */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.breadcrumb')) {
+            case 'displayInHeader':
+                $showBreadcrumb = 'displayInHeader';
+                break;
+            case 'displayUnderHeader':
+                $showBreadcrumb = 'displayUnderHeader';
+                break;
+            case 'hide':
+                $showBreadcrumb = false;
         }
 
         /**
@@ -128,6 +151,7 @@ class Utils
         $config += [
             'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
             'showHeader'     => $showHeader,
+            'showBreadcrumb' => $showBreadcrumb,
             'showFooterNav'  => $showFooterNav,
             'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
             'typeClass'      => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),

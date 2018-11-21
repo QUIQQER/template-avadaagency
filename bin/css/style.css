@@ -154,31 +154,37 @@ label {
 /**********************/
 /* quiqqer breadcrumb */
 /**********************/
-.quiqqer-breadcrumb-list {
+.page-head .quiqqer-breadcrumb-list {
     background-color: transparent;
     float: right;
     font-size: 15px;
     text-transform: uppercase;
 }
 
-.quiqqer-breadcrumb .quiqqer-breadcrumb-title {
+.page-head .quiqqer-breadcrumb .quiqqer-breadcrumb-title {
     display: none;
 }
 
-.quiqqer-breadcrumb-list li:first-child .fa {
+.page-head .quiqqer-breadcrumb-list li:first-child .fa {
     display: none;
 }
 
-.quiqqer-breadcrumb-list a {
+.page-head .quiqqer-breadcrumb-list a {
     color: #C7C4C0;
 }
 
-.quiqqer-breadcrumb-list a:hover {
+.page-head .quiqqer-breadcrumb-list a:hover {
     color: #ffffff;
 }
 
-.quiqqer-breadcrumb-list li:last-child a .quiqqer-breadcrumb-link-text {
+.page-head .quiqqer-breadcrumb-list li:last-child a .quiqqer-breadcrumb-link-text {
     color: #fff;
+}
+
+/* breadcrumb under the header */
+.breadcrumb-under-header {
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
 }
 
 /***********/
