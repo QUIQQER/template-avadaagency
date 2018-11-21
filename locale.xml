@@ -518,11 +518,25 @@
             <en><![CDATA[Template Avada Agency: settings]]></en>
         </locale>
 
-        <!-- Title & short -->
-        <locale name="siteSettings.showTitle">
-            <de><![CDATA[Überschrift anzeigen]]></de>
-            <en><![CDATA[Show title]]></en>
+        <!-- Header -->
+        <locale name="siteSettings.showHeader">
+            <de><![CDATA[Template Header anzeigen]]></de>
+            <en><![CDATA[Template header title]]></en>
         </locale>
+            <locale name="siteSettings.showHeader.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+            </locale>
+            <locale name="siteSettings.showHeader.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+            </locale>
+            <locale name="siteSettings.showHeader.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+            </locale>
+
+        <!-- Title & short -->
         <locale name="siteSettings.showTitle">
             <de><![CDATA[Überschrift anzeigen]]></de>
             <en><![CDATA[Show title]]></en>

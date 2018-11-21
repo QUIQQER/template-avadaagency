@@ -105,6 +105,15 @@ class Utils
                 $showPageShort = false;
         }
 
+        /* site own settings: show header short description */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showHeader')) {
+            case 'show':
+                $showHeader = true;
+                break;
+            case 'hide':
+                $showHeader = false;
+        }
+
         /**
          * Template footer settings
          */

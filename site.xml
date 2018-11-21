@@ -3,6 +3,7 @@
 
     <!-- global attributes -->
     <attributes>
+        <attribute>templateAvadaAgency.showHeader</attribute>
         <attribute>templateAvadaAgency.showTitle</attribute>
         <attribute>templateAvadaAgency.showShort</attribute>
     </attributes>
@@ -14,6 +15,26 @@
                     <locale group="quiqqer/template-avadaagency"
                             var="siteSettings"/>
                 </title>
+
+                <!-- show header title -->
+                <select conf="templateAvadaAgency.showHeader">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.hide"/>
+                    </option>
+                </select>
 
                 <!-- show page title -->
                 <select conf="templateAvadaAgency.showTitle">
