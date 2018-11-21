@@ -14,7 +14,8 @@
     {/if}
 
 
-    <section role="main" class="template-section">
+    <section role="main" class="template-section clearfix">
+        {if $showPageTitle || $showPageShort}
         <header class="content-header">
             <h1 itemprop="name">
                 {$Site->getAttribute('title')}
@@ -25,6 +26,7 @@
             </div>
             {/if}
         </header>
+        {/if}
 
         {$Template->getBody()}
     </section>
@@ -38,7 +40,7 @@
     {/if}
 </div>
 
-<div class="page-multible-right col-md-3">
+<div class="page-multible-right col-md-3 page-sidebar">
     {if !empty( $rightSideBar)}
         {foreach from=$rightSideBar item=Brick}
         <div class="template-section clearfix">

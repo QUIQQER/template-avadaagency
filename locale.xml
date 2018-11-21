@@ -59,15 +59,6 @@
             <en><![CDATA[Brickarea to the right of the content]]></en>
         </locale>
 
-        <locale name="area.noSidebar.title">
-            <de><![CDATA[Inhalts-Zone]]></de>
-            <en><![CDATA[Content area]]></en>
-        </locale>
-        <locale name="area.noSidebar.description">
-            <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
-            <en><![CDATA[Content area of no sidebar layout]]></en>
-        </locale>
-
         <locale name="area.sidebar.prefix.content.title">
             <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
             <en><![CDATA[Prefix area]]></en>
@@ -84,6 +75,15 @@
         <locale name="area.sidebar.suffix.content.description">
             <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
             <en><![CDATA[Brick area after the content]]></en>
+        </locale>
+
+        <locale name="area.header.title">
+            <de><![CDATA[Kopfbereiches (Header)]]></de>
+            <en><![CDATA[Header]]></en>
+        </locale>
+        <locale name="area.header.description">
+            <de><![CDATA[Die Bausteinzone ist für Bausteine vorgesehen, die explizit im Kopfbereich platziert werden sollen - in der Regel platziert man hier einen Baustein.]]></de>
+            <en><![CDATA[The brick area is intended for bricks that are to be placed explicitly in the header area - usually one brick is placed here.]]></en>
         </locale>
 
         <locale name="area.headerSuffix.title">
@@ -109,14 +109,13 @@
             <en><![CDATA[Avada Agency]]></en>
         </locale>
         <locale name="package.description">
-            <de><![CDATA[Template für aussagekräftige Internetseiten mit
-            vielen Einstellungsmöglichkeiten.]]></de>
-            <en><![CDATA[Advanced template with a modern design and settings.]]></en>
+            <de><![CDATA[Modernes und responsives Template für diverse Agenturen oder kleine und mittlere Unternehmen.]]></de>
+            <en><![CDATA[Modern and responsive template for agency websites or corporate company websites.]]></en>
         </locale>
 
         <!-- Layouts -->
         <locale name="admin.layout.startpage">
-            <de><![CDATA[Landingpage (Startpage)]]></de>
+            <de><![CDATA[Landingpage (Startseite)]]></de>
             <en><![CDATA[Landingpage (start page)]]></en>
         </locale>
         <locale name="admin.layout.startpage.desc">
@@ -188,43 +187,36 @@
             <en><![CDATA[Template settings: Avada Agency]]></en>
         </locale>
 
-        <!-- Background Color Switcher-->
-        <locale name="settings.bgColorSwitcher.title">
-            <de><![CDATA[Prefix / Suffix Hintegrundfarbe wechseln]]></de>
-            <en><![CDATA[Change prefix / suffix background]]></en>
+        <!-- breadcrumb -->
+        <locale name="settings.general.breadcrumb">
+            <de><![CDATA[Wo soll der Breadcrumb angezeigt werden]]></de>
+            <en><![CDATA[Where should the breadcrumb be displayed?]]></en>
         </locale>
-        <locale name="settings.bgColorSwitcher.display">
-            <de><![CDATA[Aktivieren]]></de>
-            <en><![CDATA[On]]></en>
-        </locale>
-        <locale name="settings.bgColorSwitcher.hide">
-            <de><![CDATA[Deaktivieren]]></de>
-            <en><![CDATA[Off]]></en>
-        </locale>
+            <locale name="settings.general.breadcrumb.displayInHeader">
+                <de><![CDATA[Im Header]]></de>
+                <en><![CDATA[Display in header]]></en>
+            </locale>
+            <locale name="settings.general.breadcrumb.displayUnderHeader">
+                <de><![CDATA[Unter dem Header]]></de>
+                <en><![CDATA[Display under the header]]></en>
+            </locale>
+            <locale name="settings.general.breadcrumb.hide">
+                <de><![CDATA[Breadcrumb nicht anzeigen]]></de>
+                <en><![CDATA[Do not show the breadcrumb]]></en>
+            </locale>
 
-        <!-- Background Color Switcher Prefix -->
-        <locale name="settings.bgColorSwitcherPrefix.text">
-            <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Switch background color]]></en>
+        <!-- page title and desc-->
+        <locale name="settings.general.title">
+            <de><![CDATA[Allgemeine Template Einstellungen]]></de>
+            <en><![CDATA[General template settings]]></en>
         </locale>
-        <locale name="settings.bgColorSwitcherPrefix.description">
-            <de><![CDATA[(...)]]></de>
-            <en><![CDATA[(...)]]></en>
+        <locale name="settings.general.showTitle">
+                <de><![CDATA[Seitentitel auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
+                <en><![CDATA[Show page title on the following page types? Each page can overwrite this setting.]]></en>
         </locale>
-        <!-- Background Color Switcher Suffix -->
-        <locale name="settings.bgColorSwitcherSuffix.text">
-            <de><![CDATA[Suffix Hintergrundfarbe wechseln]]></de>
-            <en><![CDATA[Switch background color]]></en>
-        </locale>
-        <locale name="settings.bgColorSwitcherSuffix.description">
-            <de><![CDATA[(...)]]></de>
-            <en><![CDATA[(...)]]></en>
-        </locale>
-
-        <!-- header settings -->
-        <locale name="header.settings.title">
-            <de><![CDATA[Header Einstellungen]]></de>
-            <en><![CDATA[Header settings]]></en>
+        <locale name="settings.general.showShort">
+            <de><![CDATA[Kurzbeschreibung auf folgenden Seitentypen anzeigen? Jede einzelne Seite kann die Einstellungen überschreiben.]]></de>
+            <en><![CDATA[Show page short description on the following page types? Each page can overwrite this setting.]]></en>
         </locale>
 
         <!-- show header? -->
@@ -261,8 +253,8 @@
 
         <!-- Position des Bildes im Header-->
         <locale name="settings.headerImagePosition.text">
-            <de><![CDATA[Position des Bildes wählen:]]></de>
-            <en><![CDATA[Choose position of the image:]]></en>
+            <de><![CDATA[Position des Bildes]]></de>
+            <en><![CDATA[Position of the image]]></en>
         </locale>
             <locale name="settings.headerImagePosition.start">
                 <de><![CDATA[Oben]]></de>
@@ -299,6 +291,46 @@
         <locale name="settings.footer.showFooterNav.desc">
             <de><![CDATA[Wenn eingeschaltet, wird im Footer ganz unten Navigation eingeblendet (ohne Submenü - nur die erste Ebene).]]></de>
             <en><![CDATA[If enabled, navigation will be shown at the bottom of the footer (without submenu - only the first level).]]></en>
+        </locale>
+        <locale name="settings.footer.backgroundImage">
+            <de><![CDATA[Hintergrundbild]]></de>
+            <en><![CDATA[Background image]]></en>
+        </locale>
+        <locale name="settings.footer.backgroundImage.desc">
+            <de><![CDATA[Bei einigen Bildern wird empfohlen direkt die Transparenz der Footer Hintertrundfarbe einzustellen.]]></de>
+            <en><![CDATA[For some images it is recommended to directly adjust the transparency of the Footer background color.]]></en>
+        </locale>
+        <locale name="settings.footer.backgroundImage.position">
+            <de><![CDATA[Hintergrundbild]]></de>
+            <en><![CDATA[Background image]]></en>
+        </locale>
+            <locale name="settings.footer.backgroundImage.position.top">
+                <de><![CDATA[Oben]]></de>
+                <en><![CDATA[Top]]></en>
+            </locale>
+            <locale name="settings.footer.backgroundImage.position.center">
+                <de><![CDATA[Zentriert]]></de>
+                <en><![CDATA[Center]]></en>
+            </locale>
+            <locale name="settings.footer.backgroundImage.position.bottom">
+                <de><![CDATA[Unten]]></de>
+                <en><![CDATA[Bottom]]></en>
+            </locale>
+        <locale name="template.settings.footer.colorBackground">
+            <de><![CDATA[Footer Hintegrundfarbe]]></de>
+            <en><![CDATA[Footer background color]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorBackground.opacity">
+            <de><![CDATA[Transparenz der Hintergrundfarbe (0 - 100)]]></de>
+            <en><![CDATA[Opacity of the background color (0 - 100)]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorFont">
+            <de><![CDATA[Footer Schriftfarbe]]></de>
+            <en><![CDATA[Footer font color]]></en>
+        </locale>
+        <locale name="template.settings.footer.colorLinks">
+            <de><![CDATA[Footer Link-Farbe]]></de>
+            <en><![CDATA[Footer link color]]></en>
         </locale>
 
         <!-- Footer template -->
@@ -374,55 +406,61 @@
             <de><![CDATA[Footer Template: kurzer Text]]></de>
             <en><![CDATA[Footer template: short text]]></en>
         </locale>
-        <locale name="settings.footerTemplate.shortText.info" html="true">
+        <locale name="settings.footerTemplate.shortText.info">
             <de><![CDATA[Wenn Sie den Text ändern wollen, bearbeiten Sie die Sprachvariable <strong>settings.footerTemplate.shortText.content</strong> (zu finden in Menü: Verwaltung -> Sprachvariablen).]]></de>
             <en><![CDATA[If you want to change the text, edit the language variable <strong>settings.footerTemplate.shortText.content</strong> (to find in the menu: Administration -> Translator).]]></en>
         </locale>
         <locale name="settings.footerTemplate.shortText.content" html="true">
-            <de><![CDATA[<p>
-                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
-                            </p>
+            <de><![CDATA[
+            <p>
+                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+            </p>
 
-                            <p style="color: #eee;">
-                                1-800-123-HELLO  <br>
-                                example@mail.com
-                            </p>
+            <p style="color: #eee;">
+                1-800-123-HELLO  <br>
+                example@mail.com
+            </p>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="footer-share-button">
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>]]></de>
-            <en><![CDATA[<p>
-                                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
-                            </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-share-button">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            ]]>
+            </de>
+            <en><![CDATA[
+            <p>
+                HUGE Website Builder is a big library of pre-designed web elements which help you to create website in few minutes.
+            </p>
 
-                            <p style="color: #eee;">
-                                1-800-123-HELLO  <br>
-                                example@mail.com
-                            </p>
+            <p style="color: #eee;">
+                1-800-123-HELLO  <br>
+                example@mail.com
+            </p>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="footer-share-button">
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>]]></en>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-share-button">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            ]]>
+            </en>
         </locale>
         <locale name="settings.footerTemplate.shortText.show">
             <de><![CDATA[Anzeigen]]></de>
@@ -461,18 +499,6 @@
             <en><![CDATA[Content]]></en>
         </locale>
 
-        <locale name="template.settings.colorFooterBackground.text">
-            <de><![CDATA[Footer Hintegrundfarbe]]></de>
-            <en><![CDATA[Footer background color]]></en>
-        </locale>
-        <locale name="template.settings.colorFooterFont.text">
-            <de><![CDATA[Footer Schriftfarbe]]></de>
-            <en><![CDATA[Footer font color]]></en>
-        </locale>
-        <locale name="template.settings.colorFooterLinks.text">
-            <de><![CDATA[Footer Link-Farbe]]></de>
-            <en><![CDATA[Footer link color]]></en>
-        </locale>
         <locale name="template.settings.colorMain.text">
             <de><![CDATA[Hauptfarbe]]></de>
             <en><![CDATA[Main color]]></en>
@@ -509,19 +535,30 @@
             <en><![CDATA[Template Avada Agency: settings]]></en>
         </locale>
 
-        <locale name="siteSettings.showEmotion">
-            <de><![CDATA[Header]]></de>
-            <en><![CDATA[Header]]></en>
+        <!-- breadcrumb -->
+        <locale name="siteSettings.breadcrumb.default">
+            <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+            <en><![CDATA[Default template setting]]></en>
         </locale>
-            <locale name="siteSettings.showEmotion.default">
+        <locale name="siteSettings.breadcrumb.displayInHeader">
+            <de><![CDATA[Im Header (Breadcrumb wird nicht angezeigt wenn Header deaktiviert ist)]]></de>
+            <en><![CDATA[In header (breadcrumb will be not displayed if header is disabled)]]></en>
+        </locale>
+
+        <!-- Header -->
+        <locale name="siteSettings.showHeader">
+            <de><![CDATA[Template Header anzeigen]]></de>
+            <en><![CDATA[Template header title]]></en>
+        </locale>
+            <locale name="siteSettings.showHeader.default">
                 <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
                 <en><![CDATA[Default template setting]]></en>
             </locale>
-            <locale name="siteSettings.showEmotion.show">
+            <locale name="siteSettings.showHeader.show">
                 <de><![CDATA[Anzeigen]]></de>
                 <en><![CDATA[Show]]></en>
             </locale>
-            <locale name="siteSettings.showEmotion.hide">
+            <locale name="siteSettings.showHeader.hide">
                 <de><![CDATA[Verstecken]]></de>
                 <en><![CDATA[Hide]]></en>
             </locale>
@@ -531,10 +568,34 @@
             <de><![CDATA[Überschrift anzeigen]]></de>
             <en><![CDATA[Show title]]></en>
         </locale>
+            <locale name="siteSettings.showTitle.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+            </locale>
+            <locale name="siteSettings.showTitle.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+            </locale>
+            <locale name="siteSettings.showTitle.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+            </locale>
         <locale name="siteSettings.showShort">
             <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
             <en><![CDATA[Show short descriptions]]></en>
         </locale>
+            <locale name="siteSettings.showShort.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+            </locale>
+            <locale name="siteSettings.showShort.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+            </locale>
+            <locale name="siteSettings.showShort.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+            </locale>
 
     </groups>
 </locales>

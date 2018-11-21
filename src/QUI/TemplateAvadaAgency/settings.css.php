@@ -19,19 +19,53 @@ $navBarBgColorLighter = $Convert->colorBrightness($navBarBgColor, 0.9);
  * colors
  */
 $colorFooterBackground = '#414141';
+$colorFooterNavBackground = '#2c2c2c';
+$colorFooterBackgroundOpacity = 1;
 $colorFooterFont       = '#D1D1D1';
 $colorFooterLinks      = '#DDDDDD';
-$colorMain             = '#dd151b';
+$backgroundImageUrl = false;
+$backgroundImagePosition = 'center';
+$colorMain             = '#252525';
 $buttonFontColor       = '#ffffff';
 $colorMainContentBg    = '#ffffff';
 
-if ($Project->getConfig('templateAvadaAgency.settings.colorFooterBackground')) {
-    $colorFooterBackground = $Project->getConfig('templateAvadaAgency.settings.colorFooterBackground');
+if ($Project->getConfig('templateAvadaAgency.settings.footer.colorBackground.opacity')) {
+    $colorFooterBackgroundOpacity = $Project->getConfig('templateAvadaAgency.settings.footer.colorBackground.opacity');
+
+    // min 0, max 1
+    $colorFooterBackgroundOpacity = $colorFooterBackgroundOpacity / 100;
+
+    if ($colorFooterBackgroundOpacity > 1 || $colorFooterBackgroundOpacity < 0) {
+        $colorFooterBackgroundOpacity = 1;
+    }
 }
 
-if ($Project->getConfig('templateAvadaAgency.settings.colorFooterFont')) {
-    $colorFooterFont = $Project->getConfig('templateAvadaAgency.settings.colorFooterFont');
+if ($Project->getConfig('templateAvadaAgency.settings.footer.colorBackground')) {
+    $colorFooterBackground = $Project->getConfig('templateAvadaAgency.settings.footer.colorBackground');
+    $colorFooterNavBackground = $Convert->colorBrightness($colorFooterBackground, -0.8);
 }
+
+if ($Project->getConfig('templateAvadaAgency.settings.footer.backgroundOpacity')) {
+    $colorFooterBackgroundOpacity = $Project->getConfig('templateAvadaAgency.settings.footer.backgroundOpacity');
+}
+
+if ($Project->getConfig('templateAvadaAgency.settings.footer.colorFont')) {
+    $colorFooterFont = $Project->getConfig('templateAvadaAgency.settings.footer.colorFont');
+}
+
+if ($Project->getConfig('templateAvadaAgency.settings.footer.colorLinks')) {
+    $colorFooterLinks = $Project->getConfig('templateAvadaAgency.settings.footer.colorLinks');
+}
+
+if ($Project->getConfig('templateAvadaAgency.settings.footer.backgroundImage')) {
+    $backgroundImage = $Project->getConfig('templateAvadaAgency.settings.footer.backgroundImage');
+    $backgroundImageUrl = QUI\Projects\Media\Utils::getImageByUrl($backgroundImage)->getSizeCacheUrl();
+}
+
+if ($Project->getConfig('templateAvadaAgency.settings.footer.backgroundImage.position')) {
+    $backgroundImagePosition = $Project->getConfig('templateAvadaAgency.settings.footer.backgroundImage.position');
+}
+
 
 if ($Project->getConfig('templateAvadaAgency.settings.colorMain')) {
     $colorMain = $Project->getConfig('templateAvadaAgency.settings.colorMain');
@@ -41,13 +75,16 @@ if ($Project->getConfig('templateAvadaAgency.settings.buttonFontColor')) {
     $buttonFontColor = $Project->getConfig('templateAvadaAgency.settings.buttonFontColor');
 }
 
-if ($Project->getConfig('templateAvadaAgency.settings.colorFooterLinks')) {
-    $colorFooterLinks = $Project->getConfig('templateAvadaAgency.settings.colorFooterLinks');
-}
-
 if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentBg')) {
     $colorMainContentBg = $Project->getConfig('templateAvadaAgency.settings.colorMainContentBg');
 }
+
+
+// Footer background color (Transparency is observed.)
+$colorFooterBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterBackground, $colorFooterBackgroundOpacity, true);
+// Footer nav background color
+$colorFooterNavBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterNavBackground ,$colorFooterBackgroundOpacity, true);
+
 
 $colorFooterLinksLighter = $Convert->colorBrightness($colorFooterLinks, 0.9);
 
@@ -84,33 +121,23 @@ ob_start();
     color: <?php echo $colorMain; ?>;
 }
 
+.control-background {
+    background: <?php echo $colorMain;?>;
+}
+
+/* for example gallery */
+.control-background .control-color {
+    color: <?php echo $buttonFontColor;?>;
+}
+
 .pace .pace-progress {
     background-color: <?php echo $colorMain; ?>;
 }
 
-/*input[type='submit'],
-input[type='reset'],
-input[type='button'],
 button,
 .button,
-.tpl-Argon-row .button,
-button:disabled,
-button:disabled:hover,
-a.template-button,
-button.qui-button-active,
-button.qui-button:active,
-button.qui-button:hover {
-    background-color: <?php /*echo $colorMain; */?>;
-    color: <?php /*echo $buttonFontColor; */?>;
-    border: 2px solid <?php /*echo $colorMain; */?>;
-}
-
-.button:hover {
-    background: none;
-}*/
-
-button,
-.button {
+button[type=submit],
+input[type="submit"] {
     background-color: <?php echo $colorMain; ?>;
     color: <?php echo $buttonFontColor; ?>;
 }
@@ -125,20 +152,43 @@ a {
     color: <?php echo $colorMain; ?>;
 }
 
+a:hover,
+a:focus {
+    color: <?php echo $Convert->colorBrightness($colorMain, -0.8); ?>;
+}
+
+<?php if ($backgroundImageUrl) { ?>
+/***************************/
+/* footer background image */
+/***************************/
+
+.page-footer-wrapper {
+    background-position: <?php echo $backgroundImagePosition ?>;
+    background-image: url("<?php echo $backgroundImageUrl ?>");
+}
+
+<?php }; ?>
+
 .page-footer {
     background: <?php echo $colorFooterBackground; ?>;
     color: <?php echo $colorFooterFont; ?>;
 }
 
-.page-footer p {
+.page-footer p,
+.page-footer h1,
+.page-footer h2,
+.page-footer h3,
+.page-footer h4,
+.page-footer h5 {
     color: <?php echo $colorFooterFont; ?>;
 }
 
 .footer-nav {
-    background: <?php echo $Convert->colorBrightness($colorFooterBackground, -0.9) ; ?>;
+    background: <?php echo $colorFooterNavBackground ; ?>;
     color: <?php echo $colorFooterFont; ?>;
 }
-
+.footer-nav .navbar-brand a,
+.footer-nav li a,
 .footer-links li a {
     color: <?php echo $colorFooterLinks; ?>;
 }
@@ -154,25 +204,6 @@ a {
 .page-footer a:hover {
     color: <?php echo $Convert->colorBrightness($colorFooterLinks, 0.25); ?>;
 }
-
-/* pagination */
-/*.quiqqer-sheets-desktop a:hover {
-    border: 1px solid <?php /*echo $colorMain; */?> !important;
-    background-color: <?php /*echo $colorMain; */?>;
-}
-
-.quiqqer-sheets-desktop-limits a:hover {
-    color: <?php /*echo $colorMain; */?>;
-}
-
-.control-background-active {
-    background: <?php /*echo $colorMain; */?> !important;
-    color: #FFFFFF !important;
-}
-
-.control-background {
-    background: <?php /*echo $colorMain; */?>;
-}*/
 
 /**
  * background color prefix suffix switcher
@@ -201,6 +232,7 @@ a {
 .brick-odd-suffix {
     background: #e5e5e5;
 }
+
 <?php }; ?>
 
 <?php if ($headerHeight) { ?>

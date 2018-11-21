@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+
+    <!-- global attributes -->
+    <attributes>
+        <attribute>templateAvadaAgency.breadcrumb</attribute>
+        <attribute>templateAvadaAgency.showHeader</attribute>
+        <attribute>templateAvadaAgency.showTitle</attribute>
+        <attribute>templateAvadaAgency.showShort</attribute>
+    </attributes>
+
+    <settings>
+        <category name="templateAvadaAgency.siteSettings">
+            <settings>
+                <title>
+                    <locale group="quiqqer/template-avadaagency"
+                            var="siteSettings"/>
+                </title>
+
+                <!-- breadcrumb -->
+                <!-- Locale from site.xml -->
+                <select conf="templateAvadaAgency.breadcrumb">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.breadcrumb.default"/>
+                    </option>
+                    <option value="displayInHeader">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.breadcrumb.displayInHeader"/>
+                    </option>
+                    <option value="displayUnderHeader">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb.displayUnderHeader"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="settings.general.breadcrumb.hide"/>
+                    </option>
+                </select>
+
+                <!-- show header title -->
+                <select conf="templateAvadaAgency.showHeader">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showHeader.hide"/>
+                    </option>
+                </select>
+
+                <!-- show page title -->
+                <select conf="templateAvadaAgency.showTitle">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showTitle"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showTitle.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showTitle.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showTitle.hide"/>
+                    </option>
+                </select>
+
+                <!-- show page short description -->
+                <select conf="templateAvadaAgency.showShort">
+                    <text>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showShort"/>
+                    </text>
+                    <option value="default">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showShort.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showShort.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-avadaagency"
+                                var="siteSettings.showShort.hide"/>
+                    </option>
+                </select>
+            </settings>
+        </category>
+    </settings>
     
     <!-- layouts -->
     <layouts>

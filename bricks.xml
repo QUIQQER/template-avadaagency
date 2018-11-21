@@ -21,6 +21,19 @@
             <!-- global areas -->
 
             <areas>
+                <area name="header" inheritance="1" priority="1">
+                    <title>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="area.header.title"
+                        />
+                    </title>
+                    <description>
+                        <locale group="quiqqer/template-avadaagency"
+                                var="area.header.description"
+                        />
+                    </description>
+                </area>
+
                 <area name="headerSuffix" inheritance="1" priority="1">
                     <title>
                         <locale group="quiqqer/template-avadaagency"
@@ -93,19 +106,6 @@
                 </layout>
 
                 <layout layout="layout/noSidebar">
-                    <area name="noSidebar">
-                        <title>
-                            <locale group="quiqqer/template-avadaagency"
-                                    var="area.noSidebar.title"
-                                    />
-                        </title>
-                        <description>
-                            <locale group="quiqqer/template-avadaagency"
-                                    var="area.noSidebar.description"
-                                    />
-                        </description>
-                    </area>
-
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
                             <locale group="quiqqer/template-avadaagency"

@@ -3,13 +3,6 @@
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
-{*
-
-ACHTUNG!
-Das ist der LINKE Sidebar mit push- und pull- Klassen von Unsemantic.
-D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Main-Content kommt.
-
-*}
 <div class="page-multible-right col-md-9 col-md-push-3" role="main">
 
     {if !empty( $prefixContentBricks )}
@@ -20,7 +13,8 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
     {/foreach}
     {/if}
 
-    <section class="template-section">
+    <section class="template-section clearfix">
+        {if $showPageTitle || $showPageShort}
         <header class="content-header">
             <h1 itemprop="name">
                 {$Site->getAttribute('title')}
@@ -31,6 +25,7 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
             </div>
             {/if}
         </header>
+        {/if}
 
         {$Template->getBody()}
     </section>
@@ -46,7 +41,7 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
 
 </div>
 
-<div class="page-multible-left col-md-3 col-md-pull-9">
+<div class="page-multible-left col-md-3 col-md-pull-9 page-sidebar">
     {if !empty( $leftSideBar )}
         {foreach from=$leftSideBar item=Brick}
         <div class="template-section clearfix">

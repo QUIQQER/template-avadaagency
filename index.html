@@ -13,8 +13,7 @@
     <!-- [begin] css combine -->
     {fontawesome}
 
-    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/unsemantic-wrapper.css" rel="stylesheet" type="text/css"/>
+    <link href="{$URL_OPT_DIR}quiqqer/bootstrap/bin/css/bootstrap-unsemantic.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/fonts.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="{$URL_TPL_DIR}bin/css/avada-agency.css" rel="stylesheet" type="text/css"/>
@@ -38,9 +37,51 @@
     <!-- site-navigation start -->
     {fetch template="template/navigation.html" Project=$Project Site=$Site}
 
+    <!-- header suffix area -->
+    <div class="headerArea">
+        {assign var=header value=$BricksManager->getBricksByArea('header', $Site)}
+        {foreach $header as $Brick}
+
+            {assign var=noPadding value=''}
+            {if $Brick->getSetting('noPadding')}
+                {assign var=noPadding value='no-padding'}
+            {/if}
+
+            {if $Brick->getSetting( 'brickFullWidth' )}
+            <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                {$Brick->create()}
+            </section>
+            {else}
+            <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                                brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {$Brick->create()}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/if}
+        {/foreach}
+    </div>
+
     <!-- header begin -->
     {if $showHeader}
-        {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb}
+        {fetch template="template/header.html" imageEmotion=$imageEmotion Breadcrumb=$Breadcrumb showBreadcrumb=$showBreadcrumb}
+    {/if}
+
+    {if $showBreadcrumb == 'displayUnderHeader'}
+    <div class="breadcrumb-under-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {$Breadcrumb->create()}
+                </div>
+            </div>
+        </div>
+    </div>
     {/if}
 
     <!-- header suffix  -->
@@ -63,7 +104,9 @@
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
                 <div class="container">
                     <div class="row">
-                        {$Brick->create()}
+                        <div class="col-md-12">
+                            {$Brick->create()}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -72,7 +115,7 @@
     </div>
 
     <!-- content -->
-    <div class="{cycle values='' reset=true} container">
+    <div class="{cycle values='' reset=true} container main-wrapper">
         <div class="main-content row">
             {$Template->getLayout()}
         </div>
@@ -99,7 +142,9 @@
                             brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
             <div class="container">
                 <div class="row">
-                    {$Brick->create()}
+                    <div class="col-md-12">
+                        {$Brick->create()}
+                    </div>
                 </div>
             </div>
         </section>
@@ -107,23 +152,25 @@
         {/foreach}
     </div>
 
-    <!-- page footer -->
-    <footer class="page-footer">
-        {if $footerTemplate}
-            {fetch template="template/footerTemplate.html" BricksManager=$BricksManager
-            Site=$Site footerTemplate=$footerTemplate}
+    <div class="page-footer-wrapper">
+        <!-- page footer -->
+        <footer class="page-footer">
+            {if $footerTemplate}
+                {fetch template="template/footerTemplate.html" BricksManager=$BricksManager
+                Site=$Site footerTemplate=$footerTemplate}
+            {/if}
+
+            {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
+        </footer>
+
+        <!-- footer copyright -->
+        {fetch template="template/footerCopyright.html"}
+
+        <!-- footer nav  -->
+        {if $showFooterNav}
+            {fetch template="template/footerNavigation.html" Project=$Project Site=$Site}
         {/if}
-
-        {fetch template="template/footer.html" BricksManager=$BricksManager Site=$Site}
-    </footer>
-
-    <!-- footer copyright -->
-    {fetch template="template/footerCopyright.html"}
-
-    <!-- footer nav  -->
-    {if $showFooterNav}
-        {fetch template="template/footerNavigation.html" Project=$Project Site=$Site}
-    {/if}
+    </div>
 
 
 <!-- [begin] js combine -->

@@ -44,48 +44,98 @@ class Utils
 
         /**
          * no header?
-         * no breadcrumb?
          * Body Class
          *
          * own site type
          */
 
-        $showHeader = false;
+        $showHeader    = false;
+        $showPageTitle = true;
+        $showPageShort = true;
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderStartPage');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleStartPage');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortStartPage');
                 break;
 
             case 'layout/noSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleNoSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortNoSidebar');
                 break;
 
             case 'layout/noSidebarSmall':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderNoSidebarSmall');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleNoSidebarSmall');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortNoSidebarSmall');
                 break;
 
             case 'layout/rightSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderRightSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleRightSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
-                $showHeader = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
+                $showHeader    = $Project->getConfig('templateAvadaAgency.settings.showHeaderLeftSidebar');
+                $showPageTitle = $Project->getConfig('templateAvadaAgency.settings.general.showTitleLeftSidebar');
+                $showPageShort = $Project->getConfig('templateAvadaAgency.settings.general.showShortLeftSidebar');
                 break;
         }
 
 
-        $showPageTitle = $params['Site']->getAttribute('templateAvadaAgency.showTitle');
-        $showPageShort = $params['Site']->getAttribute('templateAvadaAgency.showShort');
+        /* site own settings: show page title */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showTitle')) {
+            case 'show':
+                $showPageTitle = true;
+                break;
+            case 'hide':
+                $showPageTitle = false;
+        }
 
-        /* site own show header */
-        /*switch ($params['Site']->getAttribute('templateAvadaAgency.showEmotion')) {
+        /* site own settings: show page short description */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showShort')) {
+            case 'show':
+                $showPageShort = true;
+                break;
+            case 'hide':
+                $showPageShort = false;
+        }
+
+        /* site own settings: show header */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.showHeader')) {
             case 'show':
                 $showHeader = true;
                 break;
             case 'hide':
                 $showHeader = false;
-        }*/
+        }
+
+        /**
+         * Breadcrumb
+         */
+        $showBreadcrumb = 'displayInHeader';
+        switch ($Project->getConfig('templateAvadaAgency.settings.general.breadcrumb')) {
+            case 'displayUnderHeader':
+                $showBreadcrumb = 'displayUnderHeader';
+                break;
+            case 'hide':
+                $showBreadcrumb = false;
+        }
+
+        /* site own settings: breadcrumb */
+        switch ($params['Site']->getAttribute('templateAvadaAgency.breadcrumb')) {
+            case 'displayInHeader':
+                $showBreadcrumb = 'displayInHeader';
+                break;
+            case 'displayUnderHeader':
+                $showBreadcrumb = 'displayUnderHeader';
+                break;
+            case 'hide':
+                $showBreadcrumb = false;
+        }
 
         /**
          * Template footer settings
@@ -96,12 +146,12 @@ class Utils
             $config         += self::getFooterTemplate($Project);
         }
 
-
         $settingsCSS = include 'settings.css.php';
 
         $config += [
             'quiTplType'     => $Project->getConfig('templateAvadaAgency.settings.standardType'),
             'showHeader'     => $showHeader,
+            'showBreadcrumb' => $showBreadcrumb,
             'showFooterNav'  => $showFooterNav,
             'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
             'typeClass'      => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
@@ -125,6 +175,7 @@ class Utils
      */
     private static function getFooterTemplate($Project)
     {
+        $lang                 = $Project->getLang();
         $footerTemplateConfig = [];
         $where['active']      = 1;
 
@@ -140,9 +191,14 @@ class Utils
          * Links box
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBox.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.linksBox.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -165,7 +221,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['linksBox'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -175,9 +231,14 @@ class Utils
          * Links box (second / more links)
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.linksBoxMore.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.linksBoxMore.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -200,7 +261,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['linksBoxMore'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -210,9 +271,15 @@ class Utils
          * Recent (blog / news)
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.recent.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.recent.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
+
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -235,7 +302,7 @@ class Utils
             ]);
 
             $footerTemplateConfig['footerTemplate']['recent'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'sites'    => $sites,
                 'priority' => $linksBoxPriority
             ];
@@ -245,9 +312,14 @@ class Utils
          * Short text
          */
         if ($Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.show')) {
-            $linksBoxTitle = $Project->getConfig(
+            $titleArray = json_decode($Project->getConfig(
                 'templateAvadaAgency.settings.footerTemplate.shortText.title'
-            );
+            ), true);
+
+            $title = false;
+            if (isset($titleArray[$lang])) {
+                $title = $titleArray[$lang];
+            }
 
             // order the box in footer
             $linksBoxPriority = 1;
@@ -260,13 +332,52 @@ class Utils
             }
 
             $footerTemplateConfig['footerTemplate']['shortText'] = [
-                'title'    => $linksBoxTitle,
+                'title'    => $title,
                 'content'  => $Project->getConfig('templateAvadaAgency.settings.footerTemplate.shortText.content'),
                 'priority' => $linksBoxPriority
             ];
         }
 
-
         return $footerTemplateConfig;
+    }
+
+    /**
+     * Convert #hex value to rgb(a)
+     * inspired by https://stackoverflow.com/a/31934345
+     *
+     * returns array...
+     * Array (
+     *     [r] => 25
+     *     [g] => 182
+     *     [b] => 152
+     *     [a] => 1
+     * )
+     *
+     * or string in rgba format...
+     * "255,255,255,1"
+     *
+     * @param $hex
+     * @param bool $alpha
+     * @param bool $rgbaFormat
+     * @return array | string
+     */
+    public static function hexToRgb($hex, $alpha = false, $rgbaFormat = false)
+    {
+        $hex      = str_replace('#', '', $hex);
+        $length   = strlen($hex);
+        $rgb['r'] = hexdec($length == 6 ? substr($hex, 0, 2) : ($length == 3 ? str_repeat(substr($hex, 0, 1), 2) : 0));
+        $rgb['g'] = hexdec($length == 6 ? substr($hex, 2, 2) : ($length == 3 ? str_repeat(substr($hex, 1, 1), 2) : 0));
+        $rgb['b'] = hexdec($length == 6 ? substr($hex, 4, 2) : ($length == 3 ? str_repeat(substr($hex, 2, 1), 2) : 0));
+
+        if ($alpha) {
+            $rgb['a'] = $alpha;
+        }
+
+        //If you'd like to return the rgb(a) in CSS format...
+        if ($rgbaFormat) {
+            return implode(array_keys($rgb)) . '(' . implode(', ', $rgb) . ')';
+        }
+
+        return $rgb;
     }
 }

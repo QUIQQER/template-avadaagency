@@ -1,57 +1,66 @@
 <nav id="mainNavigation" class="navbar navbar-dafault main-navigation" role="navigation">
     <div class="container">
 
-        <div class="navbar-header">
+        <div class="row">
+            <div class="col-md-12">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+                <div class="navbar-header">
 
-            <!-- navbar logo -->
-            <div class="navbar-brand">
-                <!--<span class="sr-only">{$Site->getAttribute('title')}</span>-->
-                <a href="{url id=1}">
-                    {image image=$Project->getMedia()->getLogoImage() width=200
-                    class="img-responsive center-block"}
-                </a>
-            </div>
-            <!-- navbar logo -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-        </div><!-- /.navbar-header -->
-
-        <!-- nav links -->
-        <div class="collapse navbar-collapse" id="main-nav-collapse">
-            <ul class="nav navbar-nav navbar-right text-uppercase">
-
-                {assign var=children value=$Project->firstChild()->getNavigation()}
-                {foreach from=$children item=Child}
-
-                {assign var=subnavigation value=$Child->getNavigation()}
-
-
-                <li {if count($subnavigation)}class="dropdown"{/if}>
-                <a href="{url site=$Child}"
-                   {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
-                <span>{$Child->getAttribute('title')}</span>
-                </a>
-                {if count($subnavigation)}
-                <ul class="dropdown-menu">
-                    {foreach from=$subnavigation item=SubChild}
-                    <li>
-                        <a href="{url site=$SubChild}">
-                            {$SubChild->getAttribute('title')}
+                    <!-- navbar logo -->
+                    <div class="navbar-brand">
+                        <a href="{url id=1}">
+                            {image image=$Project->getMedia()->getLogoImage() width=200
+                            class="img-responsive center-block"}
                         </a>
-                    </li>
-                    {/foreach}
-                </ul><!-- end of /.dropdown-menu -->
-                {/if}
-                </li><!-- end of /.dropdown -->
-                {/foreach}
-            </ul>
-        </div><!-- nav links -->
+                    </div>
+                    <!-- navbar logo -->
+
+                </div><!-- /.navbar-header -->
+
+                <!-- nav links -->
+                <div class="collapse navbar-collapse" id="main-nav-collapse">
+                    <ul class="nav navbar-nav navbar-right text-uppercase">
+
+                        {assign var=children value=$Project->firstChild()->getNavigation()}
+                        {foreach from=$children item=Child}
+
+                        {assign var=subnavigation value=$Child->getNavigation()}
+
+                        {assign var="active" value=''}
+
+                        {if $Site->getAttribute('id') === $Child->getAttribute('id')}
+                            {assign var="active" value='active'}
+                        {/if}
+
+                        <li class="{if count($subnavigation)}dropdown{/if} {$active} child-page-id-{$Child->getAttribute('id')}">
+                            <a href="{url site=$Child}"
+                               {if count($subnavigation)}class="dropdown-toggle" data-togle="dropdown"{/if}>
+                            <span>{$Child->getAttribute('title')}</span>
+                        </a>
+                        {if count($subnavigation)}
+                        <ul class="dropdown-menu">
+                            {foreach from=$subnavigation item=SubChild}
+                            <li>
+                                <a href="{url site=$SubChild}">
+                                    {$SubChild->getAttribute('title')}
+                                </a>
+                            </li>
+                            {/foreach}
+                        </ul><!-- end of /.dropdown-menu -->
+                        {/if}
+                        </li><!-- end of /.dropdown -->
+                        {/foreach}
+                    </ul>
+                </div><!-- nav links -->
+            </div>
+        </div>
 
     </div><!-- /.container -->
 </nav>
