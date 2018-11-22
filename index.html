@@ -49,12 +49,12 @@
 
             {if $Brick->getSetting( 'brickFullWidth' )}
             <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                            brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
                 {$Brick->create()}
             </section>
             {else}
             <section class="headerArea-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                                brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                                brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -96,12 +96,12 @@
 
             {if $Brick->getSetting( 'brickFullWidth' )}
             <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                        brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
                     {$Brick->create()}
             </section>
             {else}
             <section class="headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
-                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                            brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -134,12 +134,12 @@
 
         {if $Brick->getSetting( 'brickFullWidth' )}
         <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
-                        brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                        brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
             {$Brick->create()}
         </section>
         {else}
         <section class="headerSuffix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
-                            brick-{$Brick->getAttribute('id')}-wrapper {$noPadding} template-section clearfix">
+                            brick-wrapper-{$Brick->getAttribute('id')} {$noPadding} template-section clearfix">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

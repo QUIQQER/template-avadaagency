@@ -57,7 +57,8 @@ label {
     font-weight: normal;
 }
 
-.template-section {
+.template-section,
+.content-template  {
     padding-bottom: 1.7129em;
     padding-top: 1.7129em;
 }
@@ -67,8 +68,8 @@ label {
 }
 
 .start-page .template-section {
-    padding-bottom: 5.6285em;
-    padding-top: 5.6285em;
+    padding-bottom: 4.6285em;
+    padding-top: 4.6285em;
 }
 
 .no-padding,
@@ -76,6 +77,8 @@ label {
     padding-bottom: 0;
     padding-top: 0;
 }
+
+
 
 /***************/
 /* page footer */
@@ -197,6 +200,11 @@ label {
 /*********************************************************************************/
 /* search site types
 /*********************************************************************************/
+
+/* hide top pagination */
+.qui-search-result-list .quiqqer-pagination:first-child {
+    display: none;
+}
 
 .qui-search-result form {
     display: flex;
@@ -364,3 +372,8 @@ label {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
 }
+
+/*********************************************************************************/
+/* content switcher
+/*********************************************************************************/
+
