@@ -24,7 +24,6 @@
     "quiqqer\/sitetypes": "1.*|dev-master|dev-dev",
     "quiqqer\/menu": "1.*|dev-master|dev-dev",
     "quiqqer\/utils": "1.*|dev-master|dev-dev",
-    "quiqqer\/page-transition": "1.*|dev-master|dev-dev",
     "quiqqer\/pace": ">=1.2.0,<2.0.0|dev-master|dev-dev",
     "quiqqer\/buttons": "1.*|dev-master|dev-dev",
     "quiqqer\/bootstrap": "3.3.*|dev-master|dev-dev"
