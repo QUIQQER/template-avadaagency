@@ -1,3 +1,11 @@
+body {
+    background-color: white;
+    color: #969595;
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
 .navbar-brand img {
     max-height: 200%;
 }
@@ -16,7 +24,7 @@ a header {
 
 a.btn,
 a.button {
-    fold-weight: normal;
+    font-weight: normal;
     text-decoration: none;
 }
 
@@ -373,7 +381,62 @@ label {
     border-top-left-radius: 0px;
 }
 
-/*********************************************************************************/
-/* content switcher
-/*********************************************************************************/
+/*******************/
+/* Profile sidebar */
+/*******************/
+.quiqqer-fupc-category {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
 
+.quiqqer-fupc-category:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.quiqqer-fupc-category .quiqqer-fupc-category-header {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+}
+
+.quiqqer-fupc-category-header-opener {
+    position: relative !important;
+    margin-left: auto;
+}
+
+.quiqqer-fupc-category .quiqqer-fupc-category-items-item {
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.quiqqer-fupc-category  .quiqqer-fupc-category-items-item--active,
+.quiqqer-fupc-category  .quiqqer-fupc-category-items-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.quiqqer-fupc-category-items-item .quiqqer-fupc-category-items-item-icon {
+    float: none;
+    width: 40px;
+}
+
+.quiqqer-fupc-category-items-item span:nth-child(2) {
+    color: #969595; /* body color */
+}
+
+/****************************/
+/* front end user - profile */
+/****************************/
+.quiqqer-frontendUsers-userdata-section .quiqqer-frontendUsers-userdata-email {
+    display: flex;
+}
+
+.quiqqer-frontendUsers-userdata-section .quiqqer-frontendUsers-userdata-email .quiqqer-frontendUsers-userdata-email-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

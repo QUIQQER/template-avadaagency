@@ -65,14 +65,6 @@
 
 /*==================================  2. Global  ========================================*/
 
-body {
-	background-color: white;
-    color: #969595;
-    font-family: 'Open Sans', sans-serif;;
-    font-weight: 400;
-    line-height: 1.45;
-}
-
 *:hover {
 	-webkit-transition: all 0.4s ease-in-out;
 	   -moz-transition: all 0.4s ease-in-out;

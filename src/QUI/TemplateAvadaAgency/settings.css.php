@@ -117,7 +117,8 @@ ob_start();
 
 .color-main,
 .control-color,
-.mainColor {
+.mainColor,
+.quiqqer-fupc-category-items-item--active span:nth-child(2) {
     color: <?php echo $colorMain; ?>;
 }
 
