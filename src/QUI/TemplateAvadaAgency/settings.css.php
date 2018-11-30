@@ -83,8 +83,7 @@ if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentBg')) {
 // Footer background color (Transparency is observed.)
 $colorFooterBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterBackground, $colorFooterBackgroundOpacity, true);
 // Footer nav background color
-$colorFooterNavBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterNavBackground ,$colorFooterBackgroundOpacity, true);
-
+$colorFooterNavBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterNavBackground, $colorFooterBackgroundOpacity, true);
 
 $colorFooterLinksLighter = $Convert->colorBrightness($colorFooterLinks, 0.9);
 
