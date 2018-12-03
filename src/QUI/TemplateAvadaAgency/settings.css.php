@@ -83,8 +83,7 @@ if ($Project->getConfig('templateAvadaAgency.settings.colorMainContentBg')) {
 // Footer background color (Transparency is observed.)
 $colorFooterBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterBackground, $colorFooterBackgroundOpacity, true);
 // Footer nav background color
-$colorFooterNavBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterNavBackground ,$colorFooterBackgroundOpacity, true);
-
+$colorFooterNavBackground = QUI\TemplateAvadaAgency\Utils::hexToRgb($colorFooterNavBackground, $colorFooterBackgroundOpacity, true);
 
 $colorFooterLinksLighter = $Convert->colorBrightness($colorFooterLinks, 0.9);
 
@@ -117,7 +116,8 @@ ob_start();
 
 .color-main,
 .control-color,
-.mainColor {
+.mainColor,
+.quiqqer-fupc-category-items-item--active span:nth-child(2) {
     color: <?php echo $colorMain; ?>;
 }
 
