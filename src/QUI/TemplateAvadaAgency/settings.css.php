@@ -121,6 +121,10 @@ ob_start();
     color: <?php echo $colorMain; ?>;
 }
 
+.qui-switch[data-status="1"] {
+    background: <?php echo $colorMain; ?> !important;
+}
+
 .control-background {
     background: <?php echo $colorMain;?>;
 }
