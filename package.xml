@@ -11,8 +11,10 @@
         <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/Logo.png"/>
 
         <preview>
-            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/....jpg"/>
-            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/....jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/Template_AvadaAgency.png"/>
+            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/Template_AvadaAgency_2.png"/>
+            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/Template_AvadaAgency_3.png"/>
+            <image src="URL_OPT_DIR/quiqqer/template-avadaagency/bin/img/preview/Template_AvadaAgency_4.png"/>
         </preview>
 
         <support>
