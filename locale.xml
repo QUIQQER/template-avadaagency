@@ -220,6 +220,10 @@
         </locale>
 
         <!-- show header? -->
+        <locale name="header.settings.title">
+            <de><![CDATA[Header Einstellungen]]></de>
+            <en><![CDATA[Header settings]]></en>
+        </locale>
         <locale name="showHeader.text">
             <de><![CDATA[Header anzeigen?]]></de>
             <en><![CDATA[Display header?]]></en>
@@ -270,13 +274,17 @@
             </locale>
 
         <!-- Navbar colors -->
+        <locale name="settings.navBar.title">
+            <de><![CDATA[Menü]]></de>
+            <en><![CDATA[Navigation]]></en>
+        </locale>settings.navBar.title
         <locale name="settings.navBarBgColor.text">
             <de><![CDATA[Menü Hintergrundfarbe]]></de>
-            <en><![CDATA[Nav background color]]></en>
+            <en><![CDATA[Navigation background color]]></en>
         </locale>
         <locale name="settings.navBarFontColor.text">
             <de><![CDATA[Menü Schriftfarbe]]></de>
-            <en><![CDATA[Nav font color]]></en>
+            <en><![CDATA[Navigation font color]]></en>
         </locale>
 
         <!-- Footer -->
@@ -334,9 +342,9 @@
         </locale>
 
         <!-- Footer template -->
-        <locale name="settings.footerTemplate.show">
-            <de><![CDATA[Vorgefertigter Template Footer anzeigen?]]></de>
-            <en><![CDATA[Show prefabricated template footer?]]></en>
+        <locale name="settings.footerTemplate.enable.text">
+            <de><![CDATA[Vorgefertigter Template Footer verwenden?]]></de>
+            <en><![CDATA[Use predefined  template footer?]]></en>
         </locale>
         <locale name="settings.footerTemplate.enable.desc">
             <de><![CDATA[Es wird empfohlen in den nachfolgenden Abschnitten von <strong>Footer Template</strong> die Einstellungen vorzunehmen: Links, Weitere Links, Letzte Beiträge, Kurzer Text]]></de>
