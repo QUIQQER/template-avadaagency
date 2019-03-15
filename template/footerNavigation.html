@@ -4,10 +4,10 @@
         <div class="navbar-header">
             <!-- navbar logo -->
             <div class="navbar-brand">
-                <span class="sr-only">&copy; {$Project->get(1)->getAttribute('title')}</span>
-                <a href="{url id=1}">
-                    &copy; {$Project->get(1)->getAttribute('title')}
-                </a>
+                <span class="sr-only">{locale group="quiqqer/template-avadaagency" var="copyright.text" year=$smarty.now|date_format:'%Y'}</span>
+                <span class="page-footer-copyright">
+                     {locale group="quiqqer/template-avadaagency" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+                </span>
             </div>
         </div>
 
